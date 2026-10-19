@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategic Leadership &amp; Planning · e-Training Platform | JAGA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/jaga.css">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<!--PAGE_STYLE:course--><style>
+  body { background: #fff; font-size: 17px; }
+  .wide { max-width: 1640px; margin-inline: auto; padding-inline: 40px; }
+
+  /* Moodle navbar (HTUx style) */
+  .m-nav { position: sticky; top: 0; z-index: 60; background: #fff; border-bottom: 1px solid var(--line); }
+  .m-nav .wide { display: flex; align-items: center; gap: 48px; height: 104px; }
+  .m-nav .brand img { height: 64px; }
+  .m-nav .brand .name { font-size: 15px; }
+  .m-links { display: flex; gap: 36px; }
+  .m-links a { font-family: var(--font-head); font-weight: 700; font-size: 18px; color: var(--ink-2); letter-spacing: .3px; padding: 6px 0; border-bottom: 3px solid transparent; }
+  .m-links a:hover, .m-links a.on { color: var(--maroon); border-color: var(--maroon); }
+  .m-right { margin-inline-start: auto; display: flex; align-items: center; gap: 14px; }
+  .r-btn { width: 56px; height: 56px; border-radius: 50%; background: var(--maroon); color: #fff; display: grid; place-items: center; position: relative; transition: .2s; }
+  .r-btn:hover { background: var(--maroon-700); transform: translateY(-2px); }
+  .r-btn [data-lucide] { width: 24px; height: 24px; }
+  .r-btn .dot { position: absolute; top: 2px; inset-inline-end: 2px; min-width: 20px; height: 20px; border-radius: 99px; background: var(--gold); color: #fff; font-size: 11px; font-weight: 800; display: grid; place-items: center; border: 2px solid #fff; }
+  .me { width: 60px; height: 60px; border-radius: 50%; background: var(--rose); color: var(--maroon); display: grid; place-items: center; font-family: var(--font-head); font-weight: 800; font-size: 18px; border: 3px solid #fff; box-shadow: 0 0 0 2px var(--rose-200); }
+  .lang-sw { width: 56px; height: 56px; border-radius: 50%; border: 1.5px solid var(--line); display: grid; place-items: center; font-weight: 800; color: var(--ink-2); }
+
+  /* page header */
+  .page-head { text-align: center; padding: 72px 0 40px; position: relative; }
+  .page-head .kicker { font-size: 16px; font-weight: 700; color: var(--maroon); }
+  .page-head h1 { font-size: 52px; margin-top: 6px; }
+  .page-head .sub { color: var(--ink-3); font-size: 17px; margin-top: 4px; }
+  .edit-btn { display: inline-flex; align-items: center; gap: 10px; background: #6f7378; color: #fff; padding: 16px 28px; border-radius: 10px; font-size: 18px; font-weight: 600; margin: 8px 0 36px; }
+  .edit-btn:hover { background: #5d6166; }
+  .edit-btn [data-lucide] { width: 20px; height: 20px; }
+
+  /* secondary nav bar */
+  .sec-bar { background: var(--maroon-900); border-radius: 14px; padding: 12px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .sec-bar a { padding: 14px 24px; border-radius: 10px; font-size: 18px; font-weight: 600; color: #f1cfd7; display: inline-flex; align-items: center; gap: 6px; }
+  .sec-bar a:hover { color: #fff; background: rgba(255,255,255,.08); }
+  .sec-bar a.on { background: #fff; color: var(--maroon); font-weight: 700; }
+  .sec-bar [data-lucide] { width: 18px; height: 18px; }
+
+  /* body grid */
+  .body { display: grid; grid-template-columns: 1fr 420px; gap: 40px; align-items: start; padding: 64px 0 140px; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 40px; box-shadow: 0 2px 10px rgba(61,0,16,.04); }
+  .panel-h { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .panel-h h2 { font-size: 26px; font-weight: 700; }
+  .panel-h .info { display: flex; gap: 24px; font-size: 15.5px; color: var(--ink-2); }
+  .panel-h .info b { color: var(--ink); font-weight: 700; }
+  .overall { display: flex; justify-content: flex-end; align-items: center; gap: 14px; margin: 24px 0 28px; font-size: 15.5px; color: var(--ink-2); }
+  .overall .circ { width: 60px; height: 60px; border-radius: 50%; background: conic-gradient(var(--maroon) 0 42%, var(--rose) 42% 100%); display: grid; place-items: center; }
+  .overall .circ b { width: 48px; height: 48px; border-radius: 50%; background: #fff; display: grid; place-items: center; font-size: 17px; color: var(--maroon); }
+  .overall .more { width: 60px; height: 60px; border-radius: 50%; background: var(--cream); display: grid; place-items: center; color: var(--ink-2); }
+
+  /* section tiles */
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .tile { position: relative; background: #fff; border-radius: 6px; box-shadow: 0 4px 18px rgba(61,0,16,.09); border-top: 8px solid var(--maroon); overflow: hidden; cursor: pointer; transition: .25s; display: flex; flex-direction: column; text-align: start; }
+  .tile:hover { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(61,0,16,.16); }
+  .tile .art { aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 24px; text-align: center; position: relative; overflow: hidden;
+    background: radial-gradient(circle at 1px 1px, rgba(128,0,32,.08) 1.2px, transparent 0) 0 0/20px 20px, #fff; }
+  .tile .art .pic { width: 76px; height: 76px; border-radius: 28px; display: grid; place-items: center; flex-shrink: 0; background: linear-gradient(135deg, var(--maroon), var(--maroon-900)); color: #fff; box-shadow: 0 14px 30px rgba(128,0,32,.25); transform: rotate(-6deg); }
+  .tile .art .pic [data-lucide] { width: 36px; height: 36px; stroke-width: 1.5; transform: rotate(6deg); }
+  .tile .art .pic.gold { background: linear-gradient(135deg, #c99a48, #7a531a); }
+  .tile .art .pic.coral { background: linear-gradient(135deg, #e05a5a, #a32b2b); }
+  .tile .art .pic.dark { background: linear-gradient(135deg, #3d0010, #1d0008); }
+  .tile .art .t { font-family: var(--font-head); font-weight: 700; font-size: 18px; line-height: 1.35; color: var(--ink); }
+  .tile .art .t span { display: block; color: var(--maroon); }
+  .tile .foot { padding: 20px 24px 26px; border-top: 1px solid var(--line); }
+  .tile .foot .row { gap: 10px; display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; color: var(--ink-3); margin-bottom: 10px; }
+  .tile .foot h3 { font-size: 19px; margin-bottom: 6px; }
+  .tile .progress { height: 8px; }
+  .tag { white-space: nowrap; font-size: 12.5px; font-weight: 700; padding: 4px 12px; border-radius: 999px; display: inline-flex; gap: 5px; align-items: center; }
+  .tag [data-lucide] { width: 14px; height: 14px; }
+  .tag.ok { background: #e1f1e8; color: var(--green); }
+  .tag.now { background: var(--rose); color: var(--maroon); }
+  .tag.lock { background: #f1eeed; color: var(--ink-3); }
+  .tile.locked { cursor: not-allowed; }
+  .tile.locked .art { filter: grayscale(1); opacity: .55; }
+
+  /* section drawer (opens when a tile is clicked) */
+  .sheet-bg { position: fixed; inset: 0; background: rgba(29,0,8,.45); backdrop-filter: blur(3px); z-index: 100; display: none; }
+  .sheet-bg.show { display: block; }
+  .sheet { position: fixed; top: 0; bottom: 0; inset-inline-end: 0; width: min(620px, 100%); background: #fff; z-index: 101; transform: translateX(-105%); transition: .3s ease; display: flex; flex-direction: column; }
+  [dir="ltr"] .sheet { transform: translateX(105%); }
+  .sheet.show { transform: none !important; }
+  .sheet-h { padding: 32px 36px 24px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; }
+  .sheet-h small { color: var(--maroon); font-weight: 700; font-size: 15px; }
+  .sheet-h h3 { font-size: 26px; }
+  .sheet-b { padding: 16px 36px 36px; overflow-y: auto; }
+  .act { display: flex; align-items: center; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .act .ic { width: 52px; height: 52px; border-radius: 14px; background: var(--rose); color: var(--maroon); display: grid; place-items: center; flex-shrink: 0; }
+  .act .ic.v { background: var(--maroon-900); color: #fff; }
+  .act h5 { font-family: var(--font-body); font-size: 17px; font-weight: 700; }
+  .act small { color: var(--ink-3); font-size: 14px; }
+  .act > div { flex: 1; }
+
+  /* completion levels block */
+  .levels h2 { font-size: 24px; margin-bottom: 20px; }
+  .star { position: relative; width: 240px; height: 230px; margin: 0 auto; }
+  .star svg { width: 100%; height: 100%; }
+  .star b { position: absolute; inset: 0; display: grid; place-items: center; padding-top: 22px; font-family: var(--font-head); font-size: 72px; font-weight: 800; color: #fff; }
+  .lv-bar { height: 36px; border-radius: 8px; background: var(--rose); overflow: hidden; position: relative; margin-top: 16px; }
+  .lv-bar i { display: block; height: 100%; width: 42%; background: linear-gradient(90deg, var(--coral), var(--maroon)); }
+  [dir="rtl"] .lv-bar i { margin-inline-start: 0; }
+  .lv-bar span { position: absolute; inset: 0; display: grid; place-items: center; font-weight: 800; font-size: 15px; color: var(--ink); }
+  .lv-links { display: flex; justify-content: center; gap: 36px; margin-top: 20px; }
+  .lv-links a { display: inline-flex; align-items: center; gap: 8px; font-size: 15.5px; color: var(--ink-2); }
+  .lv-links a:hover { color: var(--maroon); }
+  .lv-links [data-lucide] { width: 20px; height: 20px; }
+  .lv-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-top: 26px; text-align: center; font-size: 12.5px; color: var(--ink-3); }
+  .lv-steps i { display: block; height: 6px; border-radius: 9px; background: var(--rose); margin-bottom: 6px; }
+  .lv-steps .on i { background: var(--maroon); }
+  .lv-steps .on { color: var(--maroon); font-weight: 700; }
+
+  /* floating options button */
+  .options { position: fixed; bottom: 22px; inset-inline-end: 22px; z-index: 90; display: inline-flex; align-items: center; gap: 10px; background: #6f7378; color: #fff; padding: 16px 24px; border-radius: 8px; font-size: 18px; font-weight: 600; box-shadow: 0 10px 24px rgba(0,0,0,.18); }
+  .options [data-lucide] { width: 22px; height: 22px; }
+  .mock-nav { bottom: 90px; }
+
+  @media (max-width: 1300px) { .tiles { grid-template-columns: repeat(2, 1fr); } .body { grid-template-columns: 1fr 360px; } }
+  @media (max-width: 1000px) { .body { grid-template-columns: 1fr; } }
+  @media (max-width: 680px) {
+    .wide { padding-inline: 16px; }
+    .m-nav .wide { height: 76px; gap: 16px; } .m-nav .brand img { height: 46px; } .m-links, .m-nav .brand .name, .r-btn:nth-child(3) { display: none; }
+    .r-btn, .me, .lang-sw { width: 44px; height: 44px; }
+    .page-head h1 { font-size: 32px; }
+    .tiles { grid-template-columns: 1fr; }
+    .panel { padding: 22px; }
+    .sec-bar a { padding: 10px 14px; font-size: 15px; }
+  }
+</style><!--/PAGE_STYLE-->
+</head>
+<body>
+
+<!-- Moodle navbar -->
+<header class="m-nav">
+  <div class="wide">
+    <a class="brand" href="index.html"><img src="../assets/jaga-mark.png" alt=""><div class="name">e-Training<br>Platform</div></a>
+    <nav class="m-links"><a href="#">DASHBOARD</a><a href="#" class="on">MY COURSES</a></nav>
+    <div class="m-right">
+      <a href="../course.html" class="lang-sw">ع</a>
+      <button class="r-btn" aria-label="Notifications"><i data-lucide="bell-ring"></i><span class="dot">3</span></button>
+      <button class="r-btn" aria-label="Messages"><i data-lucide="messages-square"></i></button>
+      <button class="r-btn" aria-label="Settings"><i data-lucide="settings"></i></button>
+      <a href="#" class="me">SM</a>
+    </div>
+  </div>
+</header>
+
+<div class="wide">
+  <!-- page header -->
+  <div class="page-head">
+    <div class="kicker">Government Leadership Center Programs</div>
+    <h1>Strategic Leadership &amp; Planning</h1>
+  </div>
+  <a href="#" class="edit-btn"><i data-lucide="pencil"></i> Turn editing on</a>
+
+  <!-- secondary nav -->
+  <nav class="sec-bar">
+    <a href="#" class="on">Course</a><a href="#">Settings</a><a href="#">Participants</a><a href="#">Grades</a><a href="#">Reports</a><a href="#">More <i data-lucide="chevron-down"></i></a>
+  </nav>
+
+  <div class="body">
+    <!-- course content -->
+    <section class="panel" style="padding-bottom:48px">
+      <div class="panel-h">
+        <h2>Course Content</h2>
+        <div class="info"><span>Course start date: <b>01/10/26</b></span><span>Category: <b>Government Leadership</b></span></div>
+      </div>
+      <div class="overall"><span>Overall progress %</span><span class="circ"><b>42</b></span><button class="more" aria-label="More"><i data-lucide="more-horizontal"></i></button></div>
+
+      <div class="tiles" id="tiles"></div>
+    </section>
+
+    <!-- completion levels -->
+    <aside class="panel levels">
+      <h2>Completion Levels</h2>
+      <div class="star">
+        <svg viewBox="0 0 24 24"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a8334f"/><stop offset="1" stop-color="#3d0010"/></linearGradient></defs><path fill="url(#sg)" d="M12 1.6l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.7l-6.4 3.5 1.4-7.1-5.3-5 7.2-.9z"/></svg>
+        <b>2</b>
+      </div>
+      <div class="lv-bar"><i></i><span>42%</span></div>
+      <div class="lv-steps"><div class="on"><i></i>Starter</div><div class="on"><i></i>Explorer</div><div><i></i>Advanced</div><div><i></i>Expert</div><div><i></i>Leader</div></div>
+      <div class="lv-links"><a href="#"><i data-lucide="list"></i> Overview</a><a href="#"><i data-lucide="file-search"></i> Details</a></div>
+    </aside>
+  </div>
+</div>
+
+<!-- section drawer -->
+<div class="sheet-bg" id="bg"></div>
+<aside class="sheet" id="sheet">
+  <div class="sheet-h"><div><small id="sh-k"></small><h3 id="sh-t"></h3></div><button class="icon-btn" id="close" aria-label="Close"><i data-lucide="x"></i></button></div>
+  <div class="sheet-b" id="sh-b"></div>
+</aside>
+
+<!--FOOTER--><footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><img src="../assets/jaga-logo-white.png" alt="Jordan Academy for Government Administration" style="height:92px;margin-bottom:16px"><ul><li><a href="#">About Us</a></li><li><a href="pathway.html">Pathways</a></li><li><a href="courses.html">Courses</a></li></ul></div>
+      <div><h4>Stay Updated</h4><ul><li><a href="#">News</a></li><li><a href="#">Help Center</a></li><li><a href="#">Contact Us</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Terms of Service</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Data Retention Summary</a></li></ul></div>
+      <div><h4>Social Media</h4><div class="socials"><a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a></div></div>
+    </div>
+    <div class="footer-bottom"><span>Copyright © 2026 JAGA. All Rights Reserved.</span></div>
+  </div>
+</footer><!--/FOOTER-->
+
+<a href="#" class="options"><i data-lucide="settings-2"></i> Options</a>
+<nav class="mock-nav"><a href="index.html">Home</a><a href="pathway.html">Pathway</a><a href="courses.html">Courses</a><a class="on" href="course.html">Inside Course (Moodle)</a></nav>
+
+<script>
+  // [kicker, line1, line2, icon, colour, status, done, total, activities]
+  const T = {ok:'Done', now:'In progress', lock:'Locked', of:'of', acts:'activities', unit:'Unit'};
+  const sections = [
+    ['General','Course','Orientation','compass','', 'ok',3,3,[['file-text','Trainee Guide','File · PDF'],['megaphone','Announcements','Forum'],['list-checks','Pre-test','Quiz']]],
+    ['General','Introductory','Video','clapperboard','coral','ok',1,1,[['play','Course introduction video','Video · 4 min']]],
+    ['Unit 1','Strategic','Leadership','crown','dark','ok',4,4,[['book-open-text','Unit introduction','Page'],['play','The Strategic Leader','Video · 22 min'],['briefcase','Case study','Page'],['list-checks','Unit 1 Quiz','Quiz · 8.5 / 10']]],
+    ['Unit 2','Strategic','Planning Tools','target','', 'now',1,5,[['book-open-text','SWOT & PESTLE Analysis','Page · done'],['play','The Balanced Scorecard','Video · 42% watched'],['file-text','Strategic Plan Template','File · DOCX'],['messages-square','Discussion forum','Forum'],['file-pen-line','Assignment: Your Institution\'s Plan','Assignment · due in 2 days']]],
+    ['Unit 3','Performance','Indicators','bar-chart-3','gold','lock',0,4,[]],
+    ['Unit 4','Implementation','Follow-up','refresh-ccw','dark','lock',0,4,[]],
+    ['Assessment','Final','Exam','file-check','coral','lock',0,1,[]],
+    ['Closing','Completion','Certificate','award','gold','lock',0,1,[]],
+  ];
+  const tag = s => s==='ok' ? `<span class="tag ok"><i data-lucide="check"></i> ${T.ok}</span>` : s==='now' ? `<span class="tag now">${T.now}</span>` : `<span class="tag lock"><i data-lucide="lock"></i> ${T.lock}</span>`;
+  document.getElementById('tiles').innerHTML = sections.map(([k,a,b,ic,c,s,d,t],i) => `
+    <div class="tile ${s==='lock'?'locked':''}" data-i="${i}">
+      <div class="art"><div class="pic ${c}"><i data-lucide="${ic}"></i></div><div class="t">${a}<span>${b}</span></div></div>
+      <div class="foot">
+        <div class="row"><span>${k} · ${d} ${T.of} ${t} ${T.acts}</span>${tag(s)}</div>
+        <div class="progress"><i style="width:${Math.round(d/t*100)}%"></i></div>
+      </div>
+      <span class="corner"></span>
+    </div>`).join('');
+  const sheet = document.getElementById('sheet'), bg = document.getElementById('bg');
+  document.querySelectorAll('.tile:not(.locked)').forEach(el => el.onclick = () => {
+    const [k,a,b,,,,, ,acts] = sections[el.dataset.i];
+    document.getElementById('sh-k').textContent = k;
+    document.getElementById('sh-t').textContent = a + ' ' + b;
+    document.getElementById('sh-b').innerHTML = acts.map(([ic,n,m]) => `<div class="act"><div class="ic ${ic==='play'?'v':''}"><i data-lucide="${ic}"></i></div><div><h5>${n}</h5><small>${m}</small></div></div>`).join('');
+    lucide.createIcons(); sheet.classList.add('show'); bg.classList.add('show');
+  });
+  const close = () => { sheet.classList.remove('show'); bg.classList.remove('show'); };
+  document.getElementById('close').onclick = close; bg.onclick = close;
+  lucide.createIcons();
+</script>
+</body>
+</html>

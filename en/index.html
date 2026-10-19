@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | JAGA e-Training Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/jaga.css">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<!--PAGE_STYLE:index--><style>
+  /* 1. hero */
+  .hero { position: relative; padding: 0; overflow: hidden;
+    background: radial-gradient(900px 520px at 80% 30%, #fff 0%, rgba(255,255,255,0) 65%), linear-gradient(180deg, var(--cream) 0%, #f2e8e5 100%); }
+  .hero::before { content: ""; position: absolute; inset-inline-end: -120px; top: -90px; width: 560px; height: 500px; background: url(../assets/jaga-mark.png) center/contain no-repeat; opacity: .05; pointer-events: none; }
+  .hero::after { content: ""; position: absolute; inset-inline-start: -160px; bottom: -260px; width: 620px; height: 620px; border-radius: 50%; border: 1px solid rgba(128,0,32,.12); box-shadow: 0 0 0 70px rgba(128,0,32,.025), 0 0 0 140px rgba(128,0,32,.02); pointer-events: none; }
+  .hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 72px; min-height: 600px; padding-block: 64px 120px; }
+  .hero .kicker { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: var(--maroon); margin-bottom: 18px; }
+  .hero .kicker::before { content: ""; width: 28px; height: 2px; background: var(--maroon); border-radius: 2px; }
+  .hero h1 { font-weight: 500; font-size: 38px; color: var(--ink-2); line-height: 1.55; }
+  .hero h1 b { display: block; font-weight: 800; font-size: 54px; line-height: 1.35; color: var(--maroon); margin: 4px 0; }
+  .hero h1 span { display: block; }
+  [dir="ltr"] .hero h1 { font-size: 32px; } [dir="ltr"] .hero h1 b { font-size: 46px; }
+  .hero .btn { margin-top: 36px; box-shadow: 0 14px 30px rgba(128,0,32,.25); }
+  .hero-visual { position: relative; padding-bottom: 28px; padding-inline-end: 28px; }
+  .hero-visual::before { content: ""; position: absolute; top: 28px; bottom: 0; inset-inline-start: 28px; inset-inline-end: 0; border-radius: 36px; background: linear-gradient(135deg, var(--maroon), var(--maroon-900)); }
+  .hero-visual::after { content: ""; position: absolute; width: 120px; height: 120px; inset-inline-end: -52px; top: -36px; background-image: radial-gradient(circle, rgba(128,0,32,.35) 1.6px, transparent 2px); background-size: 14px 14px; }
+  .hero-visual .frame { position: relative; z-index: 1; border-radius: 36px; overflow: hidden; aspect-ratio: 5/4; border: 8px solid #fff; box-shadow: 0 30px 60px rgba(61,0,16,.18); }
+  .hero-visual .frame img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* 2. stats */
+  .stats { margin-top: -64px; position: relative; z-index: 2; padding: 0; }
+  .stats .box { background: #fff; border-radius: 24px; display: grid; grid-template-columns: repeat(4, 1fr); box-shadow: 0 24px 60px rgba(61,0,16,.12); border: 1px solid var(--line); }
+  .stat { padding: 30px 28px; display: flex; align-items: center; gap: 16px; border-inline-start: 1px solid var(--line); }
+  .stat:first-child { border: 0; }
+  .stat .ic { width: 54px; height: 54px; border-radius: 16px; background: var(--rose); color: var(--maroon); display: grid; place-items: center; flex-shrink: 0; }
+  .stat .ic [data-lucide] { width: 24px; height: 24px; }
+  .stat b { display: block; font-family: var(--font-head); font-size: 34px; font-weight: 800; line-height: 1.1; color: var(--maroon); }
+  .stat span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
+
+  /* 3. areas */
+  .area { position: relative; background: #fff; border-radius: 24px; border: 1px solid var(--line); overflow: hidden; display: flex; flex-direction: column; transition: .3s ease; }
+  .area:hover { transform: translateY(-6px); box-shadow: 0 28px 60px rgba(61,0,16,.14); border-color: transparent; }
+  .area .band { height: 128px; position: relative; overflow: hidden; }
+  .area .band::after { content: ""; position: absolute; inset-inline-end: -36px; top: -30px; width: 210px; height: 180px; background: url(../assets/jaga-mark-white.png) center/contain no-repeat; opacity: .16; transition: .5s ease; }
+  .area:hover .band::after { transform: rotate(30deg) scale(1.08); }
+  .area .band.b1 { background: linear-gradient(135deg, #800020, #3d0010); }
+  .area .band.b2 { background: linear-gradient(135deg, #a8334f, #640019); }
+  .area .band.b3 { background: linear-gradient(135deg, #b8893b, #6e4a14); }
+  .area .ic { width: 72px; height: 72px; border-radius: 20px; background: #fff; color: var(--maroon); display: grid; place-items: center; margin: -36px 28px 0; position: relative; z-index: 1; box-shadow: 0 12px 28px rgba(61,0,16,.16); }
+  .area .ic [data-lucide] { width: 32px; height: 32px; stroke-width: 1.5; }
+  .area .in { padding: 18px 28px 26px; display: flex; flex-direction: column; flex: 1; }
+  .area h3 { font-size: 20px; margin-bottom: 20px; min-height: 2.9em; }
+  .area .nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .area .nums div { background: var(--cream); border-radius: 14px; padding: 12px 6px; text-align: center; transition: .2s; }
+  .area:hover .nums div { background: var(--rose); }
+  .area .nums b { display: block; font-family: var(--font-head); font-size: 24px; line-height: 1.2; color: var(--maroon); }
+  .area .nums span { display: inline-flex; align-items: center; gap: 4px; font-size: 12.5px; color: var(--ink-2); }
+  .area .nums [data-lucide] { width: 13px; height: 13px; color: var(--maroon); }
+  .area .more { margin-top: 22px; padding-top: 18px; border-top: 1px dashed var(--line); }
+
+  /* 4. pathways slider */
+  .slider { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 72px) / 4); gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; scrollbar-width: none; }
+  .slider::-webkit-scrollbar { display: none; }
+  .slider > * { scroll-snap-align: start; }
+  .slider-nav { display: flex; gap: 8px; align-items: center; }
+
+  /* 6. why */
+  .why { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--maroon-900) 0%, #5a0018 60%, var(--maroon) 100%); color: #fff; }
+  .why::before { content: ""; position: absolute; inset-inline-start: -140px; top: -120px; width: 520px; height: 470px; background: url(../assets/jaga-mark-white.png) center/contain no-repeat; opacity: .06; }
+  .why::after { content: ""; position: absolute; inset-inline-end: -100px; bottom: -160px; width: 420px; height: 420px; border-radius: 50%; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 0 0 60px rgba(255,255,255,.02); }
+  .why .container { position: relative; z-index: 1; }
+  .why h2 { color: #fff; }
+  .why .section-head p { color: #e9c3cc; }
+  .why .title-rule { background: var(--gold); }
+  .why-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+  .why-item { position: relative; border-radius: 22px; padding: 34px 22px 30px; text-align: center; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(6px); transition: .3s ease; }
+  .why-item:hover { background: #fff; transform: translateY(-8px); box-shadow: 0 24px 50px rgba(0,0,0,.25); }
+  .why-item .num { position: absolute; top: 14px; inset-inline-end: 18px; font-family: var(--font-head); font-weight: 800; font-size: 13px; color: rgba(255,255,255,.35); }
+  .why-item .ic { width: 72px; height: 72px; border-radius: 22px; margin: 0 auto 20px; display: grid; place-items: center; background: linear-gradient(135deg, #d8ad5e, var(--gold)); color: var(--maroon-900); box-shadow: 0 12px 26px rgba(0,0,0,.25); transform: rotate(-6deg); transition: .3s; }
+  .why-item .ic [data-lucide] { width: 32px; height: 32px; stroke-width: 1.7; transform: rotate(6deg); }
+  .why-item h4 { color: #fff; font-size: 17.5px; margin-bottom: 6px; transition: .3s; }
+  .why-item p { color: #e9c3cc; font-size: 14px; line-height: 1.7; transition: .3s; }
+  .why-item:hover .ic { transform: rotate(0); background: linear-gradient(135deg, var(--maroon), var(--maroon-900)); color: #fff; }
+  .why-item:hover h4 { color: var(--ink); } .why-item:hover p { color: var(--ink-2); } .why-item:hover .num { color: var(--rose-200); }
+
+  /* 8. partners */
+  .partners { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+  .partner { height: 110px; border-radius: 16px; background: #fff; border: 1px solid var(--line); display: grid; place-items: center; color: var(--ink-3); font-weight: 700; font-size: 13px; filter: grayscale(1); transition: .2s; }
+  .partner:hover { filter: none; border-color: var(--rose-200); color: var(--maroon); }
+
+  /* 9. register band */
+  .join { background: linear-gradient(120deg, var(--maroon) 0%, var(--maroon-900) 100%); border-radius: 32px; padding: 56px 64px; color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 32px; position: relative; overflow: hidden; }
+  .join::after { content:""; position:absolute; inset-inline-start: -40px; bottom: -80px; width: 380px; height: 340px; background: url(../assets/jaga-mark-white.png) center/contain no-repeat; opacity: .1; }
+  .join h2 { color: #fff; font-size: 38px; line-height: 1.5; }
+  .join .btn { position: relative; z-index: 1; }
+
+  @media (max-width: 1100px) {
+    .hero .container { grid-template-columns: 1fr; gap: 40px; }
+    .stats .box { grid-template-columns: 1fr 1fr; }
+    .slider { grid-auto-columns: calc((100% - 24px) / 2); }
+    .why-list { grid-template-columns: repeat(3, 1fr); }
+    .grid.g4.trainers { grid-template-columns: repeat(2, 1fr); }
+    .partners { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 680px) {
+    .hero h1 { font-size: 26px; } .hero h1 b { font-size: 36px; }
+    .hero-visual::after { display: none; }
+    .stat { padding: 20px 16px; gap: 10px; } .stat .ic { width: 42px; height: 42px; } .stat b { font-size: 26px; }
+    .stat:nth-child(3) { border: 0; } .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .slider { grid-auto-columns: 85%; }
+    .why-list, .partners { grid-template-columns: 1fr 1fr; }
+    .join { flex-direction: column; align-items: start; padding: 36px 24px; } .join h2 { font-size: 28px; }
+  }
+</style><!--/PAGE_STYLE-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="../assets/jaga-mark.png" alt="">
+      <div class="name">Jordan Academy for<br>Government Administration</div>
+    </a>
+    <nav class="nav">
+      <a href="pathway.html">Pathways</a>
+      <a href="courses.html">Courses</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+      <a href="../index.html" class="icon-btn lang">ع</a>
+      <a href="#" class="btn btn-outline btn-sm">Sign In</a>
+      <a href="#" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<!-- 1. HERO -->
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="kicker">e-Training Platform</span>
+      <h1><span>Upgrade your skills through</span><b>Integrated Training Pathways</b><span>designed for public sector professionals</span></h1>
+      <a href="#" class="btn btn-primary btn-lg">Join now! <i data-lucide="arrow-right"></i></a>
+    </div>
+    <div class="hero-visual"><div class="frame"><img src="../assets/hero-visual.jpg" alt="e-Training Platform"></div></div>
+  </div>
+</section>
+
+<!-- 2. STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="box">
+      <div class="stat"><div class="ic"><i data-lucide="route"></i></div><div><b>8</b><span>Training Pathways</span></div></div>
+      <div class="stat"><div class="ic"><i data-lucide="layers"></i></div><div><b>64</b><span>Training Programs</span></div></div>
+      <div class="stat"><div class="ic"><i data-lucide="blocks"></i></div><div><b>120</b><span>Stackable Courses</span></div></div>
+      <div class="stat"><div class="ic"><i data-lucide="users"></i></div><div><b>45</b><span>Certified Trainers</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. AREAS OF PRACTICE -->
+<section>
+  <div class="container">
+    <div class="section-head center">
+      <h2>Areas of Practice</h2>
+      <p>Choose from 8 training pathways and over 120 courses to fit your training needs. We are working on adding more programs soon.</p>
+      <div class="title-rule"></div>
+    </div>
+    <div class="grid g3">
+      <a class="area" href="pathway.html">
+        <div class="band b1"></div>
+        <div class="ic"><i data-lucide="landmark"></i></div>
+        <div class="in">
+          <h3>Government Leadership Center Programs</h3>
+          <div class="nums"><div><b>3</b><span><i data-lucide="route"></i>Pathways</span></div><div><b>18</b><span><i data-lucide="layers"></i>Courses</span></div><div><b>12</b><span><i data-lucide="users"></i>Trainers</span></div></div>
+          <span class="link-arrow more">Explore programs <i data-lucide="arrow-right"></i></span>
+        </div>
+      </a>
+      <a class="area" href="pathway.html">
+        <div class="band b2"></div>
+        <div class="ic"><i data-lucide="briefcase"></i></div>
+        <div class="in">
+          <h3>Training Programs</h3>
+          <div class="nums"><div><b>4</b><span><i data-lucide="route"></i>Pathways</span></div><div><b>34</b><span><i data-lucide="layers"></i>Courses</span></div><div><b>27</b><span><i data-lucide="users"></i>Trainers</span></div></div>
+          <span class="link-arrow more">Explore programs <i data-lucide="arrow-right"></i></span>
+        </div>
+      </a>
+      <a class="area" href="pathway.html">
+        <div class="band b3"></div>
+        <div class="ic"><i data-lucide="shield-check"></i></div>
+        <div class="in">
+          <h3>Awareness Programs</h3>
+          <div class="nums"><div><b>1</b><span><i data-lucide="route"></i>Pathway</span></div><div><b>12</b><span><i data-lucide="layers"></i>Courses</span></div><div><b>6</b><span><i data-lucide="users"></i>Trainers</span></div></div>
+          <span class="link-arrow more">Explore programs <i data-lucide="arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PATHWAYS -->
+<section class="bg-cream">
+  <div class="container">
+    <div class="section-head">
+      <h2>8 Training Pathways to Explore</h2>
+      <div class="slider-nav">
+        <button class="icon-btn" onclick="slide(-1)" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+        <button class="icon-btn" onclick="slide(1)" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+        <a href="pathway.html" class="btn btn-primary btn-sm">Explore Pathways</a>
+      </div>
+    </div>
+    <div class="slider" id="slider"></div>
+  </div>
+</section>
+
+<!-- 5. FEATURED COURSES -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Featured Courses</h2>
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-f="">All Courses</button>
+        <button class="tab" data-f="Government Leadership Center">Government Leadership Center</button>
+        <button class="tab" data-f="Training Programs">Training Programs</button>
+        <button class="tab" data-f="Awareness Programs">Awareness Programs</button>
+      </div>
+    </div>
+    <div class="grid g4" id="featured"></div>
+    <div style="text-align:center;margin-top:40px"><a href="courses.html" class="btn btn-outline btn-lg">Explore Courses <i data-lucide="arrow-right"></i></a></div>
+  </div>
+</section>
+
+<!-- 6. WHY -->
+<section class="why">
+  <div class="container">
+    <div class="section-head center"><h2>Why Learn with JAGA?</h2><p>A training experience designed around your time and your work in the public sector.</p><div class="title-rule"></div></div>
+    <div class="why-list">
+      <div class="why-item"><span class="num">01</span><div class="ic"><i data-lucide="presentation"></i></div><h4>Learn with Experts</h4><p>Certified trainers with hands-on government experience.</p></div>
+      <div class="why-item"><span class="num">02</span><div class="ic"><i data-lucide="infinity"></i></div><h4>Unlimited Access</h4><p>Return to the content any time during the pathway.</p></div>
+      <div class="why-item"><span class="num">03</span><div class="ic"><i data-lucide="smartphone"></i></div><h4>Learn Anywhere</h4><p>In the browser or on the mobile app.</p></div>
+      <div class="why-item"><span class="num">04</span><div class="ic"><i data-lucide="film"></i></div><h4>High Quality Content</h4><p>Interactive videos, case studies and applied activities.</p></div>
+      <div class="why-item"><span class="num">05</span><div class="ic"><i data-lucide="award"></i></div><h4>Get Certified</h4><p>An accredited certificate that counts toward your development.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:44px"><a href="#" class="btn btn-white btn-lg">Join Now <i data-lucide="arrow-right"></i></a></div>
+  </div>
+</section>
+
+<!-- 7. INSTRUCTORS -->
+<section>
+  <div class="container">
+    <div class="section-head"><h2>Meet Your Trainers...</h2><a href="#" class="btn btn-ghost">See More <i data-lucide="arrow-right"></i></a></div>
+    <div class="grid g4 trainers">
+      <div class="trainer"><img src="../assets/trainers/tarek-tutunji.png" alt="Prof. Tarek Tutunji"><div class="info"><span class="tag">Engineering</span><h4>Prof. Tarek Tutunji</h4><p>Dean, School of Engineering Technology at HTU</p></div><span class="bar"></span></div>
+      <div class="trainer"><img src="../assets/trainers/sameer-arabasi.png" alt="Dr. Sameer Arabasi"><div class="info"><span class="tag">Research</span><h4>Dr. Sameer Arabasi</h4><p>Ph.D. Associate Professor at HTU</p></div><span class="bar"></span></div>
+      <div class="trainer"><img src="../assets/trainers/moussa-habib.png" alt="Prof. Moussa Habib"><div class="info"><span class="tag">Electrical Engineering</span><h4>Prof. Moussa Habib</h4><p>Assistant to the President for Academic Affairs, Associate Professor of Electrical Engineering at HTU</p></div><span class="bar"></span></div>
+      <div class="trainer"><img src="../assets/trainers/firas-kafiah.png" alt="Dr. Firas Kafiah"><div class="info"><span class="tag">Manufacturing</span><h4>Dr. Firas Kafiah</h4><p>PhD in Mechanical Engineering (Applied materials &amp; manufacturing)</p></div><span class="bar"></span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><img src="../assets/jaga-logo-white.png" alt="Jordan Academy for Government Administration" style="height:92px;margin-bottom:16px"><ul><li><a href="#">About Us</a></li><li><a href="pathway.html">Pathways</a></li><li><a href="courses.html">Courses</a></li></ul></div>
+      <div><h4>Stay Updated</h4><ul><li><a href="#">News</a></li><li><a href="#">Help Center</a></li><li><a href="#">Contact Us</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Terms of Service</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Data Retention Summary</a></li></ul></div>
+      <div><h4>Social Media</h4><div class="socials"><a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a></div></div>
+    </div>
+    <div class="footer-bottom"><span>Copyright © 2026 JAGA. All Rights Reserved.</span></div>
+  </div>
+</footer><!--/FOOTER-->
+
+<nav class="mock-nav"><a class="on" href="index.html">Home</a><a href="pathway.html">Pathway</a><a href="courses.html">Courses</a><a href="course.html">Inside Course (Moodle)</a></nav>
+
+<script>
+  // [field, pathway, glyph, thumb]
+  const pathways = [
+    ['Government Leadership Center','Emerging Government Leaders Program','crown','t1'],
+    ['Training Programs','Digital Transformation in the Public Sector','cpu','t2'],
+    ['Awareness Programs','Cybersecurity – Awareness','img','img'],
+    ['Training Programs','Institutional Excellence & Quality Management','gem','t5'],
+    ['Government Leadership Center','Public Policy & Decision Making','scale','t3'],
+    ['Training Programs','Government Human Resources Management','users-round','t4'],
+    ['Training Programs','Government Project Management','kanban','t6'],
+    ['Government Leadership Center','Institutional Culture','building-2','t2'],
+  ];
+  const thumb = (t, g) => t === 'img'
+    ? '<div class="thumb" style="background:#1d0008"><img src="../assets/cyber.jpg" alt=""></div>'
+    : `<div class="thumb ${t} tx"><i data-lucide="${g}" class="glyph"></i></div>`;
+  document.getElementById('slider').innerHTML = pathways.map(([f,p,g,t]) => `
+    <a class="card" href="pathway.html">${thumb(t,g)}
+      <div class="card-body"><span class="cat">${f}</span><h3>${p}</h3>
+        <div class="card-foot"><span class="link-arrow">See Pathway <i data-lucide="arrow-right"></i></span><span class="price">Free</span></div></div>
+    </a>`).join('');
+
+  // [field, pathway, course, glyph, thumb]
+  const featured = [
+    ['Government Leadership Center','Emerging Government Leaders','Strategic Leadership & Planning','compass','t1'],
+    ['Training Programs','Digital Transformation','Data-Driven Decision Making','bar-chart-3','t2'],
+    ['Awareness Programs','Cybersecurity – Awareness','Data Protection & Phishing','img','img'],
+    ['Training Programs','Institutional Excellence','Improving the Service Experience','sparkles','t5'],
+    ['Government Leadership Center','Public Policy & Decision Making','Public Policy Analysis','scale','t3'],
+    ['Training Programs','Government Project Management','Project Management Fundamentals','kanban','t6'],
+    ['Awareness Programs','Institutional Culture','Public Service Values','building-2','t4'],
+    ['Training Programs','Government HR Management','Performance Management','users-round','t2'],
+  ];
+  function renderFeatured(filter) {
+    document.getElementById('featured').innerHTML = featured.filter(c => !filter || c[0] === filter).map(([f,p,c,g,t]) => `
+      <a class="card" href="course.html">${thumb(t,g)}
+        <div class="card-body"><span class="cat">${p}</span><span style="font-size:12.5px;color:var(--ink-3)">${f}</span><h3>${c}</h3></div>
+      </a>`).join('');
+    lucide.createIcons();
+  }
+  renderFeatured('');
+  document.querySelectorAll('#tabs .tab').forEach(t => t.onclick = () => {
+    document.querySelectorAll('#tabs .tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active'); renderFeatured(t.dataset.f);
+  });
+  function slide(dir){ const s=document.getElementById('slider'); s.scrollBy({left: dir * s.clientWidth/2, behavior:'smooth'}); }
+</script>
+</body>
+</html>

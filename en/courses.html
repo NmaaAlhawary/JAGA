@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Courses | JAGA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/jaga.css">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<!--PAGE_STYLE:courses--><style>
+  /* 1. title + intro */
+  .c-hero { background: var(--cream); padding: 64px 0; position: relative; overflow: hidden; }
+  .c-hero::after { content:""; position:absolute; inset-inline-start: 3%; top: 10px; width: 320px; height: 280px; background: url(../assets/jaga-mark.png) center/contain no-repeat; opacity: .07; }
+  .c-hero h1 { font-size: 40px; }
+  .c-hero p { color: var(--ink-2); max-width: 640px; margin-top: 8px; font-size: 17px; }
+
+  /* 2. count + search + filters */
+  .bar { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 32px; }
+  .bar .count { font-weight: 700; color: var(--ink-2); margin-inline-end: auto; }
+  .bar .count b { color: var(--maroon); font-family: var(--font-head); }
+  .search { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; min-width: 280px; color: var(--ink-3); }
+  .search input { border: 0; outline: 0; font: inherit; flex: 1; background: none; }
+  .select { appearance: none; -webkit-appearance: none; border: 1px solid var(--line); border-radius: 999px; padding: 11px 20px; padding-inline-end: 46px; font: inherit; font-size: 14.5px; color: var(--ink-2); min-width: 190px; cursor: pointer;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat left 20px center; transition: .2s; }
+  [dir="ltr"] .select { background-position: right 20px center; }
+  .select:hover, .select:focus { border-color: var(--rose-200); outline: 0; box-shadow: 0 0 0 4px var(--rose); }
+  .search:focus-within { border-color: var(--rose-200); box-shadow: 0 0 0 4px var(--rose); }
+  .search { padding-block: 11px; }
+
+  /* 3. grid */
+  .card-body .field { font-size: 12.5px; color: var(--ink-3); }
+  .card-foot { border-top: 1px dashed var(--line); }
+
+  @media (max-width: 680px) {
+    .c-hero h1 { font-size: 30px; }
+    .search, .select { min-width: 0; width: 100%; }
+  }
+</style><!--/PAGE_STYLE-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="../assets/jaga-mark.png" alt="">
+      <div class="name">Jordan Academy for<br>Government Administration</div>
+    </a>
+    <nav class="nav">
+      <a href="pathway.html">Pathways</a>
+      <a href="courses.html" class="active">Courses</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+      <a href="../courses.html" class="icon-btn lang">ع</a>
+      <a href="#" class="btn btn-outline btn-sm">Sign In</a>
+      <a href="#" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<!-- 1. TITLE -->
+<section class="c-hero pattern">
+  <div class="container">
+    <h1>Courses</h1>
+    <p>Courses are a series of shorter, self-contained modules combined to create a larger, more comprehensive training pathway.</p>
+  </div>
+</section>
+
+<!-- 2 + 3. FILTERS & GRID -->
+<section style="padding-top:48px">
+  <div class="container">
+    <div class="bar">
+      <div class="count"><b id="count">0</b> total courses available</div>
+      <label class="search"><i data-lucide="search"></i><input id="q" placeholder="Search Courses"></label>
+      <select class="select" id="fField"><option value="">Field of Practice</option></select>
+      <select class="select" id="fPath"><option value="">Pathway</option></select>
+      <select class="select" id="fInst"><option value="">Trainers</option></select>
+    </div>
+    <div class="grid g4" id="grid"></div>
+  </div>
+</section>
+
+<!--FOOTER--><footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><img src="../assets/jaga-logo-white.png" alt="Jordan Academy for Government Administration" style="height:92px;margin-bottom:16px"><ul><li><a href="#">About Us</a></li><li><a href="pathway.html">Pathways</a></li><li><a href="courses.html">Courses</a></li></ul></div>
+      <div><h4>Stay Updated</h4><ul><li><a href="#">News</a></li><li><a href="#">Help Center</a></li><li><a href="#">Contact Us</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Terms of Service</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Data Retention Summary</a></li></ul></div>
+      <div><h4>Social Media</h4><div class="socials"><a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a></div></div>
+    </div>
+    <div class="footer-bottom"><span>Copyright © 2026 JAGA. All Rights Reserved.</span></div>
+  </div>
+</footer><!--/FOOTER-->
+
+<nav class="mock-nav"><a href="index.html">Home</a><a href="pathway.html">Pathway</a><a class="on" href="courses.html">Courses</a><a href="course.html">Inside Course (Moodle)</a></nav>
+
+<script>
+  // [pathway, field, course, trainer, glyph, thumb]
+  const L='Government Leadership Center', T='Training Programs', A='Awareness Programs';
+  const courses = [
+    ['Emerging Government Leaders',L,'Foundations of Public Sector Leadership','Dr. Mohammad Al-Ali','landmark','t1'],
+    ['Emerging Government Leaders',L,'Strategic Leadership & Planning','Dr. Mohammad Al-Ali','compass','t1'],
+    ['Emerging Government Leaders',L,'Change Management & Transformation','Dr. Samer Al-Khatib','refresh-ccw','t3'],
+    ['Emerging Government Leaders',L,'Data-Driven Decision Making','Eng. Reem Al-Hassan','bar-chart-3','t2'],
+    ['Emerging Government Leaders',L,'Team Building & Performance Management','Ms. Lina Al-Nuaimi','users-round','t4'],
+    ['Emerging Government Leaders',L,'Final Applied Project','Dr. Mohammad Al-Ali','presentation','t1'],
+    ['Digital Transformation',T,'Digital Transformation Fundamentals','Eng. Reem Al-Hassan','cpu','t2'],
+    ['Digital Transformation',T,'AI in Government Services','Eng. Reem Al-Hassan','bot','t2'],
+    ['Institutional Excellence',T,'Improving the Service Experience','Ms. Lina Al-Nuaimi','sparkles','t5'],
+    ['Institutional Excellence',T,'Institutional Excellence Models','Ms. Lina Al-Nuaimi','gem','t5'],
+    ['Government Project Management',T,'Project Management Fundamentals','Dr. Samer Al-Khatib','kanban','t6'],
+    ['Cybersecurity – Awareness',A,'Data Protection & Phishing','Eng. Reem Al-Hassan','img','img'],
+  ];
+  const fill = (id, vals) => document.getElementById(id).insertAdjacentHTML('beforeend', [...new Set(vals)].map(v => `<option>${v}</option>`).join(''));
+  fill('fField', courses.map(c => c[1])); fill('fPath', courses.map(c => c[0])); fill('fInst', courses.map(c => c[3]));
+
+  function render() {
+    const q = document.getElementById('q').value.trim().toLowerCase(), f = fField.value, p = fPath.value, i = fInst.value;
+    const list = courses.filter(c => (!q || c[2].toLowerCase().includes(q)) && (!f || c[1] === f) && (!p || c[0] === p) && (!i || c[3] === i));
+    document.getElementById('count').textContent = list.length;
+    document.getElementById('grid').innerHTML = list.map(([path, field, title, inst, g, t]) => `
+      <a class="card" href="course.html">
+        ${t === 'img' ? '<div class="thumb" style="background:#1d0008"><img src="../assets/cyber.jpg" alt=""></div>' : `<div class="thumb ${t} tx"><i data-lucide="${g}" class="glyph"></i></div>`}
+        <div class="card-body">
+          <span class="cat">${path}</span><span class="field">${field}</span>
+          <h3>${title}</h3>
+          <div class="card-foot"><span class="link-arrow">View Course <i data-lucide="arrow-right"></i></span><span class="price">Free</span></div>
+        </div>
+      </a>`).join('');
+    lucide.createIcons();
+  }
+  ['q','fField','fPath','fInst'].forEach(id => document.getElementById(id).addEventListener('input', render));
+  render();
+</script>
+</body>
+</html>

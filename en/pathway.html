@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emerging Government Leaders Program | JAGA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/jaga.css">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<!--PAGE_STYLE:pathway--><style>
+  /* 1. hero: field, title, description, price + enrol, facts */
+  .p-hero { background: linear-gradient(120deg, var(--maroon-900), var(--maroon) 70%); color: #fff; padding: 64px 0; position: relative; overflow: hidden; }
+  .p-hero::after { content:""; position:absolute; inset-inline-start: 4%; top: 30px; width: 420px; height: 380px; background: url(../assets/jaga-mark-white.png) center/contain no-repeat; opacity: .08; }
+  .p-hero .container { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: center; position: relative; z-index: 1; }
+  .p-hero .field { font-family: var(--font-head); font-size: 15px; color: #f1cfd7; }
+  .p-hero h1 { color: #fff; font-size: 42px; margin: 8px 0 16px; }
+  .p-hero p { color: #f1cfd7; font-size: 16.5px; }
+  .buy { background: #fff; color: var(--ink); border-radius: 22px; padding: 28px; box-shadow: var(--shadow-lg); }
+  .buy .price { font-size: 32px; }
+  .buy .btn { width: 100%; margin-top: 16px; }
+  .facts { list-style: none; margin-top: 20px; }
+  .facts li { display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
+  .facts li span { display: flex; gap: 8px; align-items: center; color: var(--ink-2); }
+  .facts [data-lucide] { width: 18px; height: 18px; color: var(--maroon); }
+
+  /* 2. overview + outcomes / field / requirements */
+  .overview p { color: var(--ink-2); margin-bottom: 14px; max-width: 900px; }
+  .cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+  .col { background: var(--cream); border-radius: var(--radius); padding: 28px; }
+  .col h4 { font-size: 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .col h4 [data-lucide] { color: var(--maroon); }
+  .col ul { list-style: none; display: grid; gap: 10px; }
+  .col li { display: flex; gap: 10px; font-size: 14.5px; color: var(--ink-2); }
+  .col li [data-lucide] { width: 18px; height: 18px; color: var(--maroon); margin-top: 4px; }
+
+  /* 3. courses in pathway (accordion like HTUx Course 1..6) */
+  .acc { display: grid; gap: 12px; }
+  .acc-item { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  .acc-item > button { width: 100%; display: flex; align-items: center; gap: 18px; padding: 18px 22px; text-align: start; }
+  .acc-item .n { width: 52px; height: 52px; border-radius: 14px; background: var(--rose); color: var(--maroon); display: grid; place-items: center; font-family: var(--font-head); font-weight: 800; font-size: 20px; line-height: 1; text-align: center; flex-shrink: 0; }
+  .acc-item h3 { font-size: 17px; flex: 1; }
+  .acc-item .chev { color: var(--ink-3); transition: .2s; }
+  .acc-item.open .chev { transform: rotate(180deg); color: var(--maroon); }
+  .acc-item.open { border-color: var(--rose-200); }
+  .acc-item.open .n { background: var(--maroon); color: #fff; }
+  .acc-body { display: none; padding: 0 92px 22px 22px; color: var(--ink-2); font-size: 14.5px; }
+  .acc-item.open .acc-body { display: block; }
+
+  /* 4. team */
+  .team { display: grid; grid-template-columns: repeat(3, minmax(0, 340px)); gap: 28px; justify-content: center; }
+  .member { text-align: center; padding: 28px; border-radius: var(--radius); border: 1px solid var(--line); background: #fff; }
+  .member .pic { width: 104px; height: 104px; margin: 0 auto 16px; border-radius: 50%; background: linear-gradient(135deg, var(--rose), var(--rose-200)); display: grid; place-items: center; color: var(--maroon); font-family: var(--font-head); font-size: 30px; font-weight: 800; }
+  .member h4 { font-size: 16.5px; }
+  .member p { font-size: 13.5px; color: var(--ink-3); }
+
+  @media (max-width: 1100px) { .p-hero .container, .cols3 { grid-template-columns: 1fr; } }
+  @media (max-width: 680px) {
+    .p-hero h1 { font-size: 30px; }
+    .team { grid-template-columns: 1fr; }
+    .acc-body { padding: 0 22px 22px; }
+  }
+</style><!--/PAGE_STYLE-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="../assets/jaga-mark.png" alt="">
+      <div class="name">Jordan Academy for<br>Government Administration</div>
+    </a>
+    <nav class="nav">
+      <a href="pathway.html" class="active">Pathways</a>
+      <a href="courses.html">Courses</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+      <a href="../pathway.html" class="icon-btn lang">ع</a>
+      <a href="#" class="btn btn-outline btn-sm">Sign In</a>
+      <a href="#" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<!-- 1. HERO -->
+<section class="p-hero">
+  <div class="container">
+    <div>
+      <span class="field">Government Leadership Center Programs</span>
+      <h1>Emerging Government Leaders Program</h1>
+      <p>A six-course pathway that prepares current and aspiring public sector leaders. It starts with the foundations of government leadership, moves through strategic thinking and change management, and ends with an applied project that tackles a real challenge in the participant's own institution.</p>
+    </div>
+    <div class="buy">
+      <div class="price">Free <small>for government employees</small></div>
+      <a href="course.html" class="btn btn-primary btn-lg">Enroll Now</a>
+      <ul class="facts">
+        <li><span><i data-lucide="layers"></i> Courses in this pathway</span><b>6 Courses</b></li>
+        <li><span><i data-lucide="infinity"></i> Unlimited Access</span><b>Yes</b></li>
+        <li><span><i data-lucide="award"></i> Certificate of Completion</span><b>Yes</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 2. OVERVIEW -->
+<section class="overview">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:24px"><h2>Pathway Overview</h2></div>
+    <p>The Emerging Government Leaders Program is made up of six connected courses, designed to give participants the leadership knowledge and skills needed for modern government work.</p>
+    <p>Throughout the pathway, participants gain practical tools for leading teams, improving institutional performance and using data in decision making, with plenty of opportunities to apply what they learn to real cases from their workplace.</p>
+    <p>On completion, participants will be able to lead change initiatives in their institution and build strategic plans tied to measurable performance indicators.</p>
+
+    <div class="cols3">
+      <div class="col">
+        <h4><i data-lucide="target"></i> Learning Outcomes</h4>
+        <ul>
+          <li><i data-lucide="check-circle-2"></i> Apply modern leadership models in government work.</li>
+          <li><i data-lucide="check-circle-2"></i> Build strategic plans with measurable KPIs.</li>
+          <li><i data-lucide="check-circle-2"></i> Lead change and institutional transformation initiatives.</li>
+          <li><i data-lucide="check-circle-2"></i> Make data-driven decisions.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4><i data-lucide="briefcase"></i> Field of Practice</h4>
+        <ul>
+          <li><i data-lucide="check-circle-2"></i> Directorate Managers</li>
+          <li><i data-lucide="check-circle-2"></i> Heads of Departments</li>
+          <li><i data-lucide="check-circle-2"></i> Emerging Leaders</li>
+          <li><i data-lucide="check-circle-2"></i> Strategic Planning Coordinators</li>
+          <li><i data-lucide="check-circle-2"></i> Performance Development Unit Staff</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4><i data-lucide="monitor-check"></i> Technical Requirements</h4>
+        <ul>
+          <li><i data-lucide="check-circle-2"></i> Good study environment</li>
+          <li><i data-lucide="check-circle-2"></i> Good internet connection</li>
+          <li><i data-lucide="check-circle-2"></i> A computer or tablet</li>
+          <li><i data-lucide="check-circle-2"></i> A modern browser (Chrome, Firefox, Safari)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. COURSES IN THIS PATHWAY -->
+<section class="bg-cream">
+  <div class="container">
+    <div class="section-head"><h2>Courses in This Pathway</h2></div>
+    <div class="acc" id="acc">
+      <div class="acc-item open"><button><span class="n">C1</span><h3>Foundations of Public Sector Leadership</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">Management vs. leadership, leadership styles, and the leader's role in a government institution.</div></div>
+      <div class="acc-item"><button><span class="n">C2</span><h3>Strategic Leadership &amp; Planning</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">Strategic analysis tools, the balanced scorecard, and writing a strategic plan.</div></div>
+      <div class="acc-item"><button><span class="n">C3</span><h3>Change Management &amp; Institutional Transformation</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">Change management models, handling resistance, and leading transformation initiatives.</div></div>
+      <div class="acc-item"><button><span class="n">C4</span><h3>Data-Driven Decision Making</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">Reading and analyzing data, KPI dashboards, and using evidence in decision making.</div></div>
+      <div class="acc-item"><button><span class="n">C5</span><h3>Team Building &amp; Performance Management</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">Building high-performing teams, motivation, and effective feedback.</div></div>
+      <div class="acc-item"><button><span class="n">C6</span><h3>Final Applied Project</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">A project tackling a real challenge in the participant's institution, presented to an evaluation panel.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PATHWAY TEAM -->
+<section>
+  <div class="container">
+    <div class="section-head"><h2>Pathway Team</h2></div>
+    <div class="team">
+      <div class="trainer"><img src="../assets/trainers/raneem-qadoura.jpg" alt="Dr. Raneem Qadoura"><div class="info"><span class="tag">Pathway Lead</span><h4>Dr. Raneem Qadoura</h4><p>Assistant Professor at Al Hussein Technical University</p></div><span class="bar"></span></div>
+      <div class="trainer"><img src="../assets/trainers/shatha-hawasheh.jpg" alt="Eng. Shatha Hawasheh"><div class="info"><span class="tag">Trainer</span><h4>Eng. Shatha Hawasheh</h4><p>Pathway Trainer</p></div><span class="bar"></span></div>
+      <div class="trainer"><img src="../assets/trainers/hana-alrasheed.jpg" alt="Hana Al Rasheed"><div class="info"><span class="tag">Instructional Design</span><h4>Hana Al Rasheed</h4><p>Instructional Designer</p></div><span class="bar"></span></div>
+    </div>
+  </div>
+</section>
+
+<!--FOOTER--><footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><img src="../assets/jaga-logo-white.png" alt="Jordan Academy for Government Administration" style="height:92px;margin-bottom:16px"><ul><li><a href="#">About Us</a></li><li><a href="pathway.html">Pathways</a></li><li><a href="courses.html">Courses</a></li></ul></div>
+      <div><h4>Stay Updated</h4><ul><li><a href="#">News</a></li><li><a href="#">Help Center</a></li><li><a href="#">Contact Us</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Terms of Service</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Data Retention Summary</a></li></ul></div>
+      <div><h4>Social Media</h4><div class="socials"><a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a></div></div>
+    </div>
+    <div class="footer-bottom"><span>Copyright © 2026 JAGA. All Rights Reserved.</span></div>
+  </div>
+</footer><!--/FOOTER-->
+
+<nav class="mock-nav"><a href="index.html">Home</a><a class="on" href="pathway.html">Pathway</a><a href="courses.html">Courses</a><a href="course.html">Inside Course (Moodle)</a></nav>
+
+<script>
+  lucide.createIcons();
+  document.querySelectorAll('.acc-item > button').forEach(b => b.onclick = () => b.parentElement.classList.toggle('open'));
+</script>
+</body>
+</html>

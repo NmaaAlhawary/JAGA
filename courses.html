@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المساقات | JAGA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/jaga.css">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  /* 1. title + intro */
+  .c-hero { background: var(--cream); padding: 64px 0; position: relative; overflow: hidden; }
+  .c-hero::after { content:""; position:absolute; inset-inline-start: 3%; top: 10px; width: 320px; height: 280px; background: url(assets/jaga-mark.png) center/contain no-repeat; opacity: .07; }
+  .c-hero h1 { font-size: 40px; }
+  .c-hero p { color: var(--ink-2); max-width: 640px; margin-top: 8px; font-size: 17px; }
+
+  /* 2. count + search + filters */
+  .bar { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 32px; }
+  .bar .count { font-weight: 700; color: var(--ink-2); margin-inline-end: auto; }
+  .bar .count b { color: var(--maroon); font-family: var(--font-head); }
+  .search { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; min-width: 280px; color: var(--ink-3); }
+  .search input { border: 0; outline: 0; font: inherit; flex: 1; background: none; }
+  .select { appearance: none; -webkit-appearance: none; border: 1px solid var(--line); border-radius: 999px; padding: 11px 20px; padding-inline-end: 46px; font: inherit; font-size: 14.5px; color: var(--ink-2); min-width: 190px; cursor: pointer;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat left 20px center; transition: .2s; }
+  [dir="ltr"] .select { background-position: right 20px center; }
+  .select:hover, .select:focus { border-color: var(--rose-200); outline: 0; box-shadow: 0 0 0 4px var(--rose); }
+  .search:focus-within { border-color: var(--rose-200); box-shadow: 0 0 0 4px var(--rose); }
+  .search { padding-block: 11px; }
+
+  /* 3. grid */
+  .card-body .field { font-size: 12.5px; color: var(--ink-3); }
+  .card-foot { border-top: 1px dashed var(--line); }
+
+  @media (max-width: 680px) {
+    .c-hero h1 { font-size: 30px; }
+    .search, .select { min-width: 0; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="assets/jaga-mark.png" alt="">
+      <div class="name">الأكاديمية الأردنية<br>للإدارة الحكومية</div>
+    </a>
+    <nav class="nav">
+      <a href="pathway.html">المسارات</a>
+      <a href="courses.html" class="active">المساقات</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="بحث"><i data-lucide="search"></i></button>
+      <a href="en/courses.html" class="icon-btn lang">EN</a>
+      <a href="#" class="btn btn-outline btn-sm">تسجيل الدخول</a>
+      <a href="#" class="btn btn-primary btn-sm">ابدأ الآن</a>
+    </div>
+  </div>
+</header>
+
+<!-- 1. TITLE -->
+<section class="c-hero pattern">
+  <div class="container">
+    <h1>المساقات</h1>
+    <p>المساقات وحدات تدريبية قصيرة ومستقلة، تُجمع معاً لتكوّن مساراً تدريبياً أشمل وأكثر تكاملاً.</p>
+  </div>
+</section>
+
+<!-- 2 + 3. FILTERS & GRID -->
+<section style="padding-top:48px">
+  <div class="container">
+    <div class="bar">
+      <div class="count"><b id="count">0</b> مساقاً متاحاً</div>
+      <label class="search"><i data-lucide="search"></i><input id="q" placeholder="ابحث في المساقات"></label>
+      <select class="select" id="fField"><option value="">مجال التدريب</option></select>
+      <select class="select" id="fPath"><option value="">المسار</option></select>
+      <select class="select" id="fInst"><option value="">المدربون</option></select>
+    </div>
+    <div class="grid g4" id="grid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><img src="assets/jaga-logo-white.png" alt="الأكاديمية الأردنية للإدارة الحكومية" style="height:92px;margin-bottom:16px"><ul><li><a href="#">من نحن</a></li><li><a href="pathway.html">المسارات</a></li><li><a href="courses.html">المساقات</a></li></ul></div>
+      <div><h4>ابقَ على اطلاع</h4><ul><li><a href="#">الأخبار</a></li><li><a href="#">مركز المساعدة</a></li><li><a href="#">تواصل معنا</a></li></ul></div>
+      <div><h4>قانوني</h4><ul><li><a href="#">شروط الخدمة</a></li><li><a href="#">سياسة الخصوصية</a></li><li><a href="#">ملخص الاحتفاظ بالبيانات</a></li></ul></div>
+      <div><h4>وسائل التواصل الاجتماعي</h4><div class="socials"><a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a><a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a></div></div>
+    </div>
+    <div class="footer-bottom"><span>Copyright © 2026 JAGA. جميع الحقوق محفوظة.</span></div>
+  </div>
+</footer>
+
+<nav class="mock-nav"><a href="index.html">الرئيسية</a><a href="pathway.html">المسار</a><a class="on" href="courses.html">المساقات</a><a href="course.html">داخل المساق (Moodle)</a></nav>
+
+<script>
+  // [pathway, field, course, instructor, glyph, thumb]
+  const L='برامج مركز القيادات الحكومية', T='برامج التدريب', A='البرامج التوعوية';
+  const courses = [
+    ['القيادات الحكومية الواعدة',L,'أسس القيادة في القطاع العام','د. محمد العلي','landmark','t1'],
+    ['القيادات الحكومية الواعدة',L,'القيادة الاستراتيجية والتخطيط','د. محمد العلي','compass','t1'],
+    ['القيادات الحكومية الواعدة',L,'إدارة التغيير والتحول المؤسسي','د. سامر الخطيب','refresh-ccw','t3'],
+    ['القيادات الحكومية الواعدة',L,'اتخاذ القرار المبني على البيانات','م. ريم الحسن','bar-chart-3','t2'],
+    ['القيادات الحكومية الواعدة',L,'بناء الفرق وإدارة الأداء','أ. لينا النعيمي','users-round','t4'],
+    ['القيادات الحكومية الواعدة',L,'المشروع التطبيقي الختامي','د. محمد العلي','presentation','t1'],
+    ['التحول الرقمي في القطاع العام',T,'أساسيات التحول الرقمي','م. ريم الحسن','cpu','t2'],
+    ['التحول الرقمي في القطاع العام',T,'الذكاء الاصطناعي في الخدمات الحكومية','م. ريم الحسن','bot','t2'],
+    ['التميّز المؤسسي وإدارة الجودة',T,'تحسين تجربة متلقي الخدمة','أ. لينا النعيمي','sparkles','t5'],
+    ['التميّز المؤسسي وإدارة الجودة',T,'نماذج التميّز المؤسسي','أ. لينا النعيمي','gem','t5'],
+    ['إدارة المشاريع الحكومية',T,'أساسيات إدارة المشاريع','د. سامر الخطيب','kanban','t6'],
+    ['الأمن السيبراني – توعوي',A,'حماية البيانات والتصيّد الاحتيالي','م. ريم الحسن','img','img'],
+  ];
+  const fill = (id, vals) => document.getElementById(id).insertAdjacentHTML('beforeend', [...new Set(vals)].map(v => `<option>${v}</option>`).join(''));
+  fill('fField', courses.map(c => c[1])); fill('fPath', courses.map(c => c[0])); fill('fInst', courses.map(c => c[3]));
+
+  function render() {
+    const q = document.getElementById('q').value.trim(), f = fField.value, p = fPath.value, i = fInst.value;
+    const list = courses.filter(c => (!q || c[2].includes(q)) && (!f || c[1] === f) && (!p || c[0] === p) && (!i || c[3] === i));
+    document.getElementById('count').textContent = list.length;
+    document.getElementById('grid').innerHTML = list.map(([path, field, title, inst, g, t]) => `
+      <a class="card" href="course.html">
+        ${t === 'img' ? '<div class="thumb" style="background:#1d0008"><img src="assets/cyber.jpg" alt=""></div>' : `<div class="thumb ${t} tx"><i data-lucide="${g}" class="glyph"></i></div>`}
+        <div class="card-body">
+          <span class="cat">${path}</span><span class="field">${field}</span>
+          <h3>${title}</h3>
+          <div class="card-foot"><span class="link-arrow">عرض المساق <i data-lucide="arrow-left"></i></span><span class="price">مجاني</span></div>
+        </div>
+      </a>`).join('');
+    lucide.createIcons();
+  }
+  ['q','fField','fPath','fInst'].forEach(id => document.getElementById(id).addEventListener('input', render));
+  render();
+</script>
+</body>
+</html>
