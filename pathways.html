@@ -25,32 +25,32 @@
   .pw-stats span { font-size: 13.5px; color: var(--ink-2); }
 
   /* 2. pathway tiles */
-  .pw-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
-  .pw-tile { position: relative; min-height: 380px; border-radius: 28px; overflow: hidden; color: #fff; padding: 34px 36px 30px; display: flex; flex-direction: column; gap: 14px; transition: .35s ease; box-shadow: 0 16px 40px rgba(61,0,16,.16); isolation: isolate; }
+  .pw-tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 500px)); gap: 24px; justify-content: center; }
+  .pw-tile { position: relative; min-height: 0; border-radius: 24px; overflow: hidden; color: #fff; padding: 24px 26px 22px; display: flex; flex-direction: column; gap: 10px; transition: .35s ease; box-shadow: 0 16px 40px rgba(61,0,16,.16); isolation: isolate; }
   .pw-tile:hover { transform: translateY(-8px); box-shadow: 0 34px 70px rgba(61,0,16,.28); }
-  .pw-tile::before { content: ""; position: absolute; z-index: -1; inset-inline-end: -60px; bottom: -70px; width: 340px; height: 300px; background: url(assets/jaga-mark-white.png) center/contain no-repeat; opacity: .12; transition: transform .8s ease; }
+  .pw-tile::before { content: ""; position: absolute; z-index: -1; inset-inline-end: -50px; bottom: -60px; width: 240px; height: 210px; background: url(assets/jaga-mark-white.png) center/contain no-repeat; opacity: .12; transition: transform .8s ease; }
   .pw-tile:hover::before { transform: rotate(30deg) scale(1.06); }
   .pw-tile::after { content: ""; position: absolute; z-index: -1; inset-inline-start: -120px; top: -140px; width: 360px; height: 360px; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 0 0 50px rgba(255,255,255,.03), 0 0 0 100px rgba(255,255,255,.02); }
   .pw-tile .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-  .pw-tile .ico { width: 64px; height: 64px; border-radius: 20px; display: grid; place-items: center; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); backdrop-filter: blur(6px); }
-  .pw-tile .ico [data-lucide] { width: 32px; height: 32px; stroke-width: 1.5; }
-  .pw-tile .field { font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 999px; background: rgba(0,0,0,.16); border: 1px solid rgba(255,255,255,.18); }
-  .pw-tile h3 { color: #fff; font-size: 30px; line-height: 1.35; margin-top: 8px; }
-  .pw-tile p { color: rgba(255,255,255,.86); font-size: 15.5px; line-height: 1.8; max-width: 92%; }
+  .pw-tile .ico { width: 48px; height: 48px; border-radius: 15px; display: grid; place-items: center; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); backdrop-filter: blur(6px); }
+  .pw-tile .ico [data-lucide] { width: 24px; height: 24px; stroke-width: 1.5; }
+  .pw-tile .field { font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: rgba(0,0,0,.16); border: 1px solid rgba(255,255,255,.18); }
+  .pw-tile h3 { color: #fff; font-size: 21px; line-height: 1.4; margin-top: 4px; }
+  .pw-tile p { color: rgba(255,255,255,.86); font-size: 13.5px; line-height: 1.75; }
   .pw-tile .meta { display: flex; gap: 8px; flex-wrap: wrap; }
-  .pw-tile .meta span { display: inline-flex; align-items: center; gap: 6px; color: #fff; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 99px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.2); }
-  .pw-tile .meta [data-lucide] { width: 15px; height: 15px; }
-  .pw-tile .foot { margin-top: auto; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.18); display: flex; justify-content: space-between; align-items: center; }
-  .pw-tile .see { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--maroon); font-weight: 800; font-size: 15px; padding: 12px 22px; border-radius: 999px; box-shadow: 0 10px 22px rgba(0,0,0,.18); transition: .25s; }
+  .pw-tile .meta span { display: inline-flex; align-items: center; gap: 6px; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.2); }
+  .pw-tile .meta [data-lucide] { width: 13px; height: 13px; }
+  .pw-tile .foot { margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.18); display: flex; justify-content: space-between; align-items: center; }
+  .pw-tile .see { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--maroon); font-weight: 800; font-size: 13.5px; padding: 9px 18px; border-radius: 999px; box-shadow: 0 10px 22px rgba(0,0,0,.18); transition: .25s; }
   .pw-tile.t5 .see { color: #6e4a14; }
-  .pw-tile .see [data-lucide] { width: 18px; height: 18px; transition: .25s; }
+  .pw-tile .see [data-lucide] { width: 16px; height: 16px; transition: .25s; }
   .pw-tile:hover .see [data-lucide] { transform: translateX(-5px); }
   [dir="ltr"] .pw-tile:hover .see [data-lucide] { transform: translateX(5px); }
   .pw-tile .price { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-  .pw-tile .price .free { font-family: var(--font-head); font-weight: 800; font-size: 18px; color: var(--green); background: #e1f1e8; padding: 6px 20px; border-radius: 999px; box-shadow: 0 8px 18px rgba(0,0,0,.15); }
-  .pw-tile .price small { font-family: var(--font-body); font-size: 12px; font-weight: 600; color: rgba(255,255,255,.8); }
+  .pw-tile .price .free { font-family: var(--font-head); font-weight: 800; font-size: 15px; color: var(--green); background: #e1f1e8; padding: 4px 16px; border-radius: 999px; box-shadow: 0 8px 18px rgba(0,0,0,.15); }
+  .pw-tile .price small { font-family: var(--font-body); font-size: 11px; font-weight: 600; color: rgba(255,255,255,.8); }
 
-  @media (max-width: 1100px) { .pw-hero .container { grid-template-columns: 1fr; } .pw-tiles { grid-template-columns: 1fr; } }
+  @media (max-width: 1100px) { .pw-hero .container { grid-template-columns: 1fr; } .pw-tiles { grid-template-columns: minmax(0, 560px); } }
   @media (max-width: 680px) { .pw-hero h1 { font-size: 32px; } .pw-tile { padding: 26px 22px; min-height: 0; } .pw-tile h3 { font-size: 23px; } .pw-tile p { max-width: 100%; } .pw-stats b { font-size: 24px; } }
 </style>
 </head>
