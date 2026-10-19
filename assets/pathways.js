@@ -323,6 +323,74 @@ const PATHWAYS = [
         "Produce reproducible laboratory evidence for assigned specialist units."
       ]
     },
+    "skills": {
+      "ar": [
+        "تقييم حالات استخدام الذكاء الاصطناعي وتحديد أولوياتها ووصف بنية الحلول والبنية التحتية اللازمة لها.",
+        "تطبيق متطلبات حوكمة البيانات وجودتها وضوابط الأمن والنشر على مشاريع الذكاء الاصطناعي.",
+        "شرح تكييف النماذج وهندسة الذكاء الاصطناعي التوليدي والوكيلي وتطبيقها تحت الإشراف.",
+        "إعداد واجهات المراقبة وأدلة التشغيل وسجلات الحوادث، وتوثيق قرارات الإيقاف والاستبدال.",
+        "إنتاج أدلة تقنية قابلة للتكرار، وتوثيق القيود، وتصعيد المخاطر عبر القنوات المعتمدة."
+      ],
+      "en": [
+        "Assess and prioritise AI use cases and describe the solution architecture and infrastructure they need.",
+        "Apply data-governance, quality, security and deployment controls to AI projects.",
+        "Explain and apply model adaptation and generative and agentic AI engineering under supervision.",
+        "Configure monitoring, maintain runbooks and incident records, and document retirement and replacement decisions.",
+        "Produce reproducible technical evidence, document limitations and escalate risks through approved channels."
+      ]
+    },
+    "knowledge": {
+      "ar": [
+        "أطر حوكمة الذكاء الاصطناعي ومعاييره (ISO/IEC 22989، ISO/IEC 23894، NIST AI RMF).",
+        "أنماط بنية الحلول، ومكوّنات البنية التحتية، وطوبولوجيا النشر السحابي والمحلي والهجين.",
+        "الذكاء الاصطناعي التوليدي وأنظمة الأوامر وتكييف النماذج والأنظمة الوكيلية.",
+        "التحقق من الحلول وإطلاقها، والمراقبة والصيانة، وإدارة دورة حياة أنظمة الذكاء الاصطناعي.",
+        "تقييم المخاطر الأخلاقية، وتوثيق الأدلة، ومسارات التصعيد والمراجعة التقنية."
+      ],
+      "en": [
+        "AI governance frameworks and standards (ISO/IEC 22989, ISO/IEC 23894, NIST AI RMF).",
+        "Solution architecture patterns, infrastructure components and cloud, on-premises and hybrid deployment.",
+        "Generative AI, prompt systems, model adaptation and agentic systems.",
+        "Solution validation and release, monitoring and maintenance, and AI lifecycle management.",
+        "Ethical risk assessment, evidence documentation, escalation routes and technical review."
+      ]
+    },
+    "attitude": {
+      "ar": [
+        "الدقة والانضباط في إنتاج الأدلة التقنية القابلة للتكرار.",
+        "الشفافية في توثيق القيود والاعتراف بها.",
+        "المسؤولية في تصعيد المخاطر عبر القنوات المعتمدة.",
+        "تقبّل المراجعة التقنية والتغذية الراجعة من الخبراء.",
+        "الالتزام بالمعايير المهنية والمساهمة في تحسينها."
+      ],
+      "en": [
+        "Rigour and discipline in producing reproducible technical evidence.",
+        "Transparency in documenting and acknowledging limitations.",
+        "Responsibility in escalating risks through approved channels.",
+        "Openness to technical review and expert feedback.",
+        "Commitment to professional standards and to improving them."
+      ]
+    },
+    "audience": {
+      "ar": "الممارسون التقنيون في القطاع العام العاملون في الذكاء الاصطناعي والتقنيات الرقمية: مهندسو الذكاء الاصطناعي والبيانات، ومهندسو الحلول والبنية التحتية، والمختصون في أمن المعلومات والتشغيل، ممن يعملون تحت إشراف تقني على وحدات تخصصية مسندة.",
+      "en": "Public-sector technical practitioners working in AI and digital technology: AI and data engineers, solution and infrastructure architects, and security and operations specialists working under technical supervision on assigned specialist units."
+    },
+    "fields": {
+      "ar": [
+        "حوكمة الذكاء الاصطناعي والضمان التقني",
+        "هندسة الذكاء الاصطناعي التوليدي والوكيلي",
+        "البنية التحتية والتكامل والأمن",
+        "تصميم الحلول والتحقق منها وإطلاقها",
+        "التشغيل والمراقبة وإدارة دورة الحياة"
+      ],
+      "en": [
+        "AI governance and technical assurance",
+        "Generative and agentic AI engineering",
+        "Infrastructure, integration and security",
+        "Solution design, validation and release",
+        "Operations, monitoring and lifecycle management"
+      ]
+    },
     "modules": [
       {
         "icon": "shield-check",
