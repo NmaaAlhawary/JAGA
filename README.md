@@ -7,6 +7,7 @@ Design mockups for the JAGA (Jordan Academy for Government Administration) e-tra
 | Page | Arabic (RTL) | English (LTR) |
 |---|---|---|
 | Home | `index.html` | `en/index.html` |
+| Pathways list | `pathways.html` | `en/pathways.html` |
 | Pathway | `pathway.html` | `en/pathway.html` |
 | Courses | `courses.html` | `en/courses.html` |
 | Inside a Moodle course | `course.html` | `en/course.html` |

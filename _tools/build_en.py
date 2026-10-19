@@ -12,7 +12,7 @@ FOOTER = '''<!--FOOTER--><footer class="site-footer">
     <div class="footer-bottom"><span>Copyright © 2026 JAGA. All Rights Reserved.</span></div>
   </div>
 </footer><!--/FOOTER-->'''
-for p in ['index', 'pathway', 'courses', 'course']:
+for p in ['index', 'pathway', 'pathways', 'courses', 'course']:
     ar = open(os.path.join(root, p + '.html'), encoding='utf-8').read()
     style = ar[ar.index('<style>'):ar.index('</style>') + 8].replace('url(assets/', 'url(../assets/')
     fp = os.path.join(root, 'en', p + '.html')
