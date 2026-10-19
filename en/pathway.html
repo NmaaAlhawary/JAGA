@@ -49,7 +49,7 @@
   .acc-item.open .acc-body { display: block; }
 
   /* 4. team */
-  .team { display: grid; grid-template-columns: repeat(3, minmax(0, 340px)); gap: 28px; justify-content: center; }
+  .team { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
   .member { text-align: center; padding: 28px; border-radius: var(--radius); border: 1px solid var(--line); background: #fff; }
   .member .pic { width: 104px; height: 104px; margin: 0 auto 16px; border-radius: 50%; background: linear-gradient(135deg, var(--rose), var(--rose-200)); display: grid; place-items: center; color: var(--maroon); font-family: var(--font-head); font-size: 30px; font-weight: 800; }
   .member h4 { font-size: 16.5px; }
@@ -91,7 +91,7 @@
   .blocks li .lca span { font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 99px; background: #fff; color: var(--ink-3); }
   @media (max-width: 860px) { .outcomes, .aud { grid-template-columns: 1fr; } .blocks li .lca { display: none; } }
 
-  @media (max-width: 1100px) { .p-hero .container, .cols3 { grid-template-columns: 1fr; } }
+  @media (max-width: 1100px) { .p-hero .container, .cols3 { grid-template-columns: 1fr; } .team { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 680px) {
     .p-hero h1 { font-size: 30px; }
     .team { grid-template-columns: 1fr; }
@@ -182,9 +182,10 @@
   <div class="container">
     <div class="section-head"><h2>Pathway Team</h2></div>
     <div class="team">
-      <div class="trainer"><img src="../assets/trainers/raneem-qadoura.jpg" alt="Dr. Raneem Qadoura"><div class="info"><span class="tag">Pathway Lead</span><h4>Dr. Raneem Qadoura</h4><p>Assistant Professor at Al Hussein Technical University</p></div><span class="bar"></span></div>
-      <div class="trainer"><img src="../assets/trainers/shatha-hawasheh.jpg" alt="Eng. Shatha Hawasheh"><div class="info"><span class="tag">Trainer</span><h4>Eng. Shatha Hawasheh</h4><p>Pathway Trainer</p></div><span class="bar"></span></div>
-      <div class="trainer"><img src="../assets/trainers/hana-alrasheed.jpg" alt="Hana Al Rasheed"><div class="info"><span class="tag">Instructional Design</span><h4>Hana Al Rasheed</h4><p>Instructional Designer</p></div><span class="bar"></span></div>
+      <div class="trainer"><img src="../assets/trainers/tarek-tutunji.png" alt="Prof. Tarek Tutunji"><div class="info"><span class="tag">Engineering</span><h4>Prof. Tarek Tutunji</h4><p>Dean, School of Engineering Technology at HTU</p></div><span class="bar"></span></div>
+      <div class="trainer"><img src="../assets/trainers/sameer-arabasi.png" alt="Dr. Sameer Arabasi"><div class="info"><span class="tag">Research</span><h4>Dr. Sameer Arabasi</h4><p>Ph.D. Associate Professor at HTU</p></div><span class="bar"></span></div>
+      <div class="trainer"><img src="../assets/trainers/moussa-habib.png" alt="Prof. Moussa Habib"><div class="info"><span class="tag">Electrical Engineering</span><h4>Prof. Moussa Habib</h4><p>Assistant to the President for Academic Affairs, Associate Professor of Electrical Engineering at HTU</p></div><span class="bar"></span></div>
+      <div class="trainer"><img src="../assets/trainers/firas-kafiah.png" alt="Dr. Firas Kafiah"><div class="info"><span class="tag">Manufacturing</span><h4>Dr. Firas Kafiah</h4><p>PhD in Mechanical Engineering (Applied materials &amp; manufacturing)</p></div><span class="bar"></span></div>
     </div>
   </div>
 </section>
