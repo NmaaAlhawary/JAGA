@@ -8,12 +8,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/jaga.css">
 <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="assets/pathways.js"></script>
 <style>
   /* 1. hero: field, title, description, price + enrol, facts */
   .p-hero { background: linear-gradient(120deg, var(--maroon-900), var(--maroon) 70%); color: #fff; padding: 64px 0; position: relative; overflow: hidden; }
   .p-hero::after { content:""; position:absolute; inset-inline-start: 4%; top: 30px; width: 420px; height: 380px; background: url(assets/jaga-mark-white.png) center/contain no-repeat; opacity: .08; }
   .p-hero .container { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: center; position: relative; z-index: 1; }
-  .p-hero .field { font-family: var(--font-head); font-size: 15px; color: #f1cfd7; }
+  .p-hero .field { display: block; font-family: var(--font-head); font-size: 15px; color: #f1cfd7; }
   .p-hero h1 { color: #fff; font-size: 42px; margin: 8px 0 16px; }
   .p-hero p { color: #f1cfd7; font-size: 16.5px; }
   .buy { background: #fff; color: var(--ink); border-radius: 22px; padding: 28px; box-shadow: var(--shadow-lg); }
@@ -54,6 +55,42 @@
   .member h4 { font-size: 16.5px; }
   .member p { font-size: 13.5px; color: var(--ink-3); }
 
+
+  /* pathway switcher */
+  .p-switch { display: inline-flex; gap: 6px; padding: 6px; border-radius: 999px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16); margin-bottom: 26px; flex-wrap: wrap; }
+  .p-switch a { padding: 8px 18px; border-radius: 999px; font-size: 14px; font-weight: 700; color: #f1cfd7; }
+  .p-switch a.on { background: #fff; color: var(--maroon); }
+  .p-switch a:not(.on):hover { color: #fff; }
+  .p-hero .stats-row { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 22px; font-size: 14.5px; color: #f1cfd7; }
+  .p-hero .stats-row span { display: inline-flex; gap: 8px; align-items: center; }
+  .p-hero .stats-row [data-lucide] { width: 18px; height: 18px; color: #fff; }
+
+  /* outcomes */
+  .outcomes { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 8px; counter-reset: o; }
+  .outcomes li { counter-increment: o; display: flex; gap: 14px; align-items: start; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; font-size: 15px; color: var(--ink-2); }
+  .outcomes li::before { content: counter(o); flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px; background: var(--maroon); color: #fff; display: grid; place-items: center; font-family: var(--font-head); font-weight: 800; font-size: 15px; }
+
+  /* audience */
+  .aud { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; }
+  .aud .box { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+  .aud h4 { font-size: 18px; margin-bottom: 14px; display: flex; gap: 10px; align-items: center; }
+  .aud h4 [data-lucide] { color: var(--maroon); }
+  .aud p { color: var(--ink-2); font-size: 15px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chips span { padding: 9px 16px; border-radius: 12px; background: var(--rose); color: var(--maroon); font-weight: 700; font-size: 14px; }
+
+  /* study plan */
+  .plan-note { color: var(--ink-2); margin: -28px 0 24px; }
+  .acc-item .meta { font-size: 13px; color: var(--ink-3); font-weight: 600; }
+  .acc-item .n { font-size: 15px; }
+  .acc-body { padding: 0 22px 22px; }
+  .blocks { list-style: none; display: grid; gap: 10px; counter-reset: b; }
+  .blocks li { counter-increment: b; display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: 12px; background: var(--cream); font-size: 15px; color: var(--ink); }
+  .blocks li::before { content: counter(b); width: 28px; height: 28px; border-radius: 50%; background: #fff; border: 1.5px solid var(--rose-200); color: var(--maroon); display: grid; place-items: center; font-weight: 800; font-size: 13px; flex-shrink: 0; }
+  .blocks li .lca { margin-inline-start: auto; display: flex; gap: 6px; }
+  .blocks li .lca span { font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 99px; background: #fff; color: var(--ink-3); }
+  @media (max-width: 860px) { .outcomes, .aud { grid-template-columns: 1fr; } .blocks li .lca { display: none; } }
+
   @media (max-width: 1100px) { .p-hero .container, .cols3 { grid-template-columns: 1fr; } }
   @media (max-width: 680px) {
     .p-hero h1 { font-size: 30px; }
@@ -87,79 +124,60 @@
 <section class="p-hero">
   <div class="container">
     <div>
-      <span class="field">برامج مركز القيادات الحكومية</span>
-      <h1>برنامج القيادات الحكومية الواعدة</h1>
-      <p>يتكوّن المسار من ستة مساقات صُممت لإعداد القادة الحاليين والطموحين في القطاع العام. يبدأ بأسس القيادة الحكومية، ويتدرّج نحو التفكير الاستراتيجي وإدارة التغيير، وينتهي بمشروع تطبيقي يعالج تحدياً حقيقياً في مؤسسة المشارك.</p>
+      <nav class="p-switch" id="pSwitch"></nav>
+      <span class="field" id="pField"></span>
+      <h1 id="pTitle"></h1>
+      <p id="pSummary"></p>
+      <div class="stats-row" id="pStats"></div>
     </div>
     <div class="buy">
-      <div class="price">مجاني <small>للموظفين الحكوميين</small></div>
-      <a href="course.html" class="btn btn-primary btn-lg">سجّل الآن</a>
-      <ul class="facts">
-        <li><span><i data-lucide="layers"></i> المساقات في هذا المسار</span><b>6 مساقات</b></li>
-        <li><span><i data-lucide="infinity"></i> وصول غير محدود</span><b>نعم</b></li>
-        <li><span><i data-lucide="award"></i> شهادة إتمام</span><b>نعم</b></li>
-      </ul>
+      <div class="price" id="pPrice"></div>
+      <a href="course.html" class="btn btn-primary btn-lg" id="pEnroll"></a>
+      <ul class="facts" id="pFacts"></ul>
     </div>
   </div>
 </section>
 
-<!-- 2. OVERVIEW -->
+<!-- 2. OVERVIEW + OUTCOMES -->
 <section class="overview">
   <div class="container">
-    <div class="section-head" style="margin-bottom:24px"><h2>نظرة عامة على المسار</h2></div>
-    <p>يتكوّن برنامج القيادات الحكومية الواعدة من ستة مساقات مترابطة، صُممت لتزويد المشاركين بالمعارف والمهارات القيادية اللازمة للعمل الحكومي الحديث.</p>
-    <p>خلال المسار، سيكتسب المشاركون أدوات عملية لقيادة الفرق، وتحسين الأداء المؤسسي، وتوظيف البيانات في صنع القرار، مع فرص كافية لتطبيق ما تعلّموه على حالات واقعية من بيئة عملهم.</p>
-    <p>عند إتمام المسار، سيكون المشارك قادراً على قيادة مبادرات التغيير في مؤسسته، وصياغة خطط استراتيجية مرتبطة بمؤشرات أداء قابلة للقياس.</p>
+    <div class="section-head" style="margin-bottom:24px"><h2 id="hOverview"></h2></div>
+    <div id="pDesc"></div>
+    <div class="section-head" style="margin:48px 0 20px"><h2 id="hOutcomes"></h2></div>
+    <p id="pOutLead" style="color:var(--ink-2)"></p>
+    <ol class="outcomes" id="pOutcomes"></ol>
+  </div>
+</section>
 
-    <div class="cols3">
-      <div class="col">
-        <h4><i data-lucide="target"></i> مخرجات التعلّم</h4>
-        <ul>
-          <li><i data-lucide="check-circle-2"></i> تطبيق نماذج القيادة الحديثة في العمل الحكومي.</li>
-          <li><i data-lucide="check-circle-2"></i> صياغة خطط استراتيجية بمؤشرات أداء قابلة للقياس.</li>
-          <li><i data-lucide="check-circle-2"></i> قيادة مبادرات التغيير والتحول المؤسسي.</li>
-          <li><i data-lucide="check-circle-2"></i> اتخاذ قرارات مبنية على البيانات.</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h4><i data-lucide="briefcase"></i> المجالات الوظيفية</h4>
-        <ul>
-          <li><i data-lucide="check-circle-2"></i> مدراء المديريات</li>
-          <li><i data-lucide="check-circle-2"></i> رؤساء الأقسام</li>
-          <li><i data-lucide="check-circle-2"></i> القيادات الواعدة</li>
-          <li><i data-lucide="check-circle-2"></i> منسقو التخطيط الاستراتيجي</li>
-          <li><i data-lucide="check-circle-2"></i> موظفو وحدات تطوير الأداء</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h4><i data-lucide="monitor-check"></i> المتطلبات التقنية</h4>
-        <ul>
-          <li><i data-lucide="check-circle-2"></i> بيئة دراسة مناسبة</li>
-          <li><i data-lucide="check-circle-2"></i> اتصال جيد بالإنترنت</li>
-          <li><i data-lucide="check-circle-2"></i> جهاز حاسوب أو جهاز لوحي</li>
-          <li><i data-lucide="check-circle-2"></i> متصفح حديث (Chrome، Firefox، Safari)</li>
-        </ul>
-      </div>
+<!-- 3. SKILLS, KNOWLEDGE, ATTITUDE -->
+<section class="bg-cream" style="padding-top:72px">
+  <div class="container">
+    <div class="section-head"><h2 id="hSka"></h2></div>
+    <div class="cols3" id="pSka" style="margin-top:0"></div>
+  </div>
+</section>
+
+<!-- 4. TARGET AUDIENCE + FIELD OF PRACTICE -->
+<section>
+  <div class="container">
+    <div class="section-head"><h2 id="hAudience"></h2></div>
+    <div class="aud">
+      <div class="box"><h4><i data-lucide="users"></i><span id="hAud2"></span></h4><p id="pAudience"></p></div>
+      <div class="box"><h4><i data-lucide="briefcase"></i><span id="hFields"></span></h4><div class="chips" id="pFields"></div></div>
     </div>
   </div>
 </section>
 
-<!-- 3. COURSES IN THIS PATHWAY -->
+<!-- 5. STUDY PLAN -->
 <section class="bg-cream">
   <div class="container">
-    <div class="section-head"><h2>المساقات في هذا المسار</h2></div>
-    <div class="acc" id="acc">
-      <div class="acc-item open"><button><span class="n">م١</span><h3>أسس القيادة في القطاع العام</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">الفرق بين الإدارة والقيادة، وأنماط القيادة، ودور القائد في المؤسسة الحكومية.</div></div>
-      <div class="acc-item"><button><span class="n">م٢</span><h3>القيادة الاستراتيجية والتخطيط</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">أدوات التحليل الاستراتيجي، وبطاقة الأداء المتوازن، وصياغة الخطة الاستراتيجية.</div></div>
-      <div class="acc-item"><button><span class="n">م٣</span><h3>إدارة التغيير والتحول المؤسسي</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">نماذج إدارة التغيير، والتعامل مع المقاومة، وقيادة مبادرات التحول.</div></div>
-      <div class="acc-item"><button><span class="n">م٤</span><h3>اتخاذ القرار المبني على البيانات</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">قراءة البيانات وتحليلها، ولوحات المؤشرات، وتوظيف الأدلة في صنع القرار.</div></div>
-      <div class="acc-item"><button><span class="n">م٥</span><h3>بناء الفرق وإدارة الأداء</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">بناء فرق عالية الأداء، والتحفيز، والتغذية الراجعة الفعّالة.</div></div>
-      <div class="acc-item"><button><span class="n">م٦</span><h3>المشروع التطبيقي الختامي</h3><i data-lucide="chevron-down" class="chev"></i></button><div class="acc-body">مشروع يعالج تحدياً حقيقياً في مؤسسة المشارك، يُعرض أمام لجنة تقييم.</div></div>
-    </div>
+    <div class="section-head"><h2 id="hPlan"></h2></div>
+    <p class="plan-note" id="pPlanNote"></p>
+    <div class="acc" id="acc"></div>
   </div>
 </section>
 
-<!-- 4. PATHWAY TEAM -->
+<!-- 6. PATHWAY TEAM -->
 <section>
   <div class="container">
     <div class="section-head"><h2>فريق المسار</h2></div>
@@ -186,8 +204,40 @@
 <nav class="mock-nav"><a href="index.html">الرئيسية</a><a class="on" href="pathway.html">المسار</a><a href="courses.html">المساقات</a><a href="course.html">داخل المساق (Moodle)</a></nav>
 
 <script>
-  lucide.createIcons();
+  const L = {
+    ar: { overview: 'وصف المسار', outcomes: 'مخرجات التعلّم', outLead: 'في نهاية هذا المسار، سيكون المتعلمون قادرين على:', ska: 'المهارات والمعارف والاتجاهات', skills: 'المهارات', knowledge: 'المعارف', attitude: 'الاتجاهات', audience: 'الفئة المستهدفة ومجالات الممارسة', aud2: 'الفئة المستهدفة', fields: 'يدعم المسار التطبيق في المجالات التالية', plan: 'الخطة الدراسية التفصيلية', planNote: 'تعرض الخطة تسلسل الوحدات والكتل. تُنفَّذ كل كتلة من خلال أنشطة «تعلّم» و«تعاون» و«طبّق».', enroll: 'سجّل الآن', inPath: 'الوحدات في هذا المسار', blocksF: 'كتل التعلّم', access: 'وصول غير محدود', cert: 'شهادة إتمام', yes: 'نعم' },
+    en: { overview: 'Pathway Description', outcomes: 'Pathway Learning Outcomes', outLead: 'By the end of this pathway, learners will be able to:', ska: 'Skills, Knowledge and Attitude', skills: 'Skills', knowledge: 'Knowledge', attitude: 'Attitude', audience: 'Target Audience and Field of Practice', aud2: 'Target audience', fields: 'The pathway supports application in the following fields', plan: 'Pathway Detailed Study Plan', planNote: 'The study plan presents the module and block sequence. Each block is implemented through Learn, Collaborate and Apply activities.', enroll: 'Enroll Now', inPath: 'Modules in this pathway', blocksF: 'Learning blocks', access: 'Unlimited Access', cert: 'Certificate of Completion', yes: 'Yes' },
+  }[LANG];
+  const $ = id => document.getElementById(id);
+  const P = findPathway(new URLSearchParams(location.search).get('p'));
+  document.title = t(P.title) + ' | JAGA';
+  $('pSwitch').innerHTML = PATHWAYS.map(p => `<a href="?p=${p.id}" class="${p === P ? 'on' : ''}">${t(p.title)}</a>`).join('');
+  $('pField').textContent = t(P.field);
+  $('pTitle').textContent = t(P.title);
+  $('pSummary').textContent = t(P.summary);
+  $('pStats').innerHTML = `<span><i data-lucide="layers"></i> ${P.modules.length} ${t(UI.modules)}</span><span><i data-lucide="blocks"></i> ${blockCount(P)} ${t(UI.blocks)}</span>`;
+  $('pPrice').innerHTML = `${t(UI.free)} <small>${t(UI.freeFor)}</small>`;
+  $('pEnroll').textContent = L.enroll;
+  $('pFacts').innerHTML = [['layers', L.inPath, P.modules.length], ['blocks', L.blocksF, blockCount(P)], ['infinity', L.access, L.yes], ['award', L.cert, L.yes]]
+    .map(([i, k, v]) => `<li><span><i data-lucide="${i}"></i> ${k}</span><b>${v}</b></li>`).join('');
+  $('hOverview').textContent = L.overview;
+  $('pDesc').innerHTML = t(P.description).map(p => `<p>${p}</p>`).join('');
+  $('hOutcomes').textContent = L.outcomes; $('pOutLead').textContent = L.outLead;
+  $('pOutcomes').innerHTML = t(P.outcomes).map(o => `<li>${o}</li>`).join('');
+  $('hSka').textContent = L.ska;
+  $('pSka').innerHTML = [['wrench', L.skills, P.skills], ['book-open', L.knowledge, P.knowledge], ['heart-handshake', L.attitude, P.attitude]]
+    .map(([i, h, list]) => `<div class="col" style="background:#fff"><h4><i data-lucide="${i}"></i> ${h}</h4><ul>${t(list).map(x => `<li><i data-lucide="check-circle-2"></i> ${x}</li>`).join('')}</ul></div>`).join('');
+  $('hAudience').textContent = L.audience; $('hAud2').textContent = L.aud2; $('hFields').textContent = L.fields;
+  $('pAudience').textContent = t(P.audience);
+  $('pFields').innerHTML = t(P.fields).map(f => `<span>${f}</span>`).join('');
+  $('hPlan').textContent = L.plan; $('pPlanNote').textContent = L.planNote;
+  $('acc').innerHTML = P.modules.map((m, i) => `
+    <div class="acc-item ${i === 0 ? 'open' : ''}">
+      <button><span class="n">${LANG === 'ar' ? 'و' : 'M'}${(i + 1).toLocaleString(LANG === 'ar' ? 'ar-EG' : 'en')}</span><div style="flex:1"><h3>${t(m.title)}</h3><span class="meta">${t(UI.module)} ${i + 1} · ${m.blocks.en.length} ${t(UI.blocksShort)}</span></div><i data-lucide="chevron-down" class="chev"></i></button>
+      <div class="acc-body"><ol class="blocks">${t(m.blocks).map(b => `<li>${b}<span class="lca"><span>${t(UI.learn)}</span><span>${t(UI.collaborate)}</span><span>${t(UI.apply)}</span></span></li>`).join('')}</ol></div>
+    </div>`).join('');
   document.querySelectorAll('.acc-item > button').forEach(b => b.onclick = () => b.parentElement.classList.toggle('open'));
+  lucide.createIcons();
 </script>
 </body>
 </html>

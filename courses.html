@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/jaga.css">
 <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="assets/pathways.js"></script>
 <style>
   /* 1. title + intro */
   .c-hero { background: var(--cream); padding: 64px 0; position: relative; overflow: hidden; }
@@ -96,36 +97,26 @@
 <nav class="mock-nav"><a href="index.html">الرئيسية</a><a href="pathway.html">المسار</a><a class="on" href="courses.html">المساقات</a><a href="course.html">داخل المساق (Moodle)</a></nav>
 
 <script>
-  // [pathway, field, course, instructor, glyph, thumb]
-  const L='برامج مركز القيادات الحكومية', T='برامج التدريب', A='البرامج التوعوية';
-  const courses = [
-    ['القيادات الحكومية الواعدة',L,'أسس القيادة في القطاع العام','د. محمد العلي','landmark','t1'],
-    ['القيادات الحكومية الواعدة',L,'القيادة الاستراتيجية والتخطيط','د. محمد العلي','compass','t1'],
-    ['القيادات الحكومية الواعدة',L,'إدارة التغيير والتحول المؤسسي','د. سامر الخطيب','refresh-ccw','t3'],
-    ['القيادات الحكومية الواعدة',L,'اتخاذ القرار المبني على البيانات','م. ريم الحسن','bar-chart-3','t2'],
-    ['القيادات الحكومية الواعدة',L,'بناء الفرق وإدارة الأداء','أ. لينا النعيمي','users-round','t4'],
-    ['القيادات الحكومية الواعدة',L,'المشروع التطبيقي الختامي','د. محمد العلي','presentation','t1'],
-    ['التحول الرقمي في القطاع العام',T,'أساسيات التحول الرقمي','م. ريم الحسن','cpu','t2'],
-    ['التحول الرقمي في القطاع العام',T,'الذكاء الاصطناعي في الخدمات الحكومية','م. ريم الحسن','bot','t2'],
-    ['التميّز المؤسسي وإدارة الجودة',T,'تحسين تجربة متلقي الخدمة','أ. لينا النعيمي','sparkles','t5'],
-    ['التميّز المؤسسي وإدارة الجودة',T,'نماذج التميّز المؤسسي','أ. لينا النعيمي','gem','t5'],
-    ['إدارة المشاريع الحكومية',T,'أساسيات إدارة المشاريع','د. سامر الخطيب','kanban','t6'],
-    ['الأمن السيبراني – توعوي',A,'حماية البيانات والتصيّد الاحتيالي','م. ريم الحسن','img','img'],
-  ];
+  // one card per module of each pathway (assets/pathways.js)
+  const TRAINERS = ["أ.د. طارق التتنجي", "د. سمير عرباسي", "أ.د. موسى حبيب", "د. فراس كفافية"];
+  const courses = [];
+  PATHWAYS.forEach((p, pi) => p.modules.forEach((m, mi) => courses.push({
+    path: t(p.title), field: t(p.field), title: moduleTitle(m), num: mi + 1, blocks: m.blocks.en.length,
+    trainer: TRAINERS[(pi * 2 + mi) % TRAINERS.length], icon: m.icon, thumb: m.thumb, pid: p.id })));
   const fill = (id, vals) => document.getElementById(id).insertAdjacentHTML('beforeend', [...new Set(vals)].map(v => `<option>${v}</option>`).join(''));
-  fill('fField', courses.map(c => c[1])); fill('fPath', courses.map(c => c[0])); fill('fInst', courses.map(c => c[3]));
+  fill('fField', courses.map(c => c.field)); fill('fPath', courses.map(c => c.path)); fill('fInst', courses.map(c => c.trainer));
 
   function render() {
-    const q = document.getElementById('q').value.trim(), f = fField.value, p = fPath.value, i = fInst.value;
-    const list = courses.filter(c => (!q || c[2].includes(q)) && (!f || c[1] === f) && (!p || c[0] === p) && (!i || c[3] === i));
+    const q = document.getElementById('q').value.trim().toLowerCase(), f = fField.value, p = fPath.value, i = fInst.value;
+    const list = courses.filter(c => (!q || c.title.toLowerCase().includes(q)) && (!f || c.field === f) && (!p || c.path === p) && (!i || c.trainer === i));
     document.getElementById('count').textContent = list.length;
-    document.getElementById('grid').innerHTML = list.map(([path, field, title, inst, g, t]) => `
+    document.getElementById('grid').innerHTML = list.map(c => `
       <a class="card" href="course.html">
-        ${t === 'img' ? '<div class="thumb" style="background:#1d0008"><img src="assets/cyber.jpg" alt=""></div>' : `<div class="thumb ${t} tx"><i data-lucide="${g}" class="glyph"></i></div>`}
+        <div class="thumb ${c.thumb} tx"><i data-lucide="${c.icon}" class="glyph"></i><span class="chip" style="background:#fff">${t(UI.module)} ${c.num}</span></div>
         <div class="card-body">
-          <span class="cat">${path}</span><span class="field">${field}</span>
-          <h3>${title}</h3>
-          <div class="card-foot"><span class="link-arrow">عرض المساق <i data-lucide="arrow-left"></i></span><span class="price">مجاني</span></div>
+          <span class="cat">${c.path}</span><span class="field">${c.field} · ${c.blocks} ${t(UI.blocksShort)}</span>
+          <h3>${c.title}</h3>
+          <div class="card-foot"><span class="link-arrow">${t(UI.viewCourse)} <i data-lucide="${LANG === 'ar' ? 'arrow-left' : 'arrow-right'}"></i></span><span class="price">${t(UI.free)}</span></div>
         </div>
       </a>`).join('');
     lucide.createIcons();

@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/jaga.css">
 <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="assets/pathways.js"></script>
 <style>
   body { background: #fff; font-size: 17px; }
   .wide { max-width: 1640px; margin-inline: auto; padding-inline: 40px; }
@@ -31,7 +32,7 @@
   /* page header */
   .page-head { text-align: center; padding: 72px 0 40px; position: relative; }
   .page-head .kicker { font-size: 16px; font-weight: 700; color: var(--maroon); }
-  .page-head h1 { font-size: 52px; margin-top: 6px; }
+  .page-head h1 { font-size: 40px; margin-top: 6px; max-width: 1000px; margin-inline: auto; }
   .page-head .sub { color: var(--ink-3); font-size: 17px; margin-top: 4px; }
   .edit-btn { display: inline-flex; align-items: center; gap: 10px; background: #6f7378; color: #fff; padding: 16px 28px; border-radius: 10px; font-size: 18px; font-weight: 600; margin: 8px 0 36px; }
   .edit-btn:hover { background: #5d6166; }
@@ -154,8 +155,8 @@
 <div class="wide">
   <!-- page header -->
   <div class="page-head">
-    <div class="kicker">برامج مركز القيادات الحكومية</div>
-    <h1>القيادة الاستراتيجية والتخطيط</h1>
+    <div class="kicker">قيادة الذكاء الاصطناعي · الوحدة 1</div>
+    <h1>أساسيات استراتيجية الذكاء الاصطناعي واستشراف المستقبل</h1>
   </div>
   <a href="#" class="edit-btn"><i data-lucide="pencil"></i> تفعيل وضع التحرير</a>
 
@@ -169,7 +170,7 @@
     <section class="panel" style="padding-bottom:48px">
       <div class="panel-h">
         <h2>محتوى المساق</h2>
-        <div class="info"><span>تاريخ بدء المساق: <b>01/10/26</b></span><span>الفئة: <b>القيادات الحكومية</b></span></div>
+        <div class="info"><span>تاريخ بدء الوحدة: <b>01/10/26</b></span><span>المسار: <b>قيادة الذكاء الاصطناعي</b></span></div>
       </div>
       <div class="overall"><span>التقدّم الكلي %</span><span class="circ"><b>42</b></span><button class="more" aria-label="المزيد"><i data-lucide="more-horizontal"></i></button></div>
 
@@ -213,17 +214,19 @@
 <nav class="mock-nav"><a href="index.html">الرئيسية</a><a href="pathway.html">المسار</a><a href="courses.html">المساقات</a><a class="on" href="course.html">داخل المساق (Moodle)</a></nav>
 
 <script>
-  // [kicker, line1, line2, icon, colour, status, done, total, activities]
-  const T = {ok:'مكتمل', now:'قيد التعلّم', lock:'مقفل', of:'من', acts:'أنشطة', unit:'الوحدة'};
+  // AI Leadership · Module 1 — tiles = introduction + the module's learning blocks (assets/pathways.js)
+  const T = {ok:'مكتمل', now:'قيد التعلّم', lock:'مقفل', of:'من', acts:'أنشطة', intro:'مقدمة', introA:'التعريف', introB:'بالوحدة', general:'عام'};
+  const A = {learn:['فيديو ومادة قراءة','تعلّم · 20 دقيقة'], collab:['نقاش جماعي وتبادل الخبرات','تعاون · منتدى'], apply:['نشاط تطبيقي على حالة من بيئة العمل','طبّق · واجب'], guide:['دليل المتعلّم ومخطط الوحدة','ملف · PDF'], ann:['الإعلانات','منتدى'], pre:['التقييم القبلي','اختبار']};
+  const MOD = PATHWAYS[0].modules[0];
+  const ICONS = ['trending-up', 'clipboard-check', 'repeat', 'pie-chart', 'theater'];
+  const COLORS = ['', 'coral', 'dark', 'gold', 'coral'];
+  const STATUS = ['ok', 'now', 'lock', 'lock', 'lock'];
+  const split = s => { const w = s.split(' '); const k = Math.ceil(w.length / 2); return [w.slice(0, k).join(' '), w.slice(k).join(' ')]; };
+  const LCA = [['book-open-text', ...A.learn], ['messages-square', ...A.collab], ['file-pen-line', ...A.apply]];
   const sections = [
-    ['عام','التعريف','بالمساق','compass','', 'ok',3,3,[['file-text','دليل المتدرّب','ملف · PDF'],['megaphone','الإعلانات','منتدى'],['list-checks','الاختبار القبلي','اختبار']]],
-    ['عام','فيديو','تعريفي','clapperboard','coral','ok',1,1,[['play','فيديو تعريفي بالمساق','فيديو · 4 دقائق']]],
-    ['الوحدة 1','مفهوم القيادة','الاستراتيجية','crown','dark','ok',4,4,[['book-open-text','مقدمة الوحدة','صفحة'],['play','القائد الاستراتيجي','فيديو · 22 دقيقة'],['briefcase','دراسة حالة','صفحة'],['list-checks','اختبار الوحدة 1','اختبار · 8.5 / 10']]],
-    ['الوحدة 2','أدوات التخطيط','الاستراتيجي','target','', 'now',1,5,[['book-open-text','تحليل SWOT و PESTLE','صفحة · مكتمل'],['play','بطاقة الأداء المتوازن','فيديو · 42% تمت مشاهدته'],['file-text','نموذج الخطة الاستراتيجية','ملف · DOCX'],['messages-square','منتدى النقاش','منتدى'],['file-pen-line','واجب: خطة مؤسستك','واجب · مستحق خلال يومين']]],
-    ['الوحدة 3','مؤشرات','الأداء','bar-chart-3','gold','lock',0,4,[]],
-    ['الوحدة 4','متابعة','التنفيذ','refresh-ccw','dark','lock',0,4,[]],
-    ['التقييم','الاختبار','النهائي','file-check','coral','lock',0,1,[]],
-    ['الختام','شهادة','الإتمام','award','gold','lock',0,1,[]],
+    [T.general, T.introA, T.introB, 'compass', '', 'ok', 3, 3, [['file-text', ...A.guide], ['megaphone', ...A.ann], ['list-checks', ...A.pre]]],
+    ...t(MOD.blocks).map((b, i) => { const [l1, l2] = split(b); const st = STATUS[i];
+      return [`${t(UI.block)} ${i + 1}`, l1, l2, ICONS[i], COLORS[i], st, st === 'ok' ? 3 : st === 'now' ? 1 : 0, 3, LCA]; }),
   ];
   const tag = s => s==='ok' ? `<span class="tag ok"><i data-lucide="check"></i> ${T.ok}</span>` : s==='now' ? `<span class="tag now">${T.now}</span>` : `<span class="tag lock"><i data-lucide="lock"></i> ${T.lock}</span>`;
   document.getElementById('tiles').innerHTML = sections.map(([k,a,b,ic,c,s,d,t],i) => `
