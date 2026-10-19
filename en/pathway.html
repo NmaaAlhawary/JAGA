@@ -56,11 +56,6 @@
   .member p { font-size: 13.5px; color: var(--ink-3); }
 
 
-  /* pathway switcher */
-  .p-switch { display: inline-flex; gap: 6px; padding: 6px; border-radius: 999px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16); margin-bottom: 26px; flex-wrap: wrap; }
-  .p-switch a { padding: 8px 18px; border-radius: 999px; font-size: 14px; font-weight: 700; color: #f1cfd7; }
-  .p-switch a.on { background: #fff; color: var(--maroon); }
-  .p-switch a:not(.on):hover { color: #fff; }
   .p-hero .stats-row { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 22px; font-size: 14.5px; color: #f1cfd7; }
   .p-hero .stats-row span { display: inline-flex; gap: 8px; align-items: center; }
   .p-hero .stats-row [data-lucide] { width: 18px; height: 18px; color: #fff; }
@@ -124,7 +119,6 @@
 <section class="p-hero">
   <div class="container">
     <div>
-      <nav class="p-switch" id="pSwitch"></nav>
       <span class="field" id="pField"></span>
       <h1 id="pTitle"></h1>
       <p id="pSummary"></p>
@@ -212,7 +206,6 @@
   const $ = id => document.getElementById(id);
   const P = findPathway(new URLSearchParams(location.search).get('p'));
   document.title = t(P.title) + ' | JAGA';
-  $('pSwitch').innerHTML = PATHWAYS.map(p => `<a href="?p=${p.id}" class="${p === P ? 'on' : ''}">${t(p.title)}</a>`).join('');
   $('pField').textContent = t(P.field);
   $('pTitle').textContent = t(P.title);
   $('pSummary').textContent = t(P.summary);
