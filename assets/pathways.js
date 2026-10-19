@@ -14,6 +14,7 @@ const UI = {
   seePathway: { ar: 'عرض المسار', en: 'See Pathway' },
   viewCourse: { ar: 'التفاصيل', en: 'Details' },
   free: { ar: 'مجاني', en: 'Free' },
+  learnN: { ar: 'تعلّم', en: 'Learn' },
   freeFor: { ar: 'للموظفين الحكوميين', en: 'for government employees' },
   learn: { ar: 'تعلّم', en: 'Learn' },
   collaborate: { ar: 'تعاون', en: 'Collaborate' },
@@ -284,6 +285,503 @@ const PATHWAYS = [
         } },
     ],
   },
+  {
+    "id": "ai-digital-practice",
+    "icon": "cpu",
+    "thumb": "t3",
+    "field": {
+      "ar": "برامج التدريب",
+      "en": "Training Programs"
+    },
+    "title": {
+      "ar": "الممارسة المهنية في الذكاء الاصطناعي والتقنيات الرقمية",
+      "en": "AI and Digital Professional Practice"
+    },
+    "summary": {
+      "ar": "تطبيق أساليب الحوكمة التقنية للذكاء الاصطناعي وتصميم الحلول والضمان، وتوثيق القيود، وإنتاج أدلة مخبرية قابلة للتكرار.",
+      "en": "Apply technical AI governance, solution-design and assurance methods, document limitations, and produce reproducible laboratory evidence."
+    },
+    "description": {
+      "ar": [
+        "مسار تقني متخصص للممارسين في مجال الذكاء الاصطناعي والتقنيات الرقمية، يغطي حوكمة الذكاء الاصطناعي، وهندسة الذكاء الاصطناعي التوليدي والوكيلي، والبنية التحتية والتكامل والأمن، وتصميم الحلول والتحقق منها وإطلاقها، والتشغيل والمراقبة وإدارة دورة الحياة.",
+        "يعمل المتعلمون تحت الإشراف لإنتاج أدلة تقنية قابلة للتكرار، وتوثيق القيود وتصعيد المخاطر عبر القنوات المعتمدة، ويُختتم المسار بمساهمة مهنية، وملف إنجاز تراجعه لجنة خبراء، واختبار نهائي."
+      ],
+      "en": [
+        "A specialist technical pathway for AI and digital practitioners covering AI governance, generative and agentic AI engineering, infrastructure, integration and security, solution design, validation and release, and operations, monitoring and lifecycle management.",
+        "Learners work under supervision to produce reproducible technical evidence, document limitations and escalate risks through approved channels, and finish with a professional contribution, an expert-panel portfolio review and a final exam."
+      ]
+    },
+    "outcomes": {
+      "ar": [
+        "تطبيق أساليب الحوكمة التقنية وحالات الاستخدام وتصميم الحلول والضمان الأساسية تحت الإشراف.",
+        "توثيق القيود وتصعيد المخاطر عبر القنوات المعتمدة.",
+        "إنتاج أدلة مخبرية قابلة للتكرار للوحدات التخصصية المسندة."
+      ],
+      "en": [
+        "Apply core technical governance, use-case, solution-design and assurance methods under supervision.",
+        "Document limitations and escalate risks through approved channels.",
+        "Produce reproducible laboratory evidence for assigned specialist units."
+      ]
+    },
+    "modules": [
+      {
+        "icon": "shield-check",
+        "thumb": "t3",
+        "title": {
+          "ar": "أسس حوكمة الذكاء الاصطناعي والممارسة التقنية",
+          "en": "Foundations of AI Governance and Technical Practice"
+        },
+        "blocks": {
+          "ar": [
+            "تفويض ممارسة الخبراء ونطاق المعايير",
+            "تقييم حالات استخدام الذكاء الاصطناعي وتحديد أولوياتها",
+            "أسس بنية الحلول والبنية التحتية",
+            "حوكمة البيانات وجودتها وقابلية التشغيل البيني",
+            "تقييم المخاطر الأخلاقية في حالات استخدام الذكاء الاصطناعي",
+            "توثيق الأدلة التقنية واحتياجات التصعيد"
+          ],
+          "en": [
+            "Expert Practice Mandate and Standards Remit",
+            "AI Use Case Assessment and Prioritization",
+            "Solution Architecture and Infrastructure Foundations",
+            "Data Governance, Quality, and Interoperability",
+            "Ethical Risk Assessment in AI Use Cases",
+            "Documenting Technical Evidence and Escalation Needs"
+          ]
+        },
+        "subs": {
+          "ar": [
+            "تحديد تفويض ممارسة الخبراء لعمليات أنظمة الذكاء الاصطناعي، بما في ذلك نطاق المعايير، والأدلة المسموح بها، ومحطات المراجعة.",
+            "تطبيق الأساليب الأساسية لتقييم حالات استخدام الذكاء الاصطناعي وتحديد أولوياتها تحت الإشراف.",
+            "التعرّف على متطلبات البنية التحتية وبنية الحلول الأساسية لأنظمة الذكاء الاصطناعي ووصفها.",
+            "تطبيق متطلبات حوكمة البيانات وجودتها والبيانات الوصفية وقابلية التشغيل البيني على مشاريع الذكاء الاصطناعي المسندة.",
+            "تقييم المخاطر الأخلاقية في حالات الاستخدام التقنية للذكاء الاصطناعي وتوثيق القيود لتصعيدها.",
+            "توثيق الأدلة التقنية المنجزة تحت الإشراف والقيود واحتياجات التصعيد بصيغة مناسبة للمراجعة التقنية."
+          ],
+          "en": [
+            "Define the expert practice mandate for AI systems operations, including standards remit, permitted evidence, and review milestones.",
+            "Apply foundational methods for AI use-case assessment and prioritization under supervision.",
+            "Recognise and describe core infrastructure and solution architecture requirements for AI systems.",
+            "Apply data-governance, quality, metadata, and interoperability requirements to assigned AI projects.",
+            "Assess ethical risks in technical AI use cases and document limitations for escalation.",
+            "Document supervised technical evidence, limitations, and escalation needs in a form suitable for technical review."
+          ]
+        },
+        "acts": [
+          [
+            5,
+            1,
+            2
+          ],
+          [
+            5,
+            2,
+            2
+          ],
+          [
+            5,
+            1,
+            2
+          ],
+          [
+            5,
+            2,
+            2
+          ],
+          [
+            5,
+            2,
+            1
+          ],
+          [
+            5,
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "icon": "sparkles",
+        "thumb": "t1",
+        "title": {
+          "ar": "أسس هندسة الذكاء الاصطناعي التوليدي والوكيلي",
+          "en": "Generative and Agentic AI Engineering Foundations"
+        },
+        "blocks": {
+          "ar": [
+            "نظرة عامة على الذكاء الاصطناعي التوليدي وأنظمة الأوامر",
+            "تكييف النماذج وهندسة الذكاء الاصطناعي الوكيلي",
+            "العرض والتقييم التقني تحت الإشراف",
+            "توثيق القيود في ممارسة الذكاء الاصطناعي التوليدي",
+            "تقييم عملي منظّم: الذكاء الاصطناعي التوليدي",
+            "المراجعة التقنية والتغذية الراجعة في الذكاء الاصطناعي التوليدي"
+          ],
+          "en": [
+            "Generative AI and Prompt Systems Overview",
+            "Model Adaptation and Agentic AI Engineering",
+            "Supervised Technical Demonstration and Assessment",
+            "Documenting Limitations in Generative AI Practice",
+            "Structured Practical Assessment: Generative AI",
+            "Technical Review and Feedback in Generative AI"
+          ]
+        },
+        "subs": {
+          "ar": [
+            "وصف المفاهيم الأساسية للذكاء الاصطناعي التوليدي وأنظمة الأوامر ذات الصلة بالممارسة المهنية.",
+            "شرح مناهج تكييف النماذج وهندسة الذكاء الاصطناعي الوكيلي تحت الإشراف.",
+            "إنتاج أدلة تقنية قابلة للتكرار لوحدات الذكاء الاصطناعي التوليدي والوكيلي المسندة.",
+            "توثيق القيود وتصعيد المخاطر التي تظهر في هندسة الذكاء الاصطناعي التوليدي والوكيلي.",
+            "إكمال تقييم عملي منظّم يُظهر أدلة قابلة للتكرار في الذكاء الاصطناعي التوليدي.",
+            "إعداد التوثيق التقني للمراجعة والاستجابة للتغذية الراجعة حول أدلة الذكاء الاصطناعي التوليدي."
+          ],
+          "en": [
+            "Describe the foundational concepts of generative AI and prompt systems relevant to professional practice.",
+            "Explain model adaptation and agentic AI engineering approaches under supervision.",
+            "Produce reproducible technical evidence for assigned generative and agentic AI units.",
+            "Document limitations and escalate risks encountered in generative and agentic AI engineering.",
+            "Complete a structured practical assessment demonstrating reproducible evidence in generative AI.",
+            "Prepare technical documentation for review and respond to feedback on generative AI evidence."
+          ]
+        },
+        "acts": [
+          [
+            5,
+            1,
+            2
+          ],
+          [
+            5,
+            2,
+            2
+          ],
+          [
+            5,
+            1,
+            1
+          ],
+          [
+            6,
+            1,
+            1
+          ],
+          [
+            4,
+            2,
+            1
+          ],
+          [
+            5,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "icon": "server",
+        "thumb": "t6",
+        "title": {
+          "ar": "البنية التحتية للذكاء الاصطناعي والتكامل والأمن",
+          "en": "AI Infrastructure, Integration, and Security"
+        },
+        "blocks": {
+          "ar": [
+            "متطلبات البنية التحتية والتكامل الأساسية",
+            "ضوابط الأمن والنشر لأنظمة الذكاء الاصطناعي",
+            "الأدلة التقنية للبنية التحتية والأمن",
+            "توثيق القيود والتصعيد في البنية التحتية",
+            "تقييم عملي منظّم: البنية التحتية والأمن",
+            "المراجعة التقنية والتغذية الراجعة: البنية التحتية والأمن"
+          ],
+          "en": [
+            "Core Infrastructure and Integration Requirements",
+            "Security and Deployment Controls for AI Systems",
+            "Technical Evidence for Infrastructure and Security",
+            "Documenting Limitations and Escalation in Infrastructure",
+            "Structured Practical Assessment: Infrastructure and Security",
+            "Technical Review and Feedback: Infrastructure and Security"
+          ]
+        },
+        "subs": {
+          "ar": [
+            "تحديد متطلبات البنية التحتية والتكامل الأساسية لنشر الذكاء الاصطناعي وشرحها.",
+            "تطبيق ضوابط الأمن والنشر على أنظمة الذكاء الاصطناعي تحت الإشراف.",
+            "إنتاج أدلة تقنية قابلة للتكرار لوحدات البنية التحتية والتكامل والأمن.",
+            "توثيق القيود وتصعيد المخاطر المحددة في ممارسات البنية التحتية والأمن.",
+            "إكمال تقييم عملي منظّم يُظهر أدلة قابلة للتكرار في البنية التحتية والأمن.",
+            "إعداد التوثيق التقني للمراجعة والاستجابة للتغذية الراجعة حول أدلة البنية التحتية والأمن."
+          ],
+          "en": [
+            "Identify and explain core infrastructure and integration requirements for AI deployment.",
+            "Apply security and deployment controls to AI systems under supervision.",
+            "Produce reproducible technical evidence for infrastructure, integration, and security units.",
+            "Document limitations and escalate risks identified in infrastructure and security practice.",
+            "Complete a structured practical assessment demonstrating reproducible evidence in infrastructure and security.",
+            "Prepare technical documentation for review and respond to feedback on infrastructure and security evidence."
+          ]
+        },
+        "acts": [
+          [
+            5,
+            1,
+            2
+          ],
+          [
+            5,
+            2,
+            2
+          ],
+          [
+            5,
+            2,
+            1
+          ],
+          [
+            5,
+            2,
+            1
+          ],
+          [
+            4,
+            2,
+            1
+          ],
+          [
+            5,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "icon": "drafting-compass",
+        "thumb": "t2",
+        "title": {
+          "ar": "تصميم حلول الذكاء الاصطناعي والتحقق منها وإطلاقها",
+          "en": "AI Solutions Design, Validation, and Release"
+        },
+        "blocks": {
+          "ar": [
+            "أسس تصميم حلول الذكاء الاصطناعي وتطويرها",
+            "جمع أدلة التحقق والإطلاق",
+            "توثيق القيود في التحقق من حلول الذكاء الاصطناعي",
+            "تقييم عملي منظّم: تصميم حلول الذكاء الاصطناعي",
+            "المراجعة التقنية والتغذية الراجعة: تصميم حلول الذكاء الاصطناعي",
+            "المساهمة المهنية وتحسين المعايير"
+          ],
+          "en": [
+            "AI Solutions Design and Development Foundations",
+            "Validation and Release Evidence Collection",
+            "Documenting Limitations in AI Solution Validation",
+            "Structured Practical Assessment: AI Solutions Design",
+            "Technical Review and Feedback: AI Solutions Design",
+            "Professional Contribution and Standards Improvement"
+          ]
+        },
+        "subs": {
+          "ar": [
+            "تطبيق الأساليب الأساسية لتصميم حلول الذكاء الاصطناعي وتطويرها تحت الإشراف.",
+            "جمع أدلة التحقق والإطلاق القابلة للتكرار لحلول الذكاء الاصطناعي وتوثيقها.",
+            "توثيق القيود وتصعيد المخاطر المحددة أثناء التحقق من حلول الذكاء الاصطناعي وإطلاقها.",
+            "إكمال تقييم عملي منظّم يُظهر أدلة قابلة للتكرار في تصميم حلول الذكاء الاصطناعي.",
+            "إعداد التوثيق التقني للمراجعة والاستجابة للتغذية الراجعة حول أدلة تصميم حلول الذكاء الاصطناعي.",
+            "إنتاج تحسين أصيل في الممارسة أو معيار جديد ضمن مجال حلول الذكاء الاصطناعي المسند والتحقق منه."
+          ],
+          "en": [
+            "Apply foundational methods for AI solutions design and development under supervision.",
+            "Collect and document reproducible validation and release evidence for AI solutions.",
+            "Document limitations and escalate risks identified during AI solution validation and release.",
+            "Complete a structured practical assessment demonstrating reproducible evidence in AI solutions design.",
+            "Prepare technical documentation for review and respond to feedback on AI solutions design evidence.",
+            "Produce and validate an original practice improvement or standard within the assigned AI solutions domain."
+          ]
+        },
+        "acts": [
+          [
+            5,
+            2,
+            2
+          ],
+          [
+            5,
+            2,
+            1
+          ],
+          [
+            5,
+            2,
+            2
+          ],
+          [
+            4,
+            2,
+            1
+          ],
+          [
+            4,
+            2,
+            1
+          ],
+          [
+            5,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "icon": "activity",
+        "thumb": "t3",
+        "title": {
+          "ar": "تشغيل الذكاء الاصطناعي ومراقبته وإدارة دورة حياته",
+          "en": "AI Operations, Monitoring, and Lifecycle Management"
+        },
+        "blocks": {
+          "ar": [
+            "دليل تشغيل الذكاء الاصطناعي وسجل الحوادث",
+            "مراقبة أنظمة الذكاء الاصطناعي وصيانتها",
+            "جمع أدلة دورة الحياة وتوثيقها",
+            "توثيق القيود والتصعيد في العمليات",
+            "قرارات الإيقاف والاستبدال في دورة حياة الذكاء الاصطناعي",
+            "تقديم ملف الإنجاز ومراجعة لجنة الخبراء"
+          ],
+          "en": [
+            "AI Operations Runbook and Incident Record",
+            "Monitoring and Maintenance of AI Systems",
+            "Lifecycle Evidence Collection and Documentation",
+            "Documenting Limitations and Escalation in Operations",
+            "Retirement and Replacement Decisions in AI Lifecycle",
+            "Portfolio Submission and Expert Panel Review"
+          ]
+        },
+        "subs": {
+          "ar": [
+            "الدفاع عن دليل تشغيل الذكاء الاصطناعي وسجل الحوادث تحت الإشراف.",
+            "إعداد واجهات المراقبة وتطبيق ممارسات الصيانة لأنظمة الذكاء الاصطناعي.",
+            "جمع أدلة دورة الحياة القابلة للتكرار لتشغيل الذكاء الاصطناعي وصيانته وتوثيقها.",
+            "توثيق القيود وتصعيد المخاطر المحددة أثناء تشغيل الذكاء الاصطناعي وصيانته.",
+            "توثيق قرارات إيقاف أنظمة الذكاء الاصطناعي أو استبدالها وتبريرها.",
+            "تقديم ملف من الأدلة القابلة للتكرار لمراجعة لجنة الخبراء في تشغيل الذكاء الاصطناعي وإدارة دورة حياته."
+          ],
+          "en": [
+            "Defend the AI operations runbook and incident record under supervision.",
+            "Configure monitoring views and implement maintenance practices for AI systems.",
+            "Collect and document reproducible lifecycle evidence for AI operations and maintenance.",
+            "Document limitations and escalate risks identified during AI operations and maintenance.",
+            "Document and justify retirement or replacement decisions for AI systems.",
+            "Submit a portfolio of reproducible evidence for expert panel review in AI operations and lifecycle management."
+          ]
+        },
+        "acts": [
+          [
+            5,
+            2,
+            2
+          ],
+          [
+            5,
+            2,
+            2
+          ],
+          [
+            4,
+            2,
+            1
+          ],
+          [
+            5,
+            2,
+            2
+          ],
+          [
+            5,
+            2,
+            2
+          ],
+          [
+            4,
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "icon": "graduation-cap",
+        "thumb": "t4",
+        "title": {
+          "ar": "المساهمة المهنية والمعايير والتحضير للاختبار",
+          "en": "Professional Contribution, Standards, and Exam Preparation"
+        },
+        "blocks": {
+          "ar": [
+            "المساهمة المهنية ووضع المعايير",
+            "توثيق القيود وتصعيدها في الممارسة المهنية",
+            "تقييم عملي منظّم: المساهمة المهنية",
+            "المراجعة التقنية والتغذية الراجعة: المساهمة المهنية",
+            "التحضير للاختبار وترسيخ المعرفة",
+            "الاختبار النهائي: الممارسة المهنية في الذكاء الاصطناعي والتقنيات الرقمية"
+          ],
+          "en": [
+            "Professional Contribution and Standards Setting",
+            "Documenting and Escalating Limitations in Professional Practice",
+            "Structured Practical Assessment: Professional Contribution",
+            "Technical Review and Feedback: Professional Contribution",
+            "Exam Preparation and Consolidation",
+            "Final Exam: AI and Digital Professional Practice"
+          ]
+        },
+        "subs": {
+          "ar": [
+            "إنتاج تحسين أصيل في الممارسة أو معيار جديد ضمن المجال المسند والتحقق منه.",
+            "توثيق القيود وتصعيد المخاطر التي تظهر أثناء المساهمة المهنية ووضع المعايير.",
+            "إكمال تقييم عملي منظّم يُظهر أدلة قابلة للتكرار في المساهمة المهنية ووضع المعايير.",
+            "إعداد التوثيق التقني للمراجعة والاستجابة للتغذية الراجعة حول أدلة المساهمة المهنية.",
+            "ترسيخ فهم حوكمة الذكاء الاصطناعي التقنية وتصميم الحلول وأساليب الضمان استعداداً للاختبار النهائي.",
+            "إثبات القدرة على تطبيق أساليب الحوكمة التقنية وحالات الاستخدام وتصميم الحلول والضمان في ظروف الاختبار."
+          ],
+          "en": [
+            "Produce and validate an original practice improvement or standard within their assigned domain.",
+            "Document limitations and escalate risks encountered during professional contribution and standards setting.",
+            "Complete a structured practical assessment demonstrating reproducible evidence in professional contribution and standards setting.",
+            "Prepare technical documentation for review and respond to feedback on professional contribution evidence.",
+            "Consolidate their understanding of technical governance, solution design, and assurance methods in preparation for the final exam.",
+            "Demonstrate their ability to apply core technical governance, use-case, solution-design, and assurance methods under exam conditions."
+          ]
+        },
+        "acts": [
+          [
+            5,
+            1,
+            1
+          ],
+          [
+            5,
+            1,
+            2
+          ],
+          [
+            5,
+            1,
+            1
+          ],
+          [
+            5,
+            1,
+            1
+          ],
+          [
+            4,
+            2,
+            2
+          ],
+          [
+            4,
+            1,
+            2
+          ]
+        ]
+      }
+    ]
+  }
 ];
 
 const blockCount = p => p.modules.reduce((n, m) => n + m.blocks.en.length, 0);
