@@ -231,9 +231,13 @@
   <div class="container">
     <div class="section-head">
       <h2>2 Training Pathways to Explore</h2>
-      <a href="pathway.html" class="btn btn-primary btn-sm">Explore Pathways</a>
+      <div class="slider-nav">
+        <button class="icon-btn" onclick="slide(-1)" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+        <button class="icon-btn" onclick="slide(1)" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+        <a href="pathway.html" class="btn btn-primary btn-sm">Explore Pathways</a>
+      </div>
     </div>
-    <div class="pw-grid" id="pathways"></div>
+    <div class="slider" id="pathways"></div>
   </div>
 </section>
 
@@ -293,18 +297,14 @@
 
 <script>
   const ARROW = 'arrow-right';
-  // 4. the two pathways
+  // 4. pathways — compact cards; clicking opens the pathway details page
   document.getElementById('pathways').innerHTML = PATHWAYS.map(p => `
-    <a class="pw" href="pathway.html?p=${p.id}">
-      <div class="vis ${p.thumb}"><div class="ico"><i data-lucide="${p.icon}"></i></div><div><div class="field">${t(p.field)}</div><h3>${t(p.title)}</h3></div></div>
-      <div class="body">
-        <p>${t(p.summary)}</p>
-        <div class="nums"><span><i data-lucide="layers"></i> ${p.modules.length} ${t(UI.modules)}</span><span><i data-lucide="blocks"></i> ${blockCount(p)} ${t(UI.blocks)}</span></div>
-        <h5>Pathway modules</h5>
-        <ol>${p.modules.map(m => `<li>${moduleTitle(m)}</li>`).join('')}</ol>
-        <div class="foot"><span class="price">${t(UI.free)}</span><span class="link-arrow">${t(UI.seePathway)} <i data-lucide="${ARROW}"></i></span></div>
-      </div>
+    <a class="card" href="pathway.html?p=${p.id}">
+      <div class="thumb ${p.thumb} tx"><i data-lucide="${p.icon}" class="glyph"></i></div>
+      <div class="card-body"><span class="cat">${t(p.field)}</span><h3>${t(p.title)}</h3>
+        <div class="card-foot"><span class="link-arrow">${t(UI.seePathway)} <i data-lucide="${ARROW}"></i></span><span class="price">${t(UI.free)}</span></div></div>
     </a>`).join('');
+  function slide(dir) { const el = document.getElementById('pathways'); el.scrollBy({ left: dir * el.clientWidth / 2, behavior: 'smooth' }); }
 
   // 5. featured modules, filterable by pathway
   const mods = PATHWAYS.flatMap(p => p.modules.map((m, i) => ({ p, m, i })));
