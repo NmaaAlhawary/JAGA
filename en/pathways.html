@@ -46,8 +46,9 @@
   .pw-tile .see [data-lucide] { width: 18px; height: 18px; transition: .25s; }
   .pw-tile:hover .see [data-lucide] { transform: translateX(-5px); }
   [dir="ltr"] .pw-tile:hover .see [data-lucide] { transform: translateX(5px); }
-  .pw-tile .price { color: #fff; font-family: var(--font-head); font-weight: 800; font-size: 22px; }
-  .pw-tile .price small { display: block; font-family: var(--font-body); font-size: 12px; font-weight: 600; color: rgba(255,255,255,.75); }
+  .pw-tile .price { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .pw-tile .price .free { font-family: var(--font-head); font-weight: 800; font-size: 18px; color: var(--green); background: #e1f1e8; padding: 6px 20px; border-radius: 999px; box-shadow: 0 8px 18px rgba(0,0,0,.15); }
+  .pw-tile .price small { font-family: var(--font-body); font-size: 12px; font-weight: 600; color: rgba(255,255,255,.8); }
 
   @media (max-width: 1100px) { .pw-hero .container { grid-template-columns: 1fr; } .pw-tiles { grid-template-columns: 1fr; } }
   @media (max-width: 680px) { .pw-hero h1 { font-size: 32px; } .pw-tile { padding: 26px 22px; min-height: 0; } .pw-tile h3 { font-size: 23px; } .pw-tile p { max-width: 100%; } .pw-stats b { font-size: 24px; } }
@@ -118,7 +119,7 @@
       <h3>${t(p.title)}</h3>
       <p>${t(p.summary)}</p>
       <div class="meta"><span><i data-lucide="layers"></i> ${p.modules.length} ${t(UI.modules)}</span><span><i data-lucide="blocks"></i> ${blockCount(p)} ${t(UI.blocks)}</span><span><i data-lucide="award"></i> Certificate</span></div>
-      <div class="foot"><span class="see">${t(UI.seePathway)} <i data-lucide="${ARROW}"></i></span><span class="price">${t(UI.free)}<small>${t(UI.freeFor)}</small></span></div>
+      <div class="foot"><span class="see">${t(UI.seePathway)} <i data-lucide="${ARROW}"></i></span><span class="price"><span class="free">${t(UI.free)}</span><small>${t(UI.freeFor)}</small></span></div>
     </a>`).join('');
   lucide.createIcons();
 </script>
