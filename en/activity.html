@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Activity · e-Training Platform | JAGA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/jaga.css">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="../assets/pathways.js"></script>
+<!--PAGE_STYLE:activity--><style>
+  body { background: #faf7f6; }
+
+  /* top bar (Moodle activity view) */
+  .a-top { position: sticky; top: 0; z-index: 60; height: 76px; background: #fff; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 24px; padding-inline: 28px; }
+  .back { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border: 1.5px solid var(--ink); border-radius: 8px; font-weight: 700; font-size: 15px; color: var(--ink); }
+  .back:hover { border-color: var(--maroon); color: var(--maroon); }
+  .back [data-lucide] { width: 18px; height: 18px; }
+  .a-top .course { font-family: var(--font-head); font-weight: 700; font-size: 17px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .a-top .right { margin-inline-start: auto; display: flex; align-items: center; gap: 10px; }
+  .r-btn { width: 46px; height: 46px; border-radius: 50%; background: var(--maroon); color: #fff; display: grid; place-items: center; position: relative; }
+  .r-btn:hover { background: var(--maroon-700); }
+  .r-btn [data-lucide] { width: 20px; height: 20px; }
+  .r-btn .dot { position: absolute; top: 0; inset-inline-end: 0; min-width: 18px; height: 18px; border-radius: 99px; background: var(--gold); color: #fff; font-size: 10.5px; font-weight: 800; display: grid; place-items: center; border: 2px solid #fff; }
+  .me { width: 48px; height: 48px; border-radius: 50%; background: var(--rose); color: var(--maroon); display: grid; place-items: center; font-family: var(--font-head); font-weight: 800; font-size: 15px; }
+  .lang-sw { width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--line); display: grid; place-items: center; font-weight: 800; color: var(--ink-2); }
+
+  /* layout */
+  .a-shell { display: grid; grid-template-columns: 380px 1fr; min-height: calc(100vh - 76px); }
+
+  /* course index (activities of this block) */
+  .ci { background: #fff; border-inline-end: 1px solid var(--line); position: sticky; top: 76px; height: calc(100vh - 76px); overflow-y: auto; padding-bottom: 40px; }
+  .ci-head { padding: 22px 24px 14px; border-bottom: 1px solid var(--line); }
+  .ci-head small { color: var(--maroon); font-weight: 700; font-size: 13px; }
+  .ci-head h3 { font-size: 17px; line-height: 1.5; }
+  .ci-head .progress { margin-top: 12px; height: 6px; }
+  .ci-head .pg { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--ink-3); margin-top: 6px; }
+  .ci-sec > button { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px 8px; font-family: var(--font-head); font-weight: 700; font-size: 13px; letter-spacing: .4px; color: var(--ink-3); }
+  .ci-sec > button [data-lucide] { width: 18px; height: 18px; transition: .2s; }
+  .ci-sec.closed > button [data-lucide] { transform: rotate(90deg); }
+  [dir="ltr"] .ci-sec.closed > button [data-lucide] { transform: rotate(-90deg); }
+  .ci-sec.closed .ci-items { display: none; }
+  .ci-item { display: flex; align-items: center; gap: 14px; padding: 14px 24px; border-inline-start: 4px solid transparent; transition: .15s; }
+  .ci-item:hover { background: #fdf8f8; }
+  .ci-item.on { background: var(--cream); border-inline-start-color: var(--maroon); }
+  .ci-item .txt { flex: 1; min-width: 0; }
+  .ci-item small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .5px; color: var(--ink-3); text-transform: uppercase; }
+  .ci-item b { display: block; font-weight: 600; font-size: 14.5px; line-height: 1.5; color: var(--ink); }
+  .ci-item .chk { width: 22px; height: 22px; border-radius: 6px; border: 1.8px dashed #c9bfbd; flex-shrink: 0; display: grid; place-items: center; }
+  .ci-item .chk.ok { border: 0; background: var(--green); color: #fff; }
+  .ci-item .chk.ok [data-lucide] { width: 14px; height: 14px; stroke-width: 3; }
+
+  /* activity icon */
+  .ai { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; color: #fff; }
+  .ai [data-lucide] { width: 22px; height: 22px; }
+  .ai.video { background: linear-gradient(135deg, var(--maroon), var(--maroon-900)); }
+  .ai.read { background: linear-gradient(135deg, #b8893b, #7a531a); }
+  .ai.forum { background: linear-gradient(135deg, #2f8a5f, #1f6045); }
+  .ai.quiz { background: linear-gradient(135deg, #e05a5a, #a32b2b); }
+  .ai.assign { background: linear-gradient(135deg, #5a3a44, #2b1a1f); }
+  .ai.lg { width: 68px; height: 68px; } .ai.lg [data-lucide] { width: 30px; height: 30px; }
+
+  /* main */
+  .main { padding: 44px 56px 120px; min-width: 0; }
+  .a-head { display: flex; align-items: center; gap: 20px; }
+  .a-head small { display: block; font-size: 13px; font-weight: 700; letter-spacing: .6px; color: var(--ink-3); text-transform: uppercase; }
+  .a-head h1 { font-size: 28px; line-height: 1.45; }
+  .a-tabs { margin: 30px 0 26px; background: var(--maroon-900); border-radius: 12px; padding: 10px; display: flex; gap: 4px; flex-wrap: wrap; }
+  .a-tabs a { padding: 11px 20px; border-radius: 8px; font-size: 15.5px; font-weight: 600; color: #f1cfd7; display: inline-flex; gap: 4px; align-items: center; }
+  .a-tabs a:hover { background: rgba(255,255,255,.08); color: #fff; }
+  .a-tabs a.on { background: #fff; color: var(--maroon); font-weight: 700; }
+  .a-tabs [data-lucide] { width: 16px; height: 16px; }
+  .todo { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 999px; background: var(--rose); color: var(--maroon); }
+  .todo.ok { background: #e1f1e8; color: var(--green); }
+  .todo [data-lucide] { width: 14px; height: 14px; }
+  .dates { margin: 18px 0; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; gap: 32px; flex-wrap: wrap; font-size: 15px; color: var(--ink-2); }
+  .dates b { color: var(--ink); }
+  .desc { font-family: var(--font-head); font-size: 20px; font-weight: 700; line-height: 1.8; color: var(--ink); margin: 24px 0 28px; max-width: 980px; }
+
+  /* type-specific content */
+  .player { position: relative; aspect-ratio: 16/9; max-width: 980px; border-radius: 18px; overflow: hidden; background: radial-gradient(circle at 30% 30%, #5a0018, #1d0008 70%); display: grid; place-items: center; box-shadow: 0 20px 50px rgba(61,0,16,.25); }
+  .player::before { content: ""; position: absolute; inset-inline-end: -60px; bottom: -80px; width: 420px; height: 380px; background: url(../assets/jaga-mark-white.png) center/contain no-repeat; opacity: .07; }
+  .player .play { width: 92px; height: 92px; border-radius: 50%; background: #fff; color: var(--maroon); display: grid; place-items: center; box-shadow: 0 0 0 14px rgba(255,255,255,.12); z-index: 1; }
+  .player .play [data-lucide] { width: 36px; height: 36px; fill: currentColor; }
+  .player .kind { position: absolute; top: 18px; inset-inline-start: 18px; font-size: 12.5px; font-weight: 700; color: #fff; padding: 5px 12px; border-radius: 999px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); }
+  .player .bar { position: absolute; inset-inline: 18px; bottom: 16px; display: flex; align-items: center; gap: 12px; color: #fff; font-size: 13px; }
+  .player .bar .track { flex: 1; height: 5px; border-radius: 9px; background: rgba(255,255,255,.25); overflow: hidden; }
+  .player .bar .track i { display: block; height: 100%; width: 0; background: var(--gold); }
+  .doc { max-width: 980px; display: flex; align-items: center; gap: 18px; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; }
+  .doc .ic { width: 56px; height: 64px; border-radius: 10px; background: var(--rose); color: var(--maroon); display: grid; place-items: center; }
+  .doc b { display: block; font-size: 16px; }
+  .doc small { color: var(--ink-3); }
+  .doc .btn { margin-inline-start: auto; }
+  .threads { max-width: 980px; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  .threads .th { display: flex; align-items: center; gap: 14px; padding: 16px 20px; border-top: 1px solid var(--line); }
+  .threads .th:first-child { border: 0; }
+  .threads .th .avatar { width: 40px; height: 40px; font-size: 13px; }
+  .threads .th b { display: block; font-size: 15px; }
+  .threads .th small { color: var(--ink-3); font-size: 13px; }
+  .threads .th .n { margin-inline-start: auto; font-size: 13px; font-weight: 700; color: var(--maroon); background: var(--rose); padding: 4px 12px; border-radius: 99px; white-space: nowrap; }
+  .facts { list-style: none; max-width: 980px; display: grid; gap: 10px; font-size: 16px; color: var(--ink-2); margin-top: 22px; }
+  .sub-table { max-width: 980px; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin-bottom: 22px; }
+  .sub-table div { display: grid; grid-template-columns: 240px 1fr; border-top: 1px solid var(--line); }
+  .sub-table div:first-child { border: 0; }
+  .sub-table span { padding: 14px 20px; font-size: 15px; }
+  .sub-table span:first-child { background: var(--cream); font-weight: 700; color: var(--ink); }
+  .act-btn { margin-top: 22px; background: #6f7378; color: #fff; padding: 14px 26px; border-radius: 8px; font-size: 16px; font-weight: 600; display: inline-flex; gap: 8px; align-items: center; }
+  .act-btn:hover { background: #5d6166; }
+  .act-btn.primary { background: var(--maroon); } .act-btn.primary:hover { background: var(--maroon-700); }
+
+  /* prev / next */
+  .pn { max-width: 980px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; }
+  .pn a { display: flex; align-items: center; gap: 12px; max-width: 46%; color: var(--ink-2); }
+  .pn a:hover { color: var(--maroon); }
+  .pn small { display: block; font-size: 12.5px; color: var(--ink-3); }
+  .pn b { font-size: 14.5px; line-height: 1.5; }
+  .pn .nx { text-align: end; margin-inline-start: auto; }
+
+  .done-btn { margin-inline-start: auto; display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px; border: 1.5px solid var(--line); font-weight: 700; font-size: 14px; color: var(--ink-2); background: #fff; }
+  .done-btn.ok { background: #e1f1e8; border-color: #bfe0cd; color: var(--green); }
+  .done-btn [data-lucide] { width: 16px; height: 16px; }
+
+  @media (max-width: 1000px) {
+    .a-shell { grid-template-columns: 1fr; } .ci { position: static; height: auto; border: 0; border-bottom: 1px solid var(--line); }
+    .main { padding: 28px 18px 120px; } .a-top .course, .a-top .r-btn:nth-of-type(n+2) { display: none; }
+    .sub-table div { grid-template-columns: 1fr; } .a-head h1 { font-size: 22px; }
+  }
+</style><!--/PAGE_STYLE-->
+</head>
+<body>
+
+<header class="a-top">
+  <a class="back" id="back" href="course.html"><i data-lucide="arrow-right" id="backIc"></i> <span id="backTx"></span></a>
+  <span class="course" id="courseName"></span>
+  <div class="right">
+    <a class="lang-sw" id="langSw" href="#"></a>
+    <button class="r-btn" aria-label="notifications"><i data-lucide="bell-ring"></i><span class="dot">3</span></button>
+    <button class="r-btn" aria-label="messages"><i data-lucide="messages-square"></i></button>
+    <button class="r-btn" aria-label="settings"><i data-lucide="settings"></i></button>
+    <a href="#" class="me" id="me"></a>
+  </div>
+</header>
+
+<div class="a-shell">
+  <aside class="ci" id="ci"></aside>
+  <main class="main" id="main"></main>
+</div>
+
+<nav class="mock-nav" id="mockNav"></nav>
+
+<script>
+  const S = {
+    ar: { back: 'العودة إلى المساق', me: 'س.م', block: 'الكتلة', intro: 'مقدمة الوحدة', done: 'مكتمل', of: 'من', acts: 'أنشطة',
+          markDone: 'تحديد كمكتمل', isDone: 'تمّ', todo: 'للإنجاز: ', todoT: { Video: 'شاهد الفيديو', Reading: 'اطّلع على المادة', File: 'اطّلع على الملف', Discussion: 'أضف مشاركة', Quiz: 'احصل على علامة', Assignment: 'سلّم الواجب' },
+          opened: 'يُفتح:', due: 'الاستحقاق:', openD: 'الأحد، 19 تشرين الأول 2026، 9:00 ص', dueD: 'الأحد، 2 تشرين الثاني 2026، 11:59 م',
+          tabs: { Quiz: ['الاختبار','الإعدادات','الأسئلة','النتائج','بنك الأسئلة','المزيد'], Assignment: ['الواجب','الإعدادات','التقديمات','المزيد'], Discussion: ['المنتدى','الإعدادات','المشتركون','المزيد'], def: ['النشاط','الإعدادات','المزيد'] },
+          desc: { Video: 'شاهد الفيديو كاملاً، ودوّن أبرز الأفكار لاستخدامها في نشاطي «تعاون» و«طبّق» ضمن هذه الكتلة.',
+                  Reading: 'اقرأ المادة المرفقة بعناية، فهي الأساس المرجعي لأنشطة هذه الكتلة وتقييمها.',
+                  File: 'اطّلع على الملف المرفق قبل البدء بأنشطة الوحدة.',
+                  Discussion: 'شارك رأيك وخبرتك العملية، وعلّق على مشاركتين على الأقل من زملائك بشكل بنّاء.',
+                  Quiz: 'يقيس هذا الاختبار مدى فهمك لمحتوى الكتلة. اقرأ كل سؤال بعناية واختر الإجابة الأنسب.',
+                  Assignment: 'طبّق ما تعلّمته في هذه الكتلة على الحالة المقدّمة، وسلّم عملك بصيغة PDF وفق النموذج المرفق.' },
+          kind: { 'Talking Head': 'حديث مباشر', 'Screen Cast': 'شرح على الشاشة', '': 'فيديو' },
+          min: 'دقيقة', file: 'ملف PDF · 1.4 MB', open: 'فتح', preview: 'معاينة الاختبار', attempt: 'ابدأ المحاولة', attempts: 'المحاولات المسموحة:', time: 'المدة الزمنية:', mins: 'دقيقة', grade: 'طريقة التقييم: أعلى علامة',
+          sub: [['حالة التسليم','لم يتم التسليم بعد'],['حالة التقييم','لم يُقيَّم'],['الوقت المتبقي','13 يوماً و 4 ساعات'],['آخر تعديل','—']], add: 'إضافة تسليم',
+          threads: [['م.ع','أهلاً بكم في نقاش هذه الكتلة','د. محمد العلي · منذ يومين','12 رداً'],['ر.ح','تجربة مؤسستنا في هذا الموضوع','م. ريم الحسن · منذ يوم','5 ردود'],['ل.ن','سؤال حول متطلبات التوثيق','أ. لينا النعيمي · منذ 3 ساعات','2 ردّان']], newPost: 'إضافة موضوع نقاش',
+          prev: 'النشاط السابق', next: 'النشاط التالي',
+          mock: [['index.html','الرئيسية'],['pathways.html','المسارات'],['courses.html','المساقات'],['course.html','داخل المساق (Moodle)']] },
+    en: { back: 'Back to Course', me: 'SM', block: 'Block', intro: 'Module introduction', done: 'Done', of: 'of', acts: 'activities',
+          markDone: 'Mark as done', isDone: 'Done', todo: 'To do: ', todoT: { Video: 'Watch the video', Reading: 'View the material', File: 'View the file', Discussion: 'Make a post', Quiz: 'Receive a grade', Assignment: 'Make a submission' },
+          opened: 'Opened:', due: 'Due:', openD: 'Sunday, 19 October 2026, 9:00 AM', dueD: 'Sunday, 2 November 2026, 11:59 PM',
+          tabs: { Quiz: ['Quiz','Settings','Questions','Results','Question bank','More'], Assignment: ['Assignment','Settings','Submissions','More'], Discussion: ['Forum','Settings','Subscriptions','More'], def: ['Activity','Settings','More'] },
+          desc: { Video: 'Watch the full video and note the key ideas — you will use them in the Collaborate and Apply activities of this block.',
+                  Reading: 'Read the attached material carefully; it is the reference for this block\'s activities and assessment.',
+                  File: 'Review the attached file before starting the module activities.',
+                  Discussion: 'Share your view and practical experience, and respond constructively to at least two classmates.',
+                  Quiz: 'This quiz checks your understanding of the block content. Read each question carefully and choose the best answer.',
+                  Assignment: 'Apply what you learned in this block to the provided case and submit your work as a PDF using the attached template.' },
+          kind: { 'Talking Head': 'Talking head', 'Screen Cast': 'Screencast', '': 'Video' },
+          min: 'min', file: 'PDF file · 1.4 MB', open: 'Open', preview: 'Preview quiz', attempt: 'Attempt quiz', attempts: 'Attempts allowed:', time: 'Time limit:', mins: 'mins', grade: 'Grading method: Highest grade',
+          sub: [['Submission status','No submissions have been made yet'],['Grading status','Not graded'],['Time remaining','13 days 4 hours'],['Last modified','—']], add: 'Add submission',
+          threads: [['MA','Welcome to this block\'s discussion','Dr. Mohammad Al-Ali · 2 days ago','12 replies'],['RH','Our institution\'s experience with this topic','Eng. Reem Al-Hassan · 1 day ago','5 replies'],['LN','Question about documentation requirements','Ms. Lina Al-Nuaimi · 3 hours ago','2 replies']], newPost: 'Add discussion topic',
+          prev: 'Previous activity', next: 'Next activity',
+          mock: [['index.html','Home'],['pathways.html','Pathways'],['courses.html','Courses'],['course.html','Inside Course (Moodle)']] },
+  }[LANG];
+  const $ = id => document.getElementById(id);
+  const q = new URLSearchParams(location.search);
+  const P = findPathway(q.get('p') || 'ai-digital-practice');
+  const mi = Math.min(+(q.get('m') || 0), P.modules.length - 1);
+  const M = P.modules[mi];
+  const bi = Math.max(-1, Math.min(+(q.get('b') ?? 0), M.blocks.en.length - 1));
+  const acts = getActivities(P, mi, bi);
+  const ai = Math.max(0, Math.min(+(q.get('a') || 0), acts.length - 1));
+  const A = acts[ai];
+  const T = ACT_TYPES[A.type];
+  const url = (b, a) => `activity.html?p=${P.id}&m=${mi}&b=${b}&a=${a}`;
+  const courseUrl = `course.html?p=${P.id}&m=${mi}`;
+  const blockTitle = bi < 0 ? S.intro : t(M.blocks)[bi];
+  // demo progress: the first activities of the first block are done
+  const isDone = (b, a) => b < 0 || (b === 0 && a < 3);
+
+  document.title = `${actTitle(A)} · ${moduleTitle(M)} | JAGA`;
+  $('back').href = courseUrl; $('backTx').textContent = S.back;
+  $('backIc').setAttribute('data-lucide', LANG === 'ar' ? 'arrow-right' : 'arrow-left');
+  $('courseName').textContent = moduleTitle(M);
+  $('me').textContent = S.me;
+  $('langSw').textContent = LANG === 'ar' ? 'EN' : 'ع';
+  $('langSw').href = (LANG === 'ar' ? 'en/' : '../') + url(bi, ai);
+  $('mockNav').innerHTML = S.mock.map(([h, l], i) => `<a href="${h}" class="${i === 3 ? 'on' : ''}">${l}</a>`).join('');
+
+  // course index: this block's activities grouped by Learn / Collaborate / Apply
+  const done = acts.filter((_, i) => isDone(bi, i)).length;
+  const groups = [...new Set(acts.map(a => a.k))];
+  $('ci').innerHTML = `
+    <div class="ci-head"><small>${bi < 0 ? t(PHASES.G) : `${S.block} ${bi + 1}`}</small><h3>${blockTitle}</h3>
+      <div class="progress"><i style="width:${Math.round(done / acts.length * 100)}%"></i></div>
+      <div class="pg"><span>${done} ${S.of} ${acts.length} ${S.acts}</span><span>${Math.round(done / acts.length * 100)}%</span></div></div>` +
+    groups.map(k => `<div class="ci-sec"><button>${t(PHASES[k])}<i data-lucide="chevron-down"></i></button><div class="ci-items">` +
+      acts.map((a, i) => a.k !== k ? '' : `
+        <a class="ci-item ${i === ai ? 'on' : ''}" href="${url(bi, i)}">
+          <span class="ai ${ACT_TYPES[a.type].tone}"><i data-lucide="${ACT_TYPES[a.type].icon}"></i></span>
+          <span class="txt"><small>${t(ACT_TYPES[a.type].label)}</small><b>${actTitle(a)}</b></span>
+          <span class="chk ${isDone(bi, i) ? 'ok' : ''}">${isDone(bi, i) ? '<i data-lucide="check"></i>' : ''}</span>
+        </a>`).join('') + `</div></div>`).join('');
+  document.querySelectorAll('.ci-sec > button').forEach(b => b.onclick = () => b.parentElement.classList.toggle('closed'));
+
+  // main: activity header, tab bar, to-do, dates, description, type-specific content
+  const tabs = S.tabs[A.type] || S.tabs.def;
+  const doneNow = isDone(bi, ai);
+  const hasDates = A.type === 'Quiz' || A.type === 'Assignment' || A.type === 'Discussion';
+  let body = '';
+  if (A.type === 'Video') {
+    const mins = 6 + (actTitle(A).length % 9);
+    body = `<div class="player"><span class="kind">${S.kind[A.v] || S.kind['']} · ${mins} ${S.min}</span><span class="play"><i data-lucide="play"></i></span>
+      <div class="bar"><span>0:00</span><span class="track"><i style="width:${doneNow ? 100 : 0}%"></i></span><span>${mins}:00</span></div></div>`;
+  } else if (A.type === 'Reading' || A.type === 'File') {
+    body = `<div class="doc"><span class="ic"><i data-lucide="file-text"></i></span><div><b>${actTitle(A)}</b><small>${S.file}</small></div><a href="#" class="btn btn-primary btn-sm">${S.open}</a></div>`;
+  } else if (A.type === 'Discussion') {
+    body = `<div class="threads">${S.threads.map(([av, ti, by, n]) => `<div class="th"><span class="avatar">${av}</span><div><b>${ti}</b><small>${by}</small></div><span class="n">${n}</span></div>`).join('')}</div>
+      <a href="#" class="act-btn primary"><i data-lucide="plus"></i> ${S.newPost}</a>`;
+  } else if (A.type === 'Quiz') {
+    body = `<a href="#" class="act-btn">${S.preview}</a> <a href="#" class="act-btn primary">${S.attempt}</a>
+      <ul class="facts"><li>${S.attempts} 1</li><li>${S.time} 30 ${S.mins}</li><li>${S.grade}</li></ul>`;
+  } else if (A.type === 'Assignment') {
+    body = `<div class="sub-table">${S.sub.map(([k, v]) => `<div><span>${k}</span><span>${v}</span></div>`).join('')}</div><a href="#" class="act-btn primary"><i data-lucide="upload"></i> ${S.add}</a>`;
+  }
+  const prev = ai > 0 ? acts[ai - 1] : null, next = ai < acts.length - 1 ? acts[ai + 1] : null;
+  const chevP = LANG === 'ar' ? 'chevron-right' : 'chevron-left', chevN = LANG === 'ar' ? 'chevron-left' : 'chevron-right';
+  $('main').innerHTML = `
+    <div class="a-head"><span class="ai lg ${T.tone}"><i data-lucide="${T.icon}"></i></span><div><small>${t(T.label)}${A.v ? ` · ${S.kind[A.v]}` : ''}</small><h1>${actTitle(A)}</h1></div></div>
+    <nav class="a-tabs">${tabs.map((x, i) => `<a href="#" class="${i === 0 ? 'on' : ''}">${x}${i === tabs.length - 1 ? ' <i data-lucide="chevron-down"></i>' : ''}</a>`).join('')}</nav>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <span class="todo ${doneNow ? 'ok' : ''}"><i data-lucide="${doneNow ? 'check' : 'circle'}"></i> ${doneNow ? S.done : S.todo + S.todoT[A.type]}</span>
+      ${A.type === 'Reading' || A.type === 'File' ? `<button class="done-btn ${doneNow ? 'ok' : ''}" id="markBtn"><i data-lucide="${doneNow ? 'check' : 'circle'}"></i> ${doneNow ? S.isDone : S.markDone}</button>` : ''}
+    </div>
+    ${hasDates ? `<div class="dates"><span><b>${S.opened}</b> ${S.openD}</span><span><b>${S.due}</b> ${S.dueD}</span></div>` : '<div style="height:8px"></div>'}
+    <p class="desc">${S.desc[A.type]}</p>
+    ${body}
+    <div class="pn">
+      ${prev ? `<a href="${url(bi, ai - 1)}"><i data-lucide="${chevP}"></i><div><small>${S.prev}</small><b>${actTitle(prev)}</b></div></a>` : '<span></span>'}
+      ${next ? `<a class="nx" href="${url(bi, ai + 1)}"><div><small>${S.next}</small><b>${actTitle(next)}</b></div><i data-lucide="${chevN}"></i></a>` : ''}
+    </div>`;
+  const mb = $('markBtn');
+  if (mb) mb.onclick = () => { const ok = mb.classList.toggle('ok'); mb.innerHTML = `<i data-lucide="${ok ? 'check' : 'circle'}"></i> ${ok ? S.isDone : S.markDone}`; lucide.createIcons(); };
+  lucide.createIcons();
+</script>
+</body>
+</html>

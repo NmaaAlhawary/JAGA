@@ -298,17 +298,17 @@ const PATHWAYS = [
       "en": "AI and Digital Professional Practice"
     },
     "summary": {
-      "ar": "تطبيق أساليب الحوكمة التقنية للذكاء الاصطناعي وتصميم الحلول والضمان، وتوثيق القيود، وإنتاج أدلة مخبرية قابلة للتكرار.",
-      "en": "Apply technical AI governance, solution-design and assurance methods, document limitations, and produce reproducible laboratory evidence."
+      "ar": "تطوير قدرات تقنية متخصصة للمهنيين الذين يصممون أنظمة الذكاء الاصطناعي ويبنونها ويضمنونها وينشرونها ويشغّلونها في الحكومة.",
+      "en": "Develop selective technical capability for professionals who design, build, assure, deploy or operate AI systems in government."
     },
     "description": {
       "ar": [
-        "مسار تقني متخصص للممارسين في مجال الذكاء الاصطناعي والتقنيات الرقمية، يغطي حوكمة الذكاء الاصطناعي، وهندسة الذكاء الاصطناعي التوليدي والوكيلي، والبنية التحتية والتكامل والأمن، وتصميم الحلول والتحقق منها وإطلاقها، والتشغيل والمراقبة وإدارة دورة الحياة.",
-        "يعمل المتعلمون تحت الإشراف لإنتاج أدلة تقنية قابلة للتكرار، وتوثيق القيود وتصعيد المخاطر عبر القنوات المعتمدة، ويُختتم المسار بمساهمة مهنية، وملف إنجاز تراجعه لجنة خبراء، واختبار نهائي."
+        "يطوّر مسار الممارسة المهنية في الذكاء الاصطناعي والتقنيات الرقمية قدرات تقنية متخصصة للمهنيين الذين يصممون أنظمة الذكاء الاصطناعي أو يبنونها أو يضمنونها أو ينشرونها أو يشغّلونها في الحكومة. ويجمع بين أساس مشترك في الحوكمة التقنية، وتقييم حالات الاستخدام، وتصميم الحلول، والاختبار، والإشراف البشري، وبين ممارسة مرتبطة بالدور تشمل الذكاء الاصطناعي التوليدي والوكيلي، والبنية التحتية، والتكامل، والأمن، والتحقق، والإطلاق، والمراقبة، وإدارة دورة الحياة.",
+        "يعتمد المسار على التقديم التخصصي، والممارسة المخبرية تحت الإشراف، والتقييمات العملية المنظّمة، والمراجعة التقنية، وأدلة ملف الإنجاز. وينتج المتعلمون أدلة تقنية قابلة للتكرار، ويوثّقون القيود، ويستخدمون مسارات التصعيد المعتمدة، ويساهمون في تحسين الممارسة. وينبغي أن يتبع التقدّم في المسار الملف المعتمد للدور التقني للمتعلم ومستوى الكفاءة المسند إليه."
       ],
       "en": [
-        "A specialist technical pathway for AI and digital practitioners covering AI governance, generative and agentic AI engineering, infrastructure, integration and security, solution design, validation and release, and operations, monitoring and lifecycle management.",
-        "Learners work under supervision to produce reproducible technical evidence, document limitations and escalate risks through approved channels, and finish with a professional contribution, an expert-panel portfolio review and a final exam."
+        "AI and Digital Professional Practice develops selective technical capability for professionals who design, build, assure, deploy or operate artificial-intelligence systems in government. It combines a common baseline in technical governance, use-case assessment, solution design, testing and human oversight with role-relevant practice across generative and agentic AI, infrastructure, integration, security, validation, release, monitoring and lifecycle management.",
+        "The pathway uses specialist delivery, supervised laboratory practice, structured practical assessments, technical review and portfolio evidence. Learners produce reproducible technical evidence, document limitations, use approved escalation routes and contribute to practice improvement. Progression should follow the learner's approved technical role profile and the assigned proficiency stage."
       ]
     },
     "outcomes": {
@@ -325,70 +325,74 @@ const PATHWAYS = [
     },
     "skills": {
       "ar": [
-        "تقييم حالات استخدام الذكاء الاصطناعي وتحديد أولوياتها ووصف بنية الحلول والبنية التحتية اللازمة لها.",
-        "تطبيق متطلبات حوكمة البيانات وجودتها وضوابط الأمن والنشر على مشاريع الذكاء الاصطناعي.",
-        "شرح تكييف النماذج وهندسة الذكاء الاصطناعي التوليدي والوكيلي وتطبيقها تحت الإشراف.",
-        "إعداد واجهات المراقبة وأدلة التشغيل وسجلات الحوادث، وتوثيق قرارات الإيقاف والاستبدال.",
-        "إنتاج أدلة تقنية قابلة للتكرار، وتوثيق القيود، وتصعيد المخاطر عبر القنوات المعتمدة."
+        "تطبيق أساليب الحوكمة التقنية وتقييم حالات الاستخدام وتصميم الحلول ضمن نطاق معتمد.",
+        "إنتاج أدلة مخبرية وتقنية قابلة للتكرار للوحدات التخصصية المسندة.",
+        "تطبيق ضوابط الاختبار والتحقق والأمن والإشراف البشري والإطلاق على أنظمة الذكاء الاصطناعي.",
+        "توثيق القيود والمخاطر التقنية وتصعيدها عبر القنوات المعتمدة.",
+        "إعداد التوثيق التقني، والاستجابة لمراجعة الخبراء، والمساهمة في تحسين المعايير."
       ],
       "en": [
-        "Assess and prioritise AI use cases and describe the solution architecture and infrastructure they need.",
-        "Apply data-governance, quality, security and deployment controls to AI projects.",
-        "Explain and apply model adaptation and generative and agentic AI engineering under supervision.",
-        "Configure monitoring, maintain runbooks and incident records, and document retirement and replacement decisions.",
-        "Produce reproducible technical evidence, document limitations and escalate risks through approved channels."
+        "Apply technical governance, use-case assessment and solution-design methods within an approved remit.",
+        "Produce reproducible laboratory and technical evidence for assigned specialist units.",
+        "Apply testing, validation, security, human-oversight and release controls to AI systems.",
+        "Document technical limitations and risks and escalate them through approved channels.",
+        "Prepare technical documentation, respond to expert review and contribute to standards improvement."
       ]
     },
     "knowledge": {
       "ar": [
-        "أطر حوكمة الذكاء الاصطناعي ومعاييره (ISO/IEC 22989، ISO/IEC 23894، NIST AI RMF).",
-        "أنماط بنية الحلول، ومكوّنات البنية التحتية، وطوبولوجيا النشر السحابي والمحلي والهجين.",
-        "الذكاء الاصطناعي التوليدي وأنظمة الأوامر وتكييف النماذج والأنظمة الوكيلية.",
-        "التحقق من الحلول وإطلاقها، والمراقبة والصيانة، وإدارة دورة حياة أنظمة الذكاء الاصطناعي.",
-        "تقييم المخاطر الأخلاقية، وتوثيق الأدلة، ومسارات التصعيد والمراجعة التقنية."
+        "حوكمة الذكاء الاصطناعي، والامتثال المؤسسي، والاستخدام المسؤول، والمساءلة التقنية.",
+        "تقييم حالات الاستخدام، وبنية الحلول، والبنية التحتية، والتكامل، وحوكمة البيانات.",
+        "الذكاء الاصطناعي التوليدي والوكيلي، وأنظمة الأوامر، وتكييف النماذج الخاضع للحوكمة.",
+        "الأمن، والاختبار، والتحقق، والموثوقية، والإشراف البشري، والجاهزية للإطلاق.",
+        "تشغيل الذكاء الاصطناعي، والمراقبة، والصيانة، وإدارة الإصدارات، والاستجابة للحوادث، والإيقاف.",
+        "الأدلة التقنية، والمعايير، ومحطات المراجعة، والمساهمة المهنية."
       ],
       "en": [
-        "AI governance frameworks and standards (ISO/IEC 22989, ISO/IEC 23894, NIST AI RMF).",
-        "Solution architecture patterns, infrastructure components and cloud, on-premises and hybrid deployment.",
-        "Generative AI, prompt systems, model adaptation and agentic systems.",
-        "Solution validation and release, monitoring and maintenance, and AI lifecycle management.",
-        "Ethical risk assessment, evidence documentation, escalation routes and technical review."
+        "AI governance, institutional compliance, responsible use and technical accountability.",
+        "Use-case assessment, solution architecture, infrastructure, integration and data governance.",
+        "Generative and agentic AI, prompt systems and governed model adaptation.",
+        "Security, testing, validation, reliability, human oversight and release readiness.",
+        "AI operations, monitoring, maintenance, versioning, incident response and retirement.",
+        "Technical evidence, standards, review milestones and professional contribution."
       ]
     },
     "attitude": {
       "ar": [
-        "الدقة والانضباط في إنتاج الأدلة التقنية القابلة للتكرار.",
-        "الشفافية في توثيق القيود والاعتراف بها.",
-        "المسؤولية في تصعيد المخاطر عبر القنوات المعتمدة.",
-        "تقبّل المراجعة التقنية والتغذية الراجعة من الخبراء.",
-        "الالتزام بالمعايير المهنية والمساهمة في تحسينها."
+        "الدقة وقابلية التكرار والمساءلة في الممارسة التقنية.",
+        "الالتزام بالأمن والخصوصية والسلامة والذكاء الاصطناعي المسؤول.",
+        "الاستعداد لتحديد القيود وتصعيد المخاطر الجوهرية.",
+        "الانفتاح على المراجعة التقنية والتغذية الراجعة والتعاون متعدد التخصصات.",
+        "التعلّم المستمر والمساهمة في المعايير المهنية."
       ],
       "en": [
-        "Rigour and discipline in producing reproducible technical evidence.",
-        "Transparency in documenting and acknowledging limitations.",
-        "Responsibility in escalating risks through approved channels.",
-        "Openness to technical review and expert feedback.",
-        "Commitment to professional standards and to improving them."
+        "Precision, reproducibility and accountability in technical practice.",
+        "Commitment to security, privacy, safety and responsible AI.",
+        "Readiness to identify limitations and escalate material risks.",
+        "Openness to technical review, feedback and multidisciplinary collaboration.",
+        "Continuous learning and contribution to professional standards."
       ]
     },
     "audience": {
-      "ar": "الممارسون التقنيون في القطاع العام العاملون في الذكاء الاصطناعي والتقنيات الرقمية: مهندسو الذكاء الاصطناعي والبيانات، ومهندسو الحلول والبنية التحتية، والمختصون في أمن المعلومات والتشغيل، ممن يعملون تحت إشراف تقني على وحدات تخصصية مسندة.",
-      "en": "Public-sector technical practitioners working in AI and digital technology: AI and data engineers, solution and infrastructure architects, and security and operations specialists working under technical supervision on assigned specialist units."
+      "ar": "المهنيون في مجالات الذكاء الاصطناعي والبيانات والبرمجيات والهندسة والبنية المعمارية والضمان والتشغيل في الحكومة. ويشمل ذلك ملفات الأدوار التقنية المعتمدة في حوكمة الذكاء الاصطناعي، وبنية الحلول، والبيانات والبنية التحتية، وهندسة الذكاء الاصطناعي التوليدي أو الوكيلي، والاختبار والضمان، والأمن السيبراني، وتشغيل الذكاء الاصطناعي وMLOps.",
+      "en": "AI, data, software, engineering, architecture, assurance and operations professionals in government. This includes approved technical-role profiles in AI governance, solution architecture, data and infrastructure, generative or agentic AI engineering, testing and assurance, cybersecurity, AI operations and MLOps."
     },
     "fields": {
       "ar": [
-        "حوكمة الذكاء الاصطناعي والضمان التقني",
-        "هندسة الذكاء الاصطناعي التوليدي والوكيلي",
-        "البنية التحتية والتكامل والأمن",
-        "تصميم الحلول والتحقق منها وإطلاقها",
-        "التشغيل والمراقبة وإدارة دورة الحياة"
+        "حوكمة الذكاء الاصطناعي وأخلاقياته والامتثال وضوابط الموردين",
+        "تقييم حالات الاستخدام والبنية المعمارية والبنية التحتية وحوكمة البيانات",
+        "الذكاء الاصطناعي التوليدي وأنظمة الأوامر وتكييف النماذج وهندسة الذكاء الاصطناعي الوكيلي",
+        "التكامل والأمن السيبراني والاختبار والتحقق وضمان الموثوقية",
+        "النشر والتشغيل والمراقبة والصيانة وإدارة دورة الحياة",
+        "المعايير التقنية والمساهمة المهنية وممارسة الخبراء"
       ],
       "en": [
-        "AI governance and technical assurance",
-        "Generative and agentic AI engineering",
-        "Infrastructure, integration and security",
-        "Solution design, validation and release",
-        "Operations, monitoring and lifecycle management"
+        "AI governance, ethics, compliance and vendor controls",
+        "AI use-case assessment, architecture, infrastructure and data governance",
+        "Generative AI, prompt systems, model adaptation and agentic AI engineering",
+        "AI integration, cybersecurity, testing, validation and reliability assurance",
+        "AI deployment, operations, monitoring, maintenance and lifecycle management",
+        "Technical standards, professional contribution and expert practice"
       ]
     },
     "modules": [
@@ -466,6 +470,470 @@ const PATHWAYS = [
             2,
             1
           ]
+        ],
+        "activities": [
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Defining the Expert Practice Mandate for AI Systems Operations",
+                "ar": "تحديد تفويض ممارسة الخبراء لعمليات أنظمة الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Mapping Standards Remit to AI Governance Frameworks",
+                "ar": "ربط نطاق المعايير بأطر حوكمة الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Permitted Evidence Types in AI Systems Operations",
+                "ar": "أنواع الأدلة المسموح بها في عمليات أنظمة الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Establishing Review Milestones for AI Practice Agreements",
+                "ar": "تحديد محطات المراجعة في اتفاقيات ممارسة الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: ISO/IEC 22989:2022 Section 5 – AI System Lifecycle and Governance",
+                "ar": "قراءة: ISO/IEC 22989:2022 القسم 5 – دورة حياة أنظمة الذكاء الاصطناعي وحوكمتها"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Interpreting the Expert Practice Mandate in Different AI Domains",
+                "ar": "نقاش: تفسير تفويض ممارسة الخبراء في مجالات ذكاء اصطناعي مختلفة"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Standards Remit, Evidence Types, and Review Milestones",
+                "ar": "اختبار: تحديد نطاق المعايير وأنواع الأدلة ومحطات المراجعة"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Define the Expert Practice Mandate for a Provided AI Use Case",
+                "ar": "واجب: تحديد تفويض ممارسة الخبراء لحالة استخدام مقدّمة"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "AI Use Case Assessment Criteria in ISO/IEC 22989",
+                "ar": "معايير تقييم حالات استخدام الذكاء الاصطناعي في ISO/IEC 22989"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Mapping Business Objectives to AI Use Cases in Practice",
+                "ar": "ربط أهداف العمل بحالات استخدام الذكاء الاصطناعي عملياً"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Prioritization Matrix for AI Use Cases: Step-by-Step Walkthrough",
+                "ar": "مصفوفة تحديد أولويات حالات الاستخدام: شرح خطوة بخطوة"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Worked Example: Assessing Feasibility and Impact of an AI Use Case",
+                "ar": "مثال تطبيقي: تقييم جدوى حالة استخدام وأثرها"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Read: ISO/IEC 22989 Section 7.2 – Use Case Assessment Requirements",
+                "ar": "قراءة: ISO/IEC 22989 القسم 7.2 – متطلبات تقييم حالات الاستخدام"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Trade-offs in Prioritizing Competing AI Use Cases",
+                "ar": "نقاش: الموازنات في تحديد أولويات حالات استخدام متنافسة"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Critique a Classmate’s Use Case Assessment Matrix",
+                "ar": "مراجعة الأقران: نقد مصفوفة تقييم حالات الاستخدام لزميل"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Gaps in Sample AI Use Case Assessments",
+                "ar": "اختبار: تحديد الثغرات في تقييمات نموذجية لحالات الاستخدام"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Apply a Prioritization Matrix to Three Proposed AI Use Cases",
+                "ar": "واجب: تطبيق مصفوفة الأولويات على ثلاث حالات استخدام مقترحة"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "AI System Solution Architecture Patterns",
+                "ar": "أنماط بنية حلول أنظمة الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Infrastructure Components for AI Workloads: Compute, Storage, and Networking",
+                "ar": "مكوّنات البنية التحتية لأحمال الذكاء الاصطناعي: الحوسبة والتخزين والشبكات"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Deployment Topologies for AI Solutions: Cloud, On-Premises, and Hybrid",
+                "ar": "طوبولوجيا نشر حلول الذكاء الاصطناعي: السحابي والمحلي والهجين"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "AI Solution Architecture: Traceability and Documentation Tools",
+                "ar": "بنية حلول الذكاء الاصطناعي: أدوات التتبّع والتوثيق"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Read: NIST AI RMF Section 2 – Technical Infrastructure Requirements",
+                "ar": "قراءة: NIST AI RMF القسم 2 – متطلبات البنية التحتية التقنية"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Compare Solution Architecture Diagrams for AI Use Cases",
+                "ar": "نقاش: مقارنة مخططات بنية الحلول لحالات الاستخدام"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Infrastructure Requirements in Sample AI Scenarios",
+                "ar": "اختبار: تحديد متطلبات البنية التحتية في سيناريوهات نموذجية"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Describe Core Infrastructure and Solution Architecture for a Provided AI Use Case",
+                "ar": "واجب: وصف البنية التحتية وبنية الحل لحالة استخدام مقدّمة"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Data Governance Frameworks in AI (ISO/IEC 38505, 23894)",
+                "ar": "أطر حوكمة البيانات في الذكاء الاصطناعي (ISO/IEC 38505، 23894)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Metadata Management with Data Catalog Tools (e.g., Collibra, DataHub)",
+                "ar": "إدارة البيانات الوصفية بأدوات فهارس البيانات (مثل Collibra وDataHub)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Assessing Data Quality Dimensions (Accuracy, Completeness, Consistency)",
+                "ar": "تقييم أبعاد جودة البيانات (الدقة والاكتمال والاتساق)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Interoperability Standards for AI Data Exchange (e.g., OpenAPI, JSON-LD, HL7 FHIR)",
+                "ar": "معايير التشغيل البيني لتبادل بيانات الذكاء الاصطناعي (OpenAPI وJSON-LD وHL7 FHIR)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Read: ISO/IEC 38505-1:2017 Section 5 – Principles for Data Governance",
+                "ar": "قراءة: ISO/IEC 38505-1:2017 القسم 5 – مبادئ حوكمة البيانات"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Compare Data Quality Assessment Approaches in AI Projects",
+                "ar": "نقاش: مقارنة مناهج تقييم جودة البيانات في مشاريع الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Evaluate Metadata Management Plans for Assigned AI Use Cases",
+                "ar": "مراجعة الأقران: تقييم خطط إدارة البيانات الوصفية لحالات استخدام مسندة"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Data Interoperability Failures in AI System Scenarios",
+                "ar": "اختبار: تحديد إخفاقات التشغيل البيني للبيانات في سيناريوهات أنظمة الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Apply Data Governance, Quality, Metadata, and Interoperability Requirements to an AI Project Brief",
+                "ar": "واجب: تطبيق متطلبات الحوكمة والجودة والبيانات الوصفية والتشغيل البيني على موجز مشروع"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Ethical Risk Identification with the AI Risk Matrix",
+                "ar": "تحديد المخاطر الأخلاقية باستخدام مصفوفة مخاطر الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Stakeholder Mapping for Ethical Impact Analysis",
+                "ar": "خرائط أصحاب المصلحة لتحليل الأثر الأخلاقي"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Documenting Limitations and Escalation Triggers in AI Systems",
+                "ar": "توثيق القيود ومحفّزات التصعيد في أنظمة الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Ethical Risk Assessment: Case Study Walkthrough",
+                "ar": "تقييم المخاطر الأخلاقية: شرح دراسة حالة"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: IEEE Ethically Aligned Design Section on Risk Assessment",
+                "ar": "قراءة: IEEE Ethically Aligned Design – قسم تقييم المخاطر"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenge and Defend an Ethical Risk Assessment",
+                "ar": "نقاش: مساءلة تقييم للمخاطر الأخلاقية والدفاع عنه"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Annotate a Classmate’s Risk Documentation",
+                "ar": "مراجعة الأقران: التعليق على توثيق المخاطر لزميل"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Assess Ethical Risks in a Provided AI Use Case and Document Limitations for Escalation",
+                "ar": "واجب: تقييم المخاطر الأخلاقية في حالة استخدام مقدّمة وتوثيق القيود للتصعيد"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Technical Evidence Documentation Templates in AI Projects",
+                "ar": "قوالب توثيق الأدلة التقنية في مشاريع الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Recording Supervised Technical Evidence Using Version Control Systems",
+                "ar": "تسجيل الأدلة التقنية تحت الإشراف باستخدام أنظمة إدارة الإصدارات"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Identifying and Documenting Limitations in AI System Outputs",
+                "ar": "تحديد القيود في مخرجات أنظمة الذكاء الاصطناعي وتوثيقها"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Escalation Pathways for Technical Risks in AI Practice",
+                "ar": "مسارات تصعيد المخاطر التقنية في ممارسة الذكاء الاصطناعي"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Read: Organisation’s Approved Technical Evidence and Escalation Policy",
+                "ar": "قراءة: سياسة المؤسسة المعتمدة للأدلة التقنية والتصعيد"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenges in Documenting Limitations and Escalation Needs",
+                "ar": "نقاش: تحديات توثيق القيود واحتياجات التصعيد"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Evaluate a Classmate’s Technical Evidence Documentation",
+                "ar": "مراجعة الأقران: تقييم توثيق الأدلة التقنية لزميل"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Document Supervised Technical Evidence, Limitations, and Escalation Needs for a Provided AI Use Case",
+                "ar": "واجب: توثيق الأدلة التقنية والقيود واحتياجات التصعيد لحالة استخدام مقدّمة"
+              }
+            }
+          ]
         ]
       },
       {
@@ -541,6 +1009,388 @@ const PATHWAYS = [
             5,
             1,
             1
+          ]
+        ],
+        "activities": [
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Defining Generative AI in Professional Contexts"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Prompt Engineering Techniques with OpenAI API"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Light Board",
+              "t": {
+                "en": "Comparing Prompt System Architectures: Templates, Chains, and Agents"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Evaluating Generative AI Use Cases in Professional Practice"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: NIST AI Risk Management Framework Section 2.1 (Generative AI)"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Share and Critique Example Prompts for a Professional Task"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Key Concepts in Generative AI and Prompt Systems"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Describe the Role of Prompt Systems in a Chosen Professional Use Case"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Model Adaptation Techniques in Generative AI (Transfer Learning, Fine-Tuning, Prompt Engineering)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Agentic AI Engineering Approaches: Orchestration, Autonomy, and Supervision"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstration: Adapting a Pre-trained Model Using Prompt Engineering"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstration: Configuring an Agentic Workflow with a Multi-Agent Framework"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: Model Adaptation and Agentic AI Engineering in Practice (Authoritative Paper or Standard)"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Compare Approaches to Model Adaptation in Assigned Use Cases"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenges and Supervision in Agentic AI Engineering"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Model Adaptation and Agentic Engineering Methods in Example Scenarios"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Explain Model Adaptation and Agentic AI Engineering Approaches for a Given Use Case"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Screen Recording: Producing Reproducible Evidence with Jupyter Notebooks"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Screen Recording: Capturing Model Adaptation Steps for Reproducibility"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Screen Recording: Exporting and Versioning Prompt Engineering Artefacts"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Screen Recording: Documenting Agentic AI Workflow Evidence"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Screen Recording: Validating Reproducibility with Automated Testing Tools"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Exchange and Critique Reproducible Evidence Artefacts"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Produce and Submit Reproducible Technical Evidence for Assigned Generative and Agentic AI Units"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: NIST AI Risk Management Framework Section 3.2 (Limitations and Risks)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Video: Identifying Model Limitations in Generative AI Outputs"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Video: Documenting Escalation Procedures for AI Risks"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Video: Common Failure Modes in Generative and Agentic AI Systems"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Video: Professional Standards for Documenting Limitations (IEEE/ISO Examples)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Video: Escalation Decision-Making in Generative AI Teams"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Peer Review of Draft Limitation Statements for a Provided AI Output"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Document Limitations and Escalate Risks for a Generative AI Use Case"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Structured Assessment Brief: Generative AI Evidence Requirements"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstration: Reproducible Prompt Engineering Workflow in OpenAI Playground"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstration: Capturing and Documenting Generative AI Outputs for Reproducibility"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstration: Validating Consistency and Reproducibility in Generative AI Outputs"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenges in Achieving Reproducibility with Generative AI"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Exchange and Critique Reproducible Generative AI Evidence"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Produce and Submit Reproducible Generative AI Evidence for Structured Assessment"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: IEEE 7001-2021 Standard for Transparency of Autonomous Systems"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Video: Structure of Technical Documentation for Generative AI Evidence"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Video: Common Feedback Patterns in Generative AI Technical Reviews"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Video: Techniques for Responding to Technical Review Feedback"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Video: Escalating Unresolved Issues in Generative AI Documentation"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Peer Review of Generative AI Technical Documentation"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Prepare and Revise Generative AI Technical Documentation in Response to Feedback"
+              }
+            }
           ]
         ]
       },
@@ -618,6 +1468,396 @@ const PATHWAYS = [
             1,
             1
           ]
+        ],
+        "activities": [
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "AI Infrastructure Components in Cloud and On-Premises Environments"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Integration Patterns for AI Systems (APIs, Pipelines, Microservices)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Light Board",
+              "t": {
+                "en": "Defining Infrastructure Requirements from Use Cases"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Infrastructure Constraints and Scalability Considerations in AI Deployment"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Read: NIST AI Infrastructure Guidance (NIST SP 1270)"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Compare Infrastructure Requirements for Two AI Use Cases"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Core Infrastructure Components in Example Scenarios"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Explain Infrastructure and Integration Requirements for a Provided AI Use Case"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Security Controls in AI System Deployment Pipelines (CI/CD)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Role-Based Access Control (RBAC) for AI Services"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Container Security Scanning with Trivy"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Secrets Management with HashiCorp Vault"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Read: NIST SP 800-53 Controls for AI System Security"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Trade-offs in Security vs. Deployment Speed for AI Systems"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Evaluate a Classmate’s Security Control Plan for an AI Deployment"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Security Gaps in AI Deployment Scenarios"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Apply Security and Deployment Controls to a Provided AI System Scenario"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstrating Infrastructure-as-Code with Terraform for AI Environments"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Configuring Secure Network Segmentation with Virtual Private Clouds (VPCs)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Automating Security Controls with Ansible Playbooks"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Collecting and Presenting Evidence with Jupyter Notebooks"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: NIST SP 800-53 Security and Privacy Controls for Information Systems"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Share and Critique Example Infrastructure Evidence Artefacts"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Evaluate Reproducibility of a Classmate's Security Evidence"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Produce and Submit Reproducible Technical Evidence for Infrastructure and Security"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Identifying Infrastructure Limitations Using System Logs"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Documenting Security Risks in Infrastructure Change Requests"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Escalation Pathways for Infrastructure Risks: Roles and Responsibilities"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "TH + SC",
+              "t": {
+                "en": "Case Study Walkthrough: Escalating a Critical Infrastructure Limitation"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: ISO/IEC 27035-1:2016 Incident Management Documentation Requirements"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Comparing Approaches to Documenting Infrastructure Limitations"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Activity",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Evaluate a Classmate’s Escalation Documentation Against Best Practice"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Document and Escalate a Limitation in a Provided Infrastructure Scenario"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstrating Infrastructure Provisioning with Terraform"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Configuring Security Groups and Network Policies in Cloud Environments"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Implementing Role-Based Access Control (RBAC) for AI Services"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Monitoring and Logging Security Events with Prometheus and Grafana"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Infrastructure and Security Evidence Submission"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Collaborative Threat Modelling for AI Infrastructure"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Produce and Submit Reproducible Evidence: Infrastructure and Security Assessment"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Structuring Technical Documentation for Infrastructure and Security Review"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstrating Evidence of Security Controls in Documentation"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Responding to Technical Review Feedback Using Change Tracking Tools"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Framing Limitations and Escalation in Infrastructure Documentation"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: NIST SP 800-53 Security and Privacy Controls for Information Systems and Organizations (Selected Sections)"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Peer Review of Infrastructure and Security Documentation Drafts"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Prepare and Submit Technical Documentation with Tracked Responses to Feedback"
+              }
+            }
+          ]
         ]
       },
       {
@@ -693,6 +1933,396 @@ const PATHWAYS = [
             5,
             1,
             1
+          ]
+        ],
+        "activities": [
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "AI Solution Design Lifecycle in Practice"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Requirements Elicitation with AI Use Case Cards"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Solution Architecture Diagramming with Draw.io"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Documenting Solution Assumptions and Constraints"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: AI Solution Design Competency Card 4.6"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Trade-offs in AI Solution Design Decisions"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Solution Architecture Diagrams"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Solution Design Stages and Artefacts"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Apply Foundational Methods to Design an AI Solution for a Given Use Case"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Validation Evidence Types in AI Solution Release Documentation"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstrating Reproducibility with Version Control Tools (e.g., Git)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Documenting Validation Results Using Structured Templates"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Capturing and Attributing Validation Failures and Revisions"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: AI Validation and Release Evidence Requirements (HTUx Reference)"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenges in Collecting Reproducible Validation Evidence"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Evaluate a Classmate's Validation Evidence Documentation"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Collect and Document Reproducible Validation and Release Evidence for an AI Solution"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Identifying Limitation Types in AI Solution Validation Reports"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstrating Limitation Documentation in AI Validation Templates"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Escalation Pathways for AI Solution Risks: Roles and Channels"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Worked Example: Documenting a Limitation and Escalating a Risk in a Validation Scenario"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: ISO/IEC 24029-1:2021 Guidelines on AI System Limitations Documentation"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenges in Identifying and Escalating Limitations in AI Validation"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Critique a Classmate's Limitation Documentation and Escalation Rationale"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Correct Limitation Types and Escalation Steps in Sample Scenarios"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Document and Escalate Limitations in a Provided AI Validation Case Study"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Walkthrough: Completing the AI Solution Design Evidence Template"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstration: Documenting Reproducibility in AI Solution Design"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Worked Example: Validating AI Solution Design Against Competency Cards"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Explainer: Critical-Fail Criteria in AI Solution Design Assessment"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Exchange and Critique AI Solution Design Evidence"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Collaborative Mapping: Aligning Solution Evidence to Competency Codes"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Submit: Complete and Validate Structured Practical Assessment for AI Solution Design"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Structuring Technical Documentation for AI Solution Design Review"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstrating Traceability in AI Solution Design Documents"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Responding to Technical Feedback Using Commenting Tools"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Documenting Limitations and Escalation Points in AI Solution Design"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Critiquing a Sample AI Solution Design Document"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Collaborative Editing: Addressing Reviewer Comments in a Shared Document"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Submit: Prepare and Respond to Technical Review of AI Solution Design Documentation"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reviewing Authoritative Competency Cards for Standards Improvement"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Video Walkthrough: Identifying Gaps in Existing AI Practice Standards"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Video Demonstration: Documenting Practice Improvements for AI Solutions"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Video Guide: Validating Practice Improvements Against Competency Criteria"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Video Example: Justifying the Need for a New Standard or Improvement"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Peer Review of Proposed Practice Improvements"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Produce and Validate an Original Practice Improvement or Standard"
+              }
+            }
           ]
         ]
       },
@@ -770,6 +2400,420 @@ const PATHWAYS = [
             2,
             1
           ]
+        ],
+        "activities": [
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "AI Operations Runbook Structure in Service Environments"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Incident Record Lifecycle and Documentation Standards"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Defensible Controls in AI Operations Runbooks"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Worked Example: Completing an Incident Record for an AI System"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: AI Operations Runbook and Incident Record Standards (NIST SP 800-61r2 Excerpts)"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenges in Defending AI Operations Runbooks"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Critique a Classmate's Incident Record Draft"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Gaps in Sample AI Operations Runbooks"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Defend an AI Operations Runbook and Incident Record for a Given Scenario"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Configuring Monitoring Views in Prometheus"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Setting Up Alerting Rules in Grafana"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Maintenance Practices for AI Model Drift Detection"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Incident Response Workflow in AI Operations"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: Monitoring and Maintenance Requirements from NIST AI RMF"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenges in Monitoring AI Systems for Performance and Fairness"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Critique a Classmate's Monitoring Configuration Proposal"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Monitoring Gaps in Sample AI System Logs"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Configure and Document a Monitoring View for a Sample AI System"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Lifecycle Evidence Collection Standards (ISO/IEC 24765, NIST SP 800-53)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstration: Logging AI System Events for Lifecycle Traceability"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Walkthrough: Version Control for AI Lifecycle Artefacts (Git, DVC)"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstration: Documenting Maintenance and Incident Records in AI Operations"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenges in Achieving Reproducibility in AI Operations Evidence"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Evaluate a Classmate’s Lifecycle Evidence Documentation"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Collect and Document Lifecycle Evidence for a Provided AI System"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Identifying Operational Limitations in AI Systems Using Incident Logs"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Documenting Limitations with the AI Operations Runbook Template"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Escalation Protocols for AI Operational Risks: Roles and Channels"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "TH + SC",
+              "t": {
+                "en": "Case Study Walkthrough: Escalating a Model Drift Incident"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: AI Operations Escalation Policy (Internal Standard)"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenges in Documenting Limitations and Escalating Risks"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Evaluate a Classmate's Limitation Documentation"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Correct Escalation Steps for Given AI Incidents"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Document Limitations and Escalate a Risk in a Provided AI Operations Scenario"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Lifecycle Documentation Standards for AI System Retirement"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Screening Criteria for AI System Retirement and Replacement Decisions"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Documenting Evidence for AI System Retirement: Example Walkthrough"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Justifying AI System Replacement: Case Study Analysis"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: IEEE Standard 7000-2021 Guidance on AI System Lifecycle Termination"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Challenges in Documenting AI System Retirement Decisions"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Critique a Classmate's AI System Retirement Documentation"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Valid and Invalid Retirement Justifications"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Document and Justify a Retirement or Replacement Decision for a Provided AI System Scenario"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Portfolio Structure and Evidence Requirements for AI Operations"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstrating Reproducibility in AI Lifecycle Evidence"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Expert Panel Review Criteria and Assessment Process"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Common Pitfalls in Portfolio Evidence Submission"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Exchange and Critique Portfolio Drafts"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Panel Q&A: Addressing Reviewer Questions on Evidence"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Submit Portfolio of Reproducible Evidence for Expert Panel Review"
+              }
+            }
+          ]
         ]
       },
       {
@@ -846,6 +2890,372 @@ const PATHWAYS = [
             1,
             2
           ]
+        ],
+        "activities": [
+          [
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Read ISO/IEC 22989:2022 AI Standards for Professional Practice"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Video: Framing Professional Contribution in AI Practice"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Video: Identifying Gaps in Existing AI Standards"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Video: Documenting and Justifying Practice Improvements"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Video: Validating a New Standard or Practice Improvement"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Critique a Peer’s Proposed Practice Improvement"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Produce and Validate an Original Practice Improvement or Standard"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Identifying Limitation Types in AI Professional Practice"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Reading: ISO/IEC 22989 Guidance on AI System Limitations"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Demonstrating Limitation Documentation in a Technical Report Template"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Escalation Channels and Protocols for AI Risk Reporting"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "TH + SC",
+              "t": {
+                "en": "Case Study: Documenting and Escalating a Model Bias Limitation"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Peer Review of Limitation Documentation Drafts"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Recognizing Proper Limitation Documentation and Escalation Steps"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Document and Escalate a Limitation from a Provided AI Use Case"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Video Walkthrough: Structuring Reproducible Evidence for Professional Contribution"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Screen Cast: Documenting Standards Setting in AI Professional Practice"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Video Case Study: Validating a Practice Improvement or Standard"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Screen Cast: Using Templates for Professional Contribution Evidence"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Video: Common Pitfalls in Reproducible Evidence Submission"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Discussion: Peer Review of Professional Contribution Evidence Drafts"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Produce and Submit Reproducible Evidence for Professional Contribution"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Reading",
+              "v": "",
+              "t": {
+                "en": "Read IEEE 829 Standard for Software and System Test Documentation"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Watch: Structuring Technical Documentation for AI Professional Contribution"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Watch: Identifying and Incorporating Feedback in Technical Documentation"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Watch: Common Pitfalls in Technical Documentation for Professional Contribution"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Watch: Responding to Reviewer Comments in Professional Practice"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Exchange and Critique Draft Technical Documentation"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Revise and Submit Technical Documentation with Response to Feedback"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Consolidation of Technical Governance Methods in AI Practice"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Reviewing Solution Design Artefacts for Assurance Readiness"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Assurance Methods: Worked Example of a Technical Review"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Examining Use-Case Assessment Criteria in AI Governance"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Assurance Checklist for AI Solution Design (Practice Exercise)"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Review: Technical Governance Evidence for Exam Preparation"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Quiz",
+              "v": "",
+              "t": {
+                "en": "Quiz: Identify Gaps in Solution Design and Assurance Documentation"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Assignment: Analyse a Provided AI Use Case for Governance and Assurance Readiness"
+              }
+            }
+          ],
+          [
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Exam Structure and Competency Card Alignment Overview"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Worked Example: Applying Technical Governance Methods to a Novel AI Use Case"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Screen Cast",
+              "t": {
+                "en": "Worked Example: Solution Design and Assurance Evidence for AI Systems"
+              }
+            },
+            {
+              "k": "L",
+              "type": "Video",
+              "v": "Talking Head",
+              "t": {
+                "en": "Exam Technique: Time Management and Critical-Fail Criteria"
+              }
+            },
+            {
+              "k": "C",
+              "type": "Discussion",
+              "v": "",
+              "t": {
+                "en": "Peer Discussion: Interpreting Competency Card Evidence Requirements"
+              }
+            },
+            {
+              "k": "A",
+              "type": "Assignment",
+              "v": "",
+              "t": {
+                "en": "Exam Practice: Analyse a Provided AI Use Case for Governance and Solution Design"
+              }
+            },
+            {
+              "k": "A",
+              "type": "F2F Assignment",
+              "v": "",
+              "t": {
+                "en": "Final Exam: Apply Technical Governance, Solution Design, and Assurance Methods to a Novel Scenario"
+              }
+            }
+          ]
         ]
       }
     ]
@@ -855,3 +3265,39 @@ const PATHWAYS = [
 const blockCount = p => p.modules.reduce((n, m) => n + m.blocks.en.length, 0);
 const moduleTitle = m => t(m.short || m.title);
 const findPathway = id => PATHWAYS.find(p => p.id === id) || PATHWAYS[0];
+
+/* ---------- activities (Moodle activity view) ---------- */
+const ACT_TYPES = {
+  Video:      { icon: 'play',            label: { ar: 'فيديو', en: 'Video' },      tone: 'video' },
+  Reading:    { icon: 'book-open-text',  label: { ar: 'قراءة', en: 'Reading' },    tone: 'read' },
+  Discussion: { icon: 'messages-square', label: { ar: 'منتدى نقاش', en: 'Forum' },  tone: 'forum' },
+  Quiz:       { icon: 'list-checks',     label: { ar: 'اختبار', en: 'Quiz' },       tone: 'quiz' },
+  Assignment: { icon: 'file-pen-line',   label: { ar: 'واجب', en: 'Assignment' },  tone: 'assign' },
+  File:       { icon: 'file-text',       label: { ar: 'ملف', en: 'File' },          tone: 'read' },
+};
+const PHASES = { L: { ar: 'تعلّم', en: 'Learn' }, C: { ar: 'تعاون', en: 'Collaborate' }, A: { ar: 'طبّق', en: 'Apply' }, G: { ar: 'عام', en: 'General' } };
+
+// introduction section shared by every module
+const introActivities = () => [
+  { k: 'G', type: 'File', v: '', t: { ar: 'دليل المتعلّم ومخطط الوحدة', en: 'Learner guide and module outline' } },
+  { k: 'G', type: 'Discussion', v: '', t: { ar: 'الإعلانات', en: 'Announcements' } },
+  { k: 'G', type: 'Quiz', v: '', t: { ar: 'التقييم القبلي', en: 'Pre-assessment' } },
+];
+
+// real activities when the outline provides them, otherwise a standard Learn / Collaborate / Apply set
+function getActivities(p, mi, bi) {
+  if (bi < 0) return introActivities();
+  const m = p.modules[mi];
+  if (m.activities && m.activities[bi]) return m.activities[bi];
+  const b = { ar: m.blocks.ar[bi], en: m.blocks.en[bi] };
+  return [
+    { k: 'L', type: 'Video', v: 'Talking Head', t: { ar: `مقدمة: ${b.ar}`, en: `Introduction: ${b.en}` } },
+    { k: 'L', type: 'Video', v: 'Screen Cast', t: { ar: `شرح تطبيقي: ${b.ar}`, en: `Walkthrough: ${b.en}` } },
+    { k: 'L', type: 'Reading', v: '', t: { ar: `قراءة: ${b.ar}`, en: `Reading: ${b.en}` } },
+    { k: 'C', type: 'Discussion', v: '', t: { ar: `نقاش: ${b.ar}`, en: `Discussion: ${b.en}` } },
+    { k: 'A', type: 'Quiz', v: '', t: { ar: `اختبار: ${b.ar}`, en: `Quiz: ${b.en}` } },
+    { k: 'A', type: 'Assignment', v: '', t: { ar: `واجب: ${b.ar}`, en: `Assignment: ${b.en}` } },
+  ];
+}
+// Arabic falls back to English where only the English title exists
+const actTitle = a => a.t[LANG] || a.t.en;

@@ -11,6 +11,7 @@ Design mockups for the JAGA (Jordan Academy for Government Administration) e-tra
 | Pathway | `pathway.html` | `en/pathway.html` |
 | Courses | `courses.html` | `en/courses.html` |
 | Inside a Moodle course | `course.html` | `en/course.html` |
+| Moodle activity view | `activity.html` | `en/activity.html` |
 
 Open `index.html` in a browser; the bar at the bottom switches between pages and the **EN / ع** button switches language.
 

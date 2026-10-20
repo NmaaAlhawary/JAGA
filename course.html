@@ -61,14 +61,14 @@
   .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .tile { position: relative; background: #fff; border-radius: 6px; box-shadow: 0 4px 18px rgba(61,0,16,.09); border-top: 8px solid var(--maroon); overflow: hidden; cursor: pointer; transition: .25s; display: flex; flex-direction: column; text-align: start; }
   .tile:hover { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(61,0,16,.16); }
-  .tile .art { aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 24px; text-align: center; position: relative; overflow: hidden;
+  .tile .art { min-height: 250px; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 24px; text-align: center; position: relative; overflow: hidden;
     background: radial-gradient(circle at 1px 1px, rgba(128,0,32,.08) 1.2px, transparent 0) 0 0/20px 20px, #fff; }
   .tile .art .pic { width: 76px; height: 76px; border-radius: 28px; display: grid; place-items: center; flex-shrink: 0; background: linear-gradient(135deg, var(--maroon), var(--maroon-900)); color: #fff; box-shadow: 0 14px 30px rgba(128,0,32,.25); transform: rotate(-6deg); }
   .tile .art .pic [data-lucide] { width: 36px; height: 36px; stroke-width: 1.5; transform: rotate(6deg); }
   .tile .art .pic.gold { background: linear-gradient(135deg, #c99a48, #7a531a); }
   .tile .art .pic.coral { background: linear-gradient(135deg, #e05a5a, #a32b2b); }
   .tile .art .pic.dark { background: linear-gradient(135deg, #3d0010, #1d0008); }
-  .tile .art .t { font-family: var(--font-head); font-weight: 700; font-size: 18px; line-height: 1.35; color: var(--ink); }
+  .tile .art .t { font-family: var(--font-head); font-weight: 700; font-size: 16.5px; line-height: 1.45; color: var(--ink); }
   .tile .art .t span { display: block; color: var(--maroon); }
   .tile .foot { padding: 20px 24px 26px; border-top: 1px solid var(--line); }
   .tile .foot .row { gap: 10px; display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; color: var(--ink-3); margin-bottom: 10px; }
@@ -215,20 +215,30 @@
 
 <script>
   // AI Leadership · Module 1 — tiles = introduction + the module's learning blocks (assets/pathways.js)
-  const T = {ok:'مكتمل', now:'قيد التعلّم', lock:'مقفل', of:'من', acts:'أنشطة', intro:'مقدمة', introA:'التعريف', introB:'بالوحدة', general:'عام'};
+  const T = {ok:'مكتمل', now:'قيد التعلّم', lock:'مقفل', of:'من', acts:'أنشطة', todo:'لم يبدأ', intro:'مقدمة', introA:'التعريف', introB:'بالوحدة', general:'عام'};
   const A = {learn:['فيديو ومادة قراءة','تعلّم · 20 دقيقة'], collab:['نقاش جماعي وتبادل الخبرات','تعاون · منتدى'], apply:['نشاط تطبيقي على حالة من بيئة العمل','طبّق · واجب'], guide:['دليل المتعلّم ومخطط الوحدة','ملف · PDF'], ann:['الإعلانات','منتدى'], pre:['التقييم القبلي','اختبار']};
-  const MOD = PATHWAYS[0].modules[0];
-  const ICONS = ['trending-up', 'clipboard-check', 'repeat', 'pie-chart', 'theater'];
-  const COLORS = ['', 'coral', 'dark', 'gold', 'coral'];
-  const STATUS = ['ok', 'now', 'lock', 'lock', 'lock'];
+  const Q = new URLSearchParams(location.search);
+  const PW = findPathway(Q.get('p') || 'ai-digital-practice');
+  const MI = Math.min(+(Q.get('m') || 0), PW.modules.length - 1);
+  const MOD = PW.modules[MI];
+  document.querySelector('.page-head .kicker').textContent = `${t(PW.title)} · ${t(UI.module)} ${MI + 1}`;
+  document.querySelector('.page-head h1').textContent = t(MOD.title);
+  document.querySelector('.panel-h .info span:last-child b').textContent = t(PW.title);
+  document.title = `${moduleTitle(MOD)} | JAGA`;
+  const langA = document.querySelector('.lang-sw'); langA.href = langA.getAttribute('href').split('?')[0] + `?p=${PW.id}&m=${MI}`;
+  const ICON_SET = ['trending-up', 'clipboard-check', 'repeat', 'pie-chart', 'theater', 'file-check', 'layers', 'target'];
+  const ICONS = MOD.blocks.en.map((_, i) => ICON_SET[i % ICON_SET.length]);
+  const COLORS = MOD.blocks.en.map((_, i) => ['', 'coral', 'dark', 'gold'][i % 4]);
+  const STATUS = MOD.blocks.en.map((_, i) => i === 0 ? 'ok' : i === 1 ? 'now' : 'todo');
   const split = s => { const w = s.split(' '); const k = Math.ceil(w.length / 2); return [w.slice(0, k).join(' '), w.slice(k).join(' ')]; };
   const LCA = [['book-open-text', ...A.learn], ['messages-square', ...A.collab], ['file-pen-line', ...A.apply]];
   const sections = [
-    [T.general, T.introA, T.introB, 'compass', '', 'ok', 3, 3, [['file-text', ...A.guide], ['megaphone', ...A.ann], ['list-checks', ...A.pre]]],
+    [T.general, T.introA, T.introB, 'compass', '', 'ok', 3, 3, []],
     ...t(MOD.blocks).map((b, i) => { const [l1, l2] = split(b); const st = STATUS[i];
-      return [`${t(UI.block)} ${i + 1}`, l1, l2, ICONS[i], COLORS[i], st, st === 'ok' ? 3 : st === 'now' ? 1 : 0, 3, LCA]; }),
+      const n = getActivities(PW, MI, i).length;
+      return [`${t(UI.block)} ${i + 1}`, l1, l2, ICONS[i], COLORS[i], st, st === 'ok' ? n : st === 'now' ? 1 : 0, n, LCA]; }),
   ];
-  const tag = s => s==='ok' ? `<span class="tag ok"><i data-lucide="check"></i> ${T.ok}</span>` : s==='now' ? `<span class="tag now">${T.now}</span>` : `<span class="tag lock"><i data-lucide="lock"></i> ${T.lock}</span>`;
+  const tag = s => s==='ok' ? `<span class="tag ok"><i data-lucide="check"></i> ${T.ok}</span>` : s==='now' ? `<span class="tag now">${T.now}</span>` : `<span class="tag lock">${T.todo}</span>`;
   document.getElementById('tiles').innerHTML = sections.map(([k,a,b,ic,c,s,d,t],i) => `
     <div class="tile ${s==='lock'?'locked':''}" data-i="${i}">
       <div class="art"><div class="pic ${c}"><i data-lucide="${ic}"></i></div><div class="t">${a}<span>${b}</span></div></div>
@@ -238,16 +248,7 @@
       </div>
       
     </div>`).join('');
-  const sheet = document.getElementById('sheet'), bg = document.getElementById('bg');
-  document.querySelectorAll('.tile:not(.locked)').forEach(el => el.onclick = () => {
-    const [k,a,b,,,,, ,acts] = sections[el.dataset.i];
-    document.getElementById('sh-k').textContent = k;
-    document.getElementById('sh-t').textContent = a + ' ' + b;
-    document.getElementById('sh-b').innerHTML = acts.map(([ic,n,m]) => `<div class="act"><div class="ic ${ic==='play'?'v':''}"><i data-lucide="${ic}"></i></div><div><h5>${n}</h5><small>${m}</small></div></div>`).join('');
-    lucide.createIcons(); sheet.classList.add('show'); bg.classList.add('show');
-  });
-  const close = () => { sheet.classList.remove('show'); bg.classList.remove('show'); };
-  document.getElementById('close').onclick = close; bg.onclick = close;
+  document.querySelectorAll('.tile').forEach(el => { el.onclick = () => { location.href = `activity.html?p=${PW.id}&m=${MI}&b=${+el.dataset.i - 1}&a=0`; }; });
   lucide.createIcons();
 </script>
 </body>

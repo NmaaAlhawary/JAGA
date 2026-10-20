@@ -213,7 +213,7 @@
   $('pSummary').textContent = t(P.summary);
   $('pStats').innerHTML = `<span><i data-lucide="layers"></i> ${P.modules.length} ${t(UI.modules)}</span><span><i data-lucide="blocks"></i> ${blockCount(P)} ${t(UI.blocks)}</span>`;
   $('pPrice').innerHTML = `${t(UI.free)} <small>${t(UI.freeFor)}</small>`;
-  $('pEnroll').textContent = L.enroll;
+  $('pEnroll').textContent = L.enroll; $('pEnroll').href = `course.html?p=${P.id}&m=0`;
   $('pFacts').innerHTML = [['layers', L.inPath, P.modules.length], ['blocks', L.blocksF, blockCount(P)], ['infinity', L.access, L.yes], ['award', L.cert, L.yes]]
     .map(([i, k, v]) => `<li><span><i data-lucide="${i}"></i> ${k}</span><b>${v}</b></li>`).join('');
   $('hOverview').textContent = L.overview;

@@ -111,7 +111,7 @@
     const list = courses.filter(c => (!q || c.title.toLowerCase().includes(q)) && (!f || c.field === f) && (!p || c.path === p) && (!i || c.trainer === i));
     document.getElementById('count').textContent = list.length;
     document.getElementById('grid').innerHTML = list.map(c => `
-      <a class="card" href="course.html">
+      <a class="card" href="course.html?p=${c.pid}&m=${c.num - 1}">
         <div class="thumb ${c.thumb} tx"><i data-lucide="${c.icon}" class="glyph"></i><span class="chip" style="background:#fff">${t(UI.module)} ${c.num}</span></div>
         <div class="card-body">
           <span class="cat">${c.path}</span><span class="field">${c.field} · ${c.blocks} ${t(UI.blocksShort)}</span>
