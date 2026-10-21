@@ -39,7 +39,7 @@
   .stat:first-child { border: 0; }
   .stat .ic { width: 54px; height: 54px; border-radius: 16px; background: var(--rose); color: var(--maroon); display: grid; place-items: center; flex-shrink: 0; }
   .stat .ic [data-lucide] { width: 24px; height: 24px; }
-  .stat b { display: block; font-family: var(--font-head); font-size: 34px; font-weight: 800; line-height: 1.1; color: var(--maroon); }
+  .stat b { display: block; font-family: var(--font-head); font-size: 34px; font-weight: 800; line-height: 1.1; color: var(--maroon); font-variant-numeric: tabular-nums; }
   .stat span { font-size: 14px; color: var(--ink-2); line-height: 1.4; }
 
   /* 3. areas */
@@ -325,6 +325,19 @@
     document.querySelectorAll('#tabs .tab').forEach(x => x.classList.remove('active'));
     tb.classList.add('active'); renderFeatured(tb.dataset.f);
   });
+  // 2. stats — count up from 0 when the bar scrolls into view
+  const counters = document.querySelectorAll('.stat b');
+  const countUp = el => {
+    const end = +el.dataset.n, t0 = performance.now(), dur = 1400;
+    const step = now => { const k = Math.min((now - t0) / dur, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  };
+  counters.forEach(el => el.dataset.n = el.textContent.trim());
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    counters.forEach(el => el.textContent = '0');
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { countUp(e.target); io.unobserve(e.target); } }), { threshold: .6 });
+    counters.forEach(el => io.observe(el));
+  }
 </script>
 </body>
 </html>
