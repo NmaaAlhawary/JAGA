@@ -3,13 +3,13 @@
    Layout patterns modelled on htux.org (home / pathways / courses) */
 
 :root {
-  --maroon: #800020;          /* JAGA primary (site brand colour) */
-  --maroon-700: #640019;
-  --maroon-900: #3d0010;
-  --maroon-400: #a8334f;
-  --coral: #d24545;           /* logo accent */
-  --rose: #f2e6e9;            /* site tint */
-  --rose-200: #d9b3bc;        /* site border tint */
+  --maroon: #700000;          /* JAGA identity primary #700000 */
+  --maroon-700: #580000;
+  --maroon-900: #3a0000;
+  --maroon-400: #8b2435;
+  --coral: #8b2435;           /* identity burgundy #8B2435 */
+  --rose: #f5e8e8;            /* site tint */
+  --rose-200: #dcb5b5;        /* site border tint */
   --cream: #f7f1ee;           /* hero banner background */
   --sand: #efe6e1;
   --ink: #212121;             /* site body text */
@@ -17,13 +17,13 @@
   --ink-3: #808080;
   --line: #e9e1df;
   --white: #ffffff;
-  --gold: #b8893b;
-  --green: #1f7a4d;           /* Jordan flag green — completion states */
+  --gold: #55bc8d;           /* identity mint #55BC8D (replaces gold) */
+  --green: #005623;           /* identity green #005623 */
 
   --radius: 18px;
   --radius-sm: 10px;
-  --shadow: 0 1px 2px rgba(61, 0, 16, .05), 0 8px 24px rgba(61, 0, 16, .07);
-  --shadow-lg: 0 24px 60px rgba(61, 0, 16, .16);
+  --shadow: 0 1px 2px rgba(58,0,0, .05), 0 8px 24px rgba(58,0,0, .07);
+  --shadow-lg: 0 24px 60px rgba(58,0,0, .16);
   --font-head: "Noto Kufi Arabic", "Cairo", sans-serif;
   --font-body: "Cairo", "Noto Kufi Arabic", sans-serif;
   --container: 1240px;
@@ -53,7 +53,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   transition: .2s ease; white-space: nowrap;
 }
 .btn-primary { background: var(--maroon); color: #fff; }
-.btn-primary:hover { background: var(--maroon-700); transform: translateY(-1px); box-shadow: 0 10px 24px rgba(128,0,32,.28); }
+.btn-primary:hover { background: var(--maroon-700); transform: translateY(-1px); box-shadow: 0 10px 24px rgba(112,0,0,.28); }
 .btn-outline { border: 1.5px solid var(--maroon); color: var(--maroon); }
 .btn-outline:hover { background: var(--maroon); color: #fff; }
 .btn-ghost { color: var(--maroon); background: var(--rose); }
@@ -64,7 +64,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .btn-sm { padding: 8px 16px; font-size: 13px; }
 
 /* ---------- top bar + header ---------- */
-.topbar { background: var(--maroon-900); color: #f3d9df; font-size: 13px; }
+.topbar { background: var(--maroon-900); color: #f3dada; font-size: 13px; }
 .topbar .container { display: flex; justify-content: space-between; align-items: center; height: 38px; }
 .topbar a { opacity: .85; } .topbar a:hover { opacity: 1; }
 .topbar .group { display: flex; gap: 20px; align-items: center; }
@@ -79,6 +79,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .site-header .container { display: flex; align-items: center; gap: 40px; height: 84px; }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand img { height: 52px; width: auto; }
+.brand img.full { height: 74px; }
 .brand .name { font-family: var(--font-head); font-weight: 700; font-size: 14px; line-height: 1.4; color: var(--maroon); }
 .brand .name small { display: block; font-family: var(--font-body); font-weight: 600; font-size: 11px; color: var(--ink-3); letter-spacing: .3px; }
 .nav { display: flex; gap: 6px; flex: 1; }
@@ -110,14 +111,14 @@ section { padding: 96px 0; }
 /* geometric pattern from the JAGA mark */
 .pattern {
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(128,0,32,.12) 1.2px, transparent 0);
+    radial-gradient(circle at 1px 1px, rgba(112,0,0,.12) 1.2px, transparent 0);
   background-size: 22px 22px;
 }
 
 /* ---------- chips / badges ---------- */
 .chip { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: var(--rose); color: var(--maroon); }
-.chip.gold { background: #f6ecd9; color: #8a6420; }
-.chip.green { background: #e1f1e8; color: var(--green); }
+.chip.gold { background: #e3f5ec; color: #005623; }
+.chip.green { background: #e3f5ec; color: var(--green); }
 .chip.dark { background: var(--maroon); color: #fff; }
 .chip.line { background: #fff; border: 1px solid var(--line); color: var(--ink-2); }
 .chip [data-lucide] { width: 14px; height: 14px; }
@@ -134,12 +135,12 @@ section { padding: 96px 0; }
 .thumb .chip { position: absolute; top: 14px; inset-inline-start: 14px; }
 .thumb .fav { position: absolute; top: 12px; inset-inline-end: 12px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.9); display: grid; place-items: center; color: var(--maroon); }
 .thumb .fav [data-lucide] { width: 16px; height: 16px; }
-.t1 { background: linear-gradient(135deg, #800020, #3d0010); }
-.t2 { background: linear-gradient(135deg, #a8334f, #640019); }
-.t3 { background: linear-gradient(135deg, #3d0010, #1d0008); }
-.t4 { background: linear-gradient(135deg, #d24545, #800020); }
-.t5 { background: linear-gradient(135deg, #b8893b, #6e4a14); }
-.t6 { background: linear-gradient(135deg, #5a3a44, #2b1a1f); }
+.t1 { background: linear-gradient(135deg, #700000, #3a0000); }
+.t2 { background: linear-gradient(135deg, #8b2435, #580000); }
+.t3 { background: linear-gradient(135deg, #3a0000, #1c0000); }
+.t4 { background: linear-gradient(135deg, #8b2435, #700000); }
+.t5 { background: linear-gradient(135deg, #55bc8d, #005623); }
+.t6 { background: linear-gradient(135deg, #5a3a3a, #2b1a1a); }
 .thumb.tx::after { /* knot-star watermark */
   content: ""; position: absolute; inset-inline-end: -40px; bottom: -40px; width: 200px; height: 170px;
   background: url("jaga-mark-white.png") center/contain no-repeat; opacity: .13;
@@ -177,7 +178,7 @@ section { padding: 96px 0; }
 .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--rose); color: var(--maroon); display: grid; place-items: center; font-family: var(--font-head); font-weight: 700; font-size: 15px; flex-shrink: 0; }
 
 /* ---------- footer ---------- */
-.site-footer { background: var(--maroon-900); color: #e9cfd5; padding: 72px 0 0; position: relative; overflow: hidden; }
+.site-footer { background: var(--maroon-900); color: #e9d0d0; padding: 72px 0 0; position: relative; overflow: hidden; }
 .site-footer::before {
   content: ""; position: absolute; inset-inline-start: -120px; top: -80px; width: 420px; height: 360px;
   background: url("jaga-mark-white.png") center/contain no-repeat; opacity: .05;
@@ -187,14 +188,14 @@ section { padding: 96px 0; }
 .site-footer ul { list-style: none; display: grid; gap: 10px; font-size: 14.5px; }
 .site-footer a:hover { color: #fff; }
 .footer-brand img { height: 92px; margin-bottom: 16px; }
-.footer-brand p { font-size: 14px; color: #cfa9b2; max-width: 300px; }
+.footer-brand p { font-size: 14px; color: #d0aaaa; max-width: 300px; }
 .contact-li { display: flex; gap: 10px; align-items: start; }
 .contact-li [data-lucide] { width: 18px; height: 18px; color: var(--coral); margin-top: 4px; }
 .socials { display: flex; gap: 10px; margin-top: 18px; }
 .socials a { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); display: grid; place-items: center; }
 .socials a:hover { background: var(--maroon); border-color: var(--maroon); }
 .socials [data-lucide] { width: 17px; height: 17px; }
-.footer-bottom { margin-top: 56px; border-top: 1px solid rgba(255,255,255,.1); padding: 22px 0; display: flex; justify-content: space-between; font-size: 13px; color: #b98b96; position: relative; }
+.footer-bottom { margin-top: 56px; border-top: 1px solid rgba(255,255,255,.1); padding: 22px 0; display: flex; justify-content: space-between; font-size: 13px; color: #b98c8c; position: relative; }
 
 /* ---------- design-review switcher (mockup only) ---------- */
 .mock-nav {
@@ -230,18 +231,18 @@ section { padding: 96px 0; }
 [dir="ltr"] .card:hover .link-arrow [data-lucide] { transform: translateX(4px); }
 
 /* "Free" price — green so it stands apart from the maroon text */
-.card-foot .price { color: var(--green); background: #e1f1e8; padding: 3px 14px; border-radius: 999px; font-size: 15px; }
+.card-foot .price { color: var(--green); background: #e3f5ec; padding: 3px 14px; border-radius: 999px; font-size: 15px; }
 .buy .price { color: var(--green); }
 
 /* ---------- trainer photo cards (home trainers + pathway team) ---------- */
-.trainer { position: relative; border-radius: 26px; overflow: hidden; aspect-ratio: 5/6; background: linear-gradient(180deg, #fff 0%, var(--cream) 100%); box-shadow: 0 10px 30px rgba(61,0,16,.08); }
+.trainer { position: relative; border-radius: 26px; overflow: hidden; aspect-ratio: 5/6; background: linear-gradient(180deg, #fff 0%, var(--cream) 100%); box-shadow: 0 10px 30px rgba(58,0,0,.08); }
 .trainer img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; transform-origin: center bottom; transition: transform .6s ease; }
 .trainer:hover img { transform: scale(1.06); }
-.trainer::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(61,0,16,0) 45%, rgba(61,0,16,.55) 68%, rgba(40,0,10,.95) 100%); }
+.trainer::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(58,0,0,0) 45%, rgba(58,0,0,.55) 68%, rgba(36,0,0,.95) 100%); }
 .trainer .info { position: absolute; inset-inline: 22px; bottom: 22px; z-index: 1; color: #fff; }
 .trainer .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: rgba(255,255,255,.16); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,.25); margin-bottom: 10px; }
 .trainer h4 { color: #fff; font-size: 19px; }
-.trainer p { color: #f1cfd7; font-size: 13.5px; line-height: 1.6; }
+.trainer p { color: #f0d0d0; font-size: 13.5px; line-height: 1.6; }
 .trainer .in { position: absolute; top: 18px; inset-inline-end: 18px; z-index: 1; width: 42px; height: 42px; border-radius: 50%; background: #fff; color: var(--maroon); display: grid; place-items: center; opacity: 0; transform: translateY(-8px); transition: .3s; }
 .trainer:hover .in { opacity: 1; transform: none; }
 .trainer .in [data-lucide] { width: 18px; height: 18px; }
