@@ -25,7 +25,7 @@
   .r-btn { width: 46px; height: 46px; border-radius: 50%; background: var(--maroon); color: #fff; display: grid; place-items: center; position: relative; }
   .r-btn:hover { background: var(--maroon-700); }
   .r-btn [data-lucide] { width: 20px; height: 20px; }
-  .r-btn .dot { position: absolute; top: 0; inset-inline-end: 0; min-width: 18px; height: 18px; border-radius: 99px; background: var(--gold); color: #fff; font-size: 10.5px; font-weight: 800; display: grid; place-items: center; border: 2px solid #fff; }
+  .r-btn .dot { position: absolute; top: 0; inset-inline-end: 0; min-width: 18px; height: 18px; border-radius: 99px; background: var(--gold); color: #002b12; font-size: 10.5px; font-weight: 800; display: grid; place-items: center; border: 2px solid #fff; }
   .me { width: 48px; height: 48px; border-radius: 50%; background: var(--rose); color: var(--maroon); display: grid; place-items: center; font-family: var(--font-head); font-weight: 800; font-size: 15px; }
   .lang-sw { width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--line); display: grid; place-items: center; font-weight: 800; color: var(--ink-2); }
 
@@ -58,10 +58,10 @@
   .ai { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; color: #fff; }
   .ai [data-lucide] { width: 22px; height: 22px; }
   .ai.video { background: linear-gradient(135deg, var(--maroon), var(--maroon-900)); }
-  .ai.read { background: linear-gradient(135deg, #b8893b, #7a531a); }
-  .ai.forum { background: linear-gradient(135deg, #2f8a5f, #1f6045); }
-  .ai.quiz { background: linear-gradient(135deg, #e05a5a, #a32b2b); }
-  .ai.assign { background: linear-gradient(135deg, #5a3a44, #2b1a1f); }
+  .ai.read { background: linear-gradient(135deg, #55bc8d, #005623); }
+  .ai.forum { background: linear-gradient(135deg, #55bc8d, #00451c); }
+  .ai.quiz { background: linear-gradient(135deg, #a33a4b, #6e1a28); }
+  .ai.assign { background: linear-gradient(135deg, #5a3a3a, #2b1a1a); }
   .ai.lg { width: 68px; height: 68px; } .ai.lg [data-lucide] { width: 30px; height: 30px; }
 
   /* main */
@@ -70,19 +70,19 @@
   .a-head small { display: block; font-size: 13px; font-weight: 700; letter-spacing: .6px; color: var(--ink-3); text-transform: uppercase; }
   .a-head h1 { font-size: 28px; line-height: 1.45; }
   .a-tabs { margin: 30px 0 26px; background: var(--maroon-900); border-radius: 12px; padding: 10px; display: flex; gap: 4px; flex-wrap: wrap; }
-  .a-tabs a { padding: 11px 20px; border-radius: 8px; font-size: 15.5px; font-weight: 600; color: #f1cfd7; display: inline-flex; gap: 4px; align-items: center; }
+  .a-tabs a { padding: 11px 20px; border-radius: 8px; font-size: 15.5px; font-weight: 600; color: #f0d0d0; display: inline-flex; gap: 4px; align-items: center; }
   .a-tabs a:hover { background: rgba(255,255,255,.08); color: #fff; }
   .a-tabs a.on { background: #fff; color: var(--maroon); font-weight: 700; }
   .a-tabs [data-lucide] { width: 16px; height: 16px; }
   .todo { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 999px; background: var(--rose); color: var(--maroon); }
-  .todo.ok { background: #e1f1e8; color: var(--green); }
+  .todo.ok { background: #e3f5ec; color: var(--green); }
   .todo [data-lucide] { width: 14px; height: 14px; }
   .dates { margin: 18px 0; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; gap: 32px; flex-wrap: wrap; font-size: 15px; color: var(--ink-2); }
   .dates b { color: var(--ink); }
   .desc { font-family: var(--font-head); font-size: 20px; font-weight: 700; line-height: 1.8; color: var(--ink); margin: 24px 0 28px; max-width: 980px; }
 
   /* type-specific content */
-  .player { position: relative; aspect-ratio: 16/9; max-width: 980px; border-radius: 18px; overflow: hidden; background: radial-gradient(circle at 30% 30%, #5a0018, #1d0008 70%); display: grid; place-items: center; box-shadow: 0 20px 50px rgba(61,0,16,.25); }
+  .player { position: relative; aspect-ratio: 16/9; max-width: 980px; border-radius: 18px; overflow: hidden; background: radial-gradient(circle at 30% 30%, #4a0000, #1c0000 70%); display: grid; place-items: center; box-shadow: 0 20px 50px rgba(58,0,0,.25); }
   .player::before { content: ""; position: absolute; inset-inline-end: -60px; bottom: -80px; width: 420px; height: 380px; background: url(assets/jaga-mark-white.png) center/contain no-repeat; opacity: .07; }
   .player .play { width: 92px; height: 92px; border-radius: 50%; background: #fff; color: var(--maroon); display: grid; place-items: center; box-shadow: 0 0 0 14px rgba(255,255,255,.12); z-index: 1; }
   .player .play [data-lucide] { width: 36px; height: 36px; fill: currentColor; }
@@ -121,7 +121,7 @@
   .pn .nx { text-align: end; margin-inline-start: auto; }
 
   .done-btn { margin-inline-start: auto; display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px; border: 1.5px solid var(--line); font-weight: 700; font-size: 14px; color: var(--ink-2); background: #fff; }
-  .done-btn.ok { background: #e1f1e8; border-color: #bfe0cd; color: var(--green); }
+  .done-btn.ok { background: #e3f5ec; border-color: #bfe8d4; color: var(--green); }
   .done-btn [data-lucide] { width: 16px; height: 16px; }
 
   @media (max-width: 1000px) {
